@@ -1,65 +1,173 @@
+// app/page.tsx
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Badge } from "@/components/ui/badge";
+import {
+  Menu,
+  BadgeCheck,
+  BrainCircuit,
+  Users,
+  DollarSign,
+  Linkedin,
+  Twitter,
+  Facebook,
+  Instagram,
+  Youtube,
+  Mail,
+} from "lucide-react";
+import NextJob from "@/components/layout/NextJob";
+import EarlyAdopters from "@/components/layout/testimonial/EarlyAdopters";
+import { Navbar } from "@/components/layout/Navbar";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <>
+      <Navbar />
+      <main>
+        {/* Hero */}
+        <NextJob imageUrl="/fine-girl.png" />        
+
+        {/* Stats */}
+        <section className="py-12 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center max-w-5xl mx-auto">
+              {[
+                { num: "500 +", label: "Active Employers" },
+                { num: "15,526", label: "Posted Jobs" },
+                { num: "200 +", label: "Hiring Companies" },
+                { num: "2000 +", label: "Skilled Talents and Workers" },
+              ].map((s) => (
+                <div key={s.label}>
+                  <div className="text-3xl lg:text-4xl font-bold text-primary">
+                    {s.num}
+                  </div>
+                  <p className="text-gray-600 mt-2">{s.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Company Logos */}
+        <section className="py-12 bg-white">
+          <div className="container mx-auto px-4 overflow-x-auto">
+            <div className="flex gap-16 items-center justify-center">
+              {[
+                "access",
+                "airtel",
+                "rainoil",
+                "moniepoint",
+                "fliqpay",
+                "flutter",
+                "exxonmobil",
+              ].map((name) => (
+                <div
+                  key={name}
+                  className="text-2xl font-medium text-gray-700 whitespace-nowrap"
+                >
+                  {name.charAt(0).toUpperCase() + name.slice(1)}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Worker Features */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4 text-center max-w-4xl mx-auto">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+              A Game Changer For Finding Real Work
+            </h2>
+            <p className="text-gray-600 mb-12">
+              We're helping thousands of workers like you find reliable jobs,
+              fair pay.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6 mb-12">
+              {[
+                {
+                  icon: <BadgeCheck className="w-6 h-6" />,
+                  title: "Verified Jobs",
+                },
+                {
+                  icon: <BrainCircuit className="w-6 h-6" />,
+                  title: "Smart Matching",
+                },
+                {
+                  icon: <Users className="w-6 h-6" />,
+                  title: "For Every Skill Level",
+                },
+                {
+                  icon: <DollarSign className="w-6 h-6" />,
+                  title: "Transparent Pay",
+                },
+              ].map((f) => (
+                <Card
+                  key={f.title}
+                  className="p-6 text-left flex items-start gap-4 hover:shadow-lg transition"
+                >
+                  <div className="p-3 bg-gray-100 rounded-lg">{f.icon}</div>
+                  <h3 className="font-semibold text-lg">{f.title}</h3>
+                </Card>
+              ))}
+            </div>
+            <Button size="lg">Hire Talents</Button>
+          </div>
+        </section>
+
+        {/* Employer Features (repeated pattern) */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4 text-center max-w-4xl mx-auto">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+              For Recruiters and Employers
+            </h2>
+            <p className="text-gray-600 mb-12">
+              We're helping thousands of workers like you find reliable jobs,
+              fair pay.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6 mb-12">
+              {/* Same cards as above */}
+            </div>
+            <Button size="lg">Hire Talents</Button>
+          </div>
+        </section>
+
+        {/* Recently Posted Jobs Placeholder */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+              Recently Posted Jobs
+            </h2>
+            <p className="text-gray-600 mb-12">
+              We're helping thousands of workers like you find reliable jobs,
+              fair pay.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {[1, 2, 3].map((i) => (
+                <Card key={i} className="p-8">
+                  <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-40 mb-4" />
+                  <h3 className="font-semibold">Job Title {i}</h3>
+                  <p className="text-gray-600">Company • Location</p>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials */}
+        <EarlyAdopters />
+
+        {/* CTA */}
+        <NextJob imageUrl="/fine-girl.png" />
       </main>
-    </div>
+
+    </>
   );
 }
