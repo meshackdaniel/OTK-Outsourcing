@@ -9,7 +9,8 @@ import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
-import { Eye, EyeOff } from "lucide-react";
+import { Eye, EyeOff, LoaderCircle } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const formSchema = z.object({
   email: z.email("Please enter a valid email"),
@@ -31,23 +32,47 @@ const LoginPage = () => {
     register,
     handleSubmit,
     formState,
+    setError
   } = useForm<formData>({
       resolver: zodResolver(formSchema),
       mode: "onChange"
   });
 
-  const onSubmit = () => {
-    console.log("submitted");
+  const router = useRouter()
+
+  const onSubmit = (data: formData) => {
+    setIsLoading(true)
+    fetch("/api/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application.json",
+      },
+      body: JSON.stringify({ ...data }),
+    }).then(async (res) => {
+      const result = await res.json();
+      if (!res.ok) {
+        setIsLoading(false);
+        if (result.message === "user does not exists") {
+          document.getElementById("invalidCredentials")?.classList.toggle("hidden");
+        }
+        throw new Error("Registration failed");
+      }
+      setIsLoading(false);
+      router.push("/dashboard");
+    });
   };
   return (
     <>
-      <Image
-        src={"/logo.jpg"}
-        height={300}
-        width={350}
-        alt="logo"
-        className="w-24 mx-auto mt-5"
-      />
+      <Link href={"/"}>
+        <Image
+          src={"/logo.jpg"}
+          height={300}
+          width={350}
+          alt="logo"
+          className="w-24 mx-auto mt-5"
+        />
+      </Link>
       <Card className="max-w-lg mx-auto bg-white mt-5 p-8 border-0 shadow-none block">
         <div className="relative">
           {/* Title */}
@@ -129,6 +154,12 @@ const LoginPage = () => {
                   {formState.errors.password.message}
                 </p>
               )}
+              <p
+                className="text-sm text-red-500 mt-1 hidden"
+                id="invalidCredentials"
+              >
+                Incorrect email or password
+              </p>
             </div>
 
             <Button
@@ -136,7 +167,11 @@ const LoginPage = () => {
               className="w-full h-14 rounded-2xl text-lg font-medium bg-dark-blue"
               disabled={isLoading}
             >
-              {isLoading ? <>Sending code...</> : "Continue"}
+              {isLoading ? (
+                <LoaderCircle className="animate-spin h-10 w-10" />
+              ) : (
+                "Continue"
+              )}
             </Button>
           </form>
           <p className="text-center text-sm text-gray-600 dark:text-gray-400 mt-3">
@@ -146,16 +181,16 @@ const LoginPage = () => {
             </Link>
           </p>
         </div>
-          </Card>
-          <div className="text-center mt-3">
-                            <Link href="/terms" className="text-blue-500 underline">
-                              Terms of Use
-                            </Link>{" "}
-                            &{" "}
-                            <Link href="/privacy" className="text-blue-500 underline">
-                              Privacy Policy
-                            </Link>
-                          </div>
+      </Card>
+      <div className="text-center mt-3">
+        <Link href="/terms" className="text-blue-500 underline">
+          Terms of Use
+        </Link>{" "}
+        &{" "}
+        <Link href="/privacy" className="text-blue-500 underline">
+          Privacy Policy
+        </Link>
+      </div>
     </>
   );
 };

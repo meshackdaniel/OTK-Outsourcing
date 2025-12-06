@@ -20,6 +20,7 @@ import {
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -36,18 +37,18 @@ export function Navbar() {
     { label: "Why OTK", href: "#" },
   ];
   return (
-    <header className="sticky top-0 z-50 border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
+    <header className="sticky top-0 bg-gray-50 z-50">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex h-16 lg:h-20 items-center justify-between">
+        <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative">
-              <div className="w-10 h-10 lg:w-12 lg:h-12 bg-linear-to-br from-yellow-400 to-amber-500 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300" />
-              <div className="absolute inset-0 bg-yellow-400 rounded-xl blur-xl opacity-40 group-hover:opacity-60 transition-opacity" />
-            </div>
-            <span className="text-2xl lg:text-3xl font-black tracking-tighter bg-linear-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
-              Labr
-            </span>
+            <Image
+              src={"/logo.jpg"}
+              width={400}
+              height={300}
+              className="w-15"
+              alt="logo"
+            />
           </Link>
 
           {/* Desktop Navigation with NavigationMenu */}
@@ -59,7 +60,7 @@ export function Navbar() {
                     <div key={idx}>
                       {/* For Talents */}
                       <NavigationMenuItem>
-                        <NavigationMenuTrigger className="text-sm font-medium">
+                        <NavigationMenuTrigger className="text-sm text-gray-700 bg-gray-50 font-medium">
                           {item.label}
                         </NavigationMenuTrigger>
                         <NavigationMenuContent>
@@ -83,40 +84,39 @@ export function Navbar() {
                       </NavigationMenuItem>
                     </div>
                   );
-                  if (!item.dropdown) {
-                      return (
-                        <>
-                          {/* Simple Links */}
-                          <NavigationMenuItem key={idx}>
-                            <NavigationMenuLink asChild>
-                              <Link
-                                href={item.href}
-                                className="text-sm font-medium text-gray-700 hover:text-primary transition"
-                              >
-                                {item.label}
-                              </Link>
-                            </NavigationMenuLink>
-                          </NavigationMenuItem>
-                        </>
-                      );
-                  }
+                if (!item.dropdown) {
+                  return (
+                      <NavigationMenuItem key={idx}>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            href={item.href}
+                            className="text-sm font-medium text-gray-700 hover:text-primary transition"
+                          >
+                            {item.label}
+                          </Link>
+                        </NavigationMenuLink>
+                      </NavigationMenuItem>
+                  );
+                }
               })}
-
-              
             </NavigationMenuList>
           </NavigationMenu>
 
           {/* Desktop Auth Buttons */}
           <div className="hidden lg:flex items-center gap-4">
-            <Button variant="ghost" size="sm" className="font-medium">
-              Log In
-            </Button>
-            <Button
-              size="sm"
-              className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold shadow-lg"
-            >
-              Create account
-            </Button>
+            <Link href={"/login"}>
+              <Button variant="ghost" size="sm" className="font-medium">
+                Log In
+              </Button>
+            </Link>
+            <Link href={"/sign-up"}>
+              <Button
+                size="sm"
+                className="bg-dark-blue text-white font-semibold shadow-lg"
+              >
+                Create account
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu */}

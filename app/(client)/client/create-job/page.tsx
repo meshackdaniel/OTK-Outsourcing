@@ -137,7 +137,7 @@ function SortableStage({
 // Main Component
 // ─────────────────────────────────────────────────────────────────────────────
 export default function CreateJobPage() {
-  const [step, setStep] = useState(4);
+  const [step, setStep] = useState(1);
 
   const {
     register,

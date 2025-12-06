@@ -120,6 +120,10 @@ export default function RegisterPage() {
   // -----------------------------------------------------------------
   const onStep1Submit = async (data: Step1Data) => {
     setIsLoading(true);
+    setSavedFullName(data.fullName);
+    setSavedEmail(data.email);
+    setSavedPassword(data.password);
+
     setStep(2);
     setIsLoading(false);
 
@@ -134,7 +138,7 @@ export default function RegisterPage() {
     // }).then(async (res) => {
     //   const result = await res.json();
     //   if (!res.ok) {
-    //     if (result.message === "User already exists") {
+    //     if (result.message === "user already exists") {
     //       setIsLoading(false);
     //       step1Form.setError("email", { message: "User already exists" });
     //       throw new Error("User already exist");
@@ -153,11 +157,50 @@ export default function RegisterPage() {
   };
 
   // -----------------------------------------------------------------
-  // Step 2 Submit → Complete Registration
+  // Step 2 Submit → Check OTP
   // -----------------------------------------------------------------
   const onStep2Submit = async (data: Step2Data) => {
     setIsLoading(true);
     setStep(3);
+    setIsLoading(false);
+
+    // fetch("/api/register", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //     Accept: "application.json",
+    //   },
+    //   body: JSON.stringify({
+    //     ...data,
+    //     email: savedEmail,
+    //     password: savedPassword,
+    //     fullName: savedFullName,
+    //   }),
+    // }).then(async (res) => {
+    //   const result = await res.json();
+    //   if (result.message === "Invalid verification code") {
+    //     step2Form.setError("code", { message: "Invalid verification code" });
+    //     setIsLoading(false);
+    //     throw new Error("Registration failed");
+    //   }
+    //   if (!res.ok) {
+    //     setIsLoading(false);
+    //     throw new Error("Registration failed");
+    //   }
+    //   router.push("/");
+    //   router.refresh();
+    //   setStep(2);
+    //   setIsLoading(false);
+    // });
+  };
+
+  // -----------------------------------------------------------------
+  // Step 2 Submit → Complete Registration
+  // -----------------------------------------------------------------
+  const onStep3Submit = async (data: Step3Data) => {
+    setIsLoading(true);
+    // setStep(3);
+    console.log(data);
     setIsLoading(false);
 
     // fetch("/api/register", {
@@ -300,13 +343,15 @@ export default function RegisterPage() {
             {/* Step 1: Main Form */}
             {step === 1 && (
               <>
-                <Image
-                  src={"/logo.jpg"}
-                  height={300}
-                  width={350}
-                  alt="logo"
-                  className="w-24 mx-auto mt-5"
-                />
+                <Link href={"/"}>
+                  <Image
+                    src={"/logo.jpg"}
+                    height={300}
+                    width={350}
+                    alt="logo"
+                    className="w-24 mx-auto mt-5"
+                  />
+                </Link>
                 <Card className="max-w-lg mx-auto bg-white mt-5 p-8 border-0 shadow-none block">
                   <div className="relative">
                     {/* Title */}
@@ -527,13 +572,15 @@ export default function RegisterPage() {
             {/* Social & Login Link */}
             {step === 3 && (
               <>
-                <Image
-                  src={"/logo.jpg"}
-                  height={300}
-                  width={350}
-                  alt="logo"
-                  className="w-24  mt-5"
-                />
+                <Link href={"/"}>
+                  <Image
+                    src={"/logo.jpg"}
+                    height={300}
+                    width={350}
+                    alt="logo"
+                    className="w-24  mt-5"
+                  />
+                </Link>
                 <div className="flex justify-center gap-2 w-40 mx-auto mt-7">
                   <Progress value={100} className="rounded-none h-1" />
                   {companyDetailsStep > 1 ? (
@@ -552,7 +599,7 @@ export default function RegisterPage() {
                     <Progress className="rounded-none h-1" />
                   )}
                 </div>
-                <form onSubmit={step3Form.handleSubmit(onSubmit)}>
+                <form onSubmit={step3Form.handleSubmit(onStep3Submit)}>
                   {companyDetailsStep === 1 && (
                     <Card className="max-w-lg mx-auto bg-white mt-3 p-8 border-0 shadow-none block">
                       <div className="relative">
@@ -1059,13 +1106,15 @@ export default function RegisterPage() {
       {!showSignUp && (
         <div className="min-h-screen bg-gray-50 flex items-center justify-center w-full">
           <div className="max-w-4xl w-full text-center">
-            <Image
-              src={"/logo.jpg"}
-              height={300}
-              width={350}
-              alt="logo"
-              className="w-30 mx-auto"
-            />
+            <Link href={"/"}>
+              <Image
+                src={"/logo.jpg"}
+                height={300}
+                width={350}
+                alt="logo"
+                className="w-30 mx-auto"
+              />
+            </Link>
             {/* Title */}
             <h1 className="text-4xl md:text-3xl font-black text-gray-900 mt-10 mb-12">
               What Brings you to OTK?

@@ -31,7 +31,7 @@ import Footer from "@/components/layout/Footer";
 
 export default function HomePage() {
   return (
-    <>
+    <div className="max-w-7xl mx-auto">
       <Navbar />
       <main>
         {/* Hero */}
@@ -39,7 +39,7 @@ export default function HomePage() {
 
         {/* Stats */}
         <section className="bg-white">
-          <div className=" mx-auto px-4">
+          <div className=" mx-auto">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mx-auto">
               {[
                 { num: "500 +", label: "Active Employers" },
@@ -149,6 +149,6 @@ export default function HomePage() {
         <NextJob imageUrl="/fine-girl.png" />
         <Footer />
       </main>
-    </>
+    </div>
   );
 }
