@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const NextJob = ({ imageUrl }: { imageUrl: string }) => {
   return (
-    <section className="py-16 md:py-20 md:px-15 bg-gray-50 mb-20 rounded-4xl">
+    <section className="py-8 md:py-20 md:px-15 bg-gray-100 mb-5">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-20 md:gap-40 items-center mx-auto">
           <div className="space-y-6">

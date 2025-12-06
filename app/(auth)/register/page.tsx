@@ -10,7 +10,6 @@ const register = async () => {
   // }
   return (
     <div>
-      
       <RegisterPage />
     </div>
   );

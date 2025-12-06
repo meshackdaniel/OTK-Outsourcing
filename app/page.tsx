@@ -26,6 +26,8 @@ import {
 import NextJob from "@/components/layout/NextJob";
 import EarlyAdopters from "@/components/layout/testimonial/EarlyAdopters";
 import { Navbar } from "@/components/layout/Navbar";
+import PartnersMarquee from "@/components/layout/PartnersMarquee";
+import Footer from "@/components/layout/Footer";
 
 export default function HomePage() {
   return (
@@ -33,23 +35,23 @@ export default function HomePage() {
       <Navbar />
       <main>
         {/* Hero */}
-        <NextJob imageUrl="/fine-girl.png" />        
+        <NextJob imageUrl="/fine-girl.png" />
 
         {/* Stats */}
-        <section className="py-12 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center max-w-5xl mx-auto">
+        <section className="bg-white">
+          <div className=" mx-auto px-4">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mx-auto">
               {[
                 { num: "500 +", label: "Active Employers" },
                 { num: "15,526", label: "Posted Jobs" },
                 { num: "200 +", label: "Hiring Companies" },
                 { num: "2000 +", label: "Skilled Talents and Workers" },
               ].map((s) => (
-                <div key={s.label}>
-                  <div className="text-3xl lg:text-4xl font-bold text-primary">
+                <div key={s.label} className="bg-gray-100 py-5 px-4 rounded-xl">
+                  <div className="text-xl lg:text-2xl font-black text-primary">
                     {s.num}
                   </div>
-                  <p className="text-gray-600 mt-2">{s.label}</p>
+                  <p className="text-gray-600 mt-2 font-semibold">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -57,28 +59,7 @@ export default function HomePage() {
         </section>
 
         {/* Company Logos */}
-        <section className="py-12 bg-white">
-          <div className="container mx-auto px-4 overflow-x-auto">
-            <div className="flex gap-16 items-center justify-center">
-              {[
-                "access",
-                "airtel",
-                "rainoil",
-                "moniepoint",
-                "fliqpay",
-                "flutter",
-                "exxonmobil",
-              ].map((name) => (
-                <div
-                  key={name}
-                  className="text-2xl font-medium text-gray-700 whitespace-nowrap"
-                >
-                  {name.charAt(0).toUpperCase() + name.slice(1)}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <PartnersMarquee />
 
         {/* Worker Features */}
         <section className="py-20 bg-gray-50">
@@ -166,8 +147,8 @@ export default function HomePage() {
 
         {/* CTA */}
         <NextJob imageUrl="/fine-girl.png" />
+        <Footer />
       </main>
-
     </>
   );
 }

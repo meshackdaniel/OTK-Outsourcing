@@ -8,7 +8,6 @@
   --color-dark-blue: #222364;
   --color-dark-yellow: #f2c060;
 
-  
   /* Shadcn styles */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -122,8 +121,50 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    scrollbar-gutter: stable !important; /* keeps space for scrollbar even when hidden */
+  }
   body {
     @apply bg-background text-foreground;
-    overflow-y: scroll !important;
+    /* overflow-y: scroll !important; */
+    padding: 0 !important;
+    margin: 0 !important;
+
   }
+  /* Remove the eye icon in Edge and IE */
+  input[type="password"]::-ms-reveal,
+  input[type="password"]::-ms-clear {
+    display: none;
+  }
+
+  /* Optional: Ensure no extra padding is left */
+  input[type="password"] {
+    padding-right: 0;
+  }
+  select {
+    appearance: none; /* modern browsers */
+    -webkit-appearance: none; /* Safari/Chrome */
+    -moz-appearance: none; /* Firefox */
+    background: white;
+    border: 1px solid #ccc;
+    padding: 0.5rem 2rem 0.5rem 0.5rem; /* space for custom arrow */
+  }
+
+  /* For IE/Edge (legacy) */
+  select::-ms-expand {
+    display: none;
+  }
+  /* Make headings look perfect */
+.prose :where(h1):not(:where([class~="not-prose"] *)) {
+  @apply text-4xl md:text-5xl font-bold leading-tight mt-8 mb-4;
+}
+.prose :where(h2):not(:where([class~="not-prose"] *)) {
+  @apply text-3xl md:text-4xl font-bold leading-tight mt-8 mb-3;
+}
+.prose :where(h3):not(:where([class~="not-prose"] *)) {
+  @apply text-2xl md:text-3xl font-bold leading-tight mt-6 mb-2;
+}
+/* Fix list spacing */
+.prose ul, .prose ol { @apply my-4 pl-6; }
+.prose li { @apply my-2; }
 }

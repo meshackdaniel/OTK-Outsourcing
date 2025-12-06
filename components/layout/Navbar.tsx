@@ -42,10 +42,10 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative">
-              <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300" />
+              <div className="w-10 h-10 lg:w-12 lg:h-12 bg-linear-to-br from-yellow-400 to-amber-500 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300" />
               <div className="absolute inset-0 bg-yellow-400 rounded-xl blur-xl opacity-40 group-hover:opacity-60 transition-opacity" />
             </div>
-            <span className="text-2xl lg:text-3xl font-black tracking-tighter bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
+            <span className="text-2xl lg:text-3xl font-black tracking-tighter bg-linear-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
               Labr
             </span>
           </Link>
@@ -56,35 +56,33 @@ export function Navbar() {
               {navItems.map((item, idx) => {
                 if (item.dropdown)
                   return (
-                    <>
+                    <div key={idx}>
                       {/* For Talents */}
-                      <NavigationMenuItem key={idx}>
+                      <NavigationMenuItem>
                         <NavigationMenuTrigger className="text-sm font-medium">
                           {item.label}
                         </NavigationMenuTrigger>
                         <NavigationMenuContent>
                           <ul className="grid gap-3 p-6 w-64 bg-white rounded-lg shadow-xl">
-                            {item.dropdown.map(
-                              (item) => (
-                                <li key={item}>
-                                  <NavigationMenuLink asChild>
-                                    <a
-                                      href="#"
-                                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
-                                    >
-                                      <div className="text-sm font-medium leading-none">
-                                        {item}
-                                      </div>
-                                    </a>
-                                  </NavigationMenuLink>
-                                </li>
-                              )
-                            )}
+                            {item.dropdown.map((item) => (
+                              <li key={item}>
+                                <NavigationMenuLink asChild>
+                                  <a
+                                    href="#"
+                                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
+                                  >
+                                    <div className="text-sm font-medium leading-none">
+                                      {item}
+                                    </div>
+                                  </a>
+                                </NavigationMenuLink>
+                              </li>
+                            ))}
                           </ul>
                         </NavigationMenuContent>
                       </NavigationMenuItem>
-                    </>
-                      );
+                    </div>
+                  );
                   if (!item.dropdown) {
                       return (
                         <>
