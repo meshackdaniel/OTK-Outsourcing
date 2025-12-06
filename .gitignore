@@ -1,2 +1,3 @@
 postman.txt
 node_modules/
+.env.local
