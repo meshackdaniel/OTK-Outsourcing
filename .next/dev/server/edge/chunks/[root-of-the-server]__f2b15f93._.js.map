@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 16, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/middleware.ts"],"sourcesContent":["import type { NextRequest } from \"next/server\";\nimport { NextResponse } from \"next/server\";\n\n// Proxy all /api/* requests to the Express server so the frontend can call the\n// backend without hard-coding its port in client code.\nconst API_BASE =\n  process.env.API_BASE_URL?.replace(/\\/$/, \"\") || \"http://localhost:5000\";\n\nexport function middleware(request: NextRequest) {\n  const { pathname, search } = request.nextUrl;\n\n  // Forward the full /api/* path to the backend (Express expects the /api prefix).\n  const targetUrl = new URL(pathname + search, API_BASE);\n\n  return NextResponse.rewrite(targetUrl);\n}\n\nexport const config = {\n  matcher: \"/api/:path*\",\n};\n"],"names":[],"mappings":";;;;;;AACA;AAAA;;AAEA,+EAA+E;AAC/E,uDAAuD;AACvD,MAAM,WACJ,QAAQ,GAAG,CAAC,YAAY,EAAE,QAAQ,OAAO,OAAO;AAE3C,SAAS,WAAW,OAAoB;IAC7C,MAAM,EAAE,QAAQ,EAAE,MAAM,EAAE,GAAG,QAAQ,OAAO;IAE5C,iFAAiF;IACjF,MAAM,YAAY,IAAI,IAAI,WAAW,QAAQ;IAE7C,OAAO,gMAAY,CAAC,OAAO,CAAC;AAC9B;AAEO,MAAM,SAAS;IACpB,SAAS;AACX"}}]
+}
