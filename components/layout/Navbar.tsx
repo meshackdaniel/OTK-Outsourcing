@@ -86,16 +86,16 @@ export function Navbar() {
                   );
                 if (!item.dropdown) {
                   return (
-                      <NavigationMenuItem key={idx}>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            href={item.href}
-                            className="text-sm font-medium text-gray-700 hover:text-primary transition"
-                          >
-                            {item.label}
-                          </Link>
-                        </NavigationMenuLink>
-                      </NavigationMenuItem>
+                    <NavigationMenuItem key={idx}>
+                      <NavigationMenuLink asChild>
+                        <Link
+                          href={item.href}
+                          className="text-sm font-medium text-gray-700 hover:text-primary transition"
+                        >
+                          {item.label}
+                        </Link>
+                      </NavigationMenuLink>
+                    </NavigationMenuItem>
                   );
                 }
               })}
@@ -109,7 +109,7 @@ export function Navbar() {
                 Log In
               </Button>
             </Link>
-            <Link href={"/sign-up"}>
+            <Link href={"/signup"}>
               <Button
                 size="sm"
                 className="bg-dark-blue text-white font-semibold shadow-lg"
@@ -127,11 +127,19 @@ export function Navbar() {
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="left" className="w-80 p-0">
+            <SheetContent
+              side="left"
+              className="w-80 p-0 h-screen overflow-y-scroll"
+            >
               <SheetHeader className="p-6 border-b">
                 <SheetTitle className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-xl" />
-                  <span className="text-2xl font-black">Labr</span>
+                  <Image
+                    src={"/logo.jpg"}
+                    width={200}
+                    height={180}
+                    alt="logo"
+                    className="w-20"
+                  />
                 </SheetTitle>
               </SheetHeader>
 
@@ -180,12 +188,16 @@ export function Navbar() {
               </nav>
 
               <div className="border-t p-6 space-y-3">
-                <Button variant="outline" className="w-full" size="lg">
-                  Log In
-                </Button>
-                <Button className="w-full" size="lg">
-                  Create account
-                </Button>
+                <Link href={"/login"}>
+                  <Button variant="outline" className="w-full" size="lg">
+                    Log In
+                  </Button>
+                </Link>
+                <Link href={"/signup"}>
+                  <Button className="w-full bg-dark-yellow" size="lg">
+                    Create account
+                  </Button>
+                </Link>
               </div>
             </SheetContent>
           </Sheet>
@@ -193,5 +205,4 @@ export function Navbar() {
       </div>
     </header>
   );
-  
 }
