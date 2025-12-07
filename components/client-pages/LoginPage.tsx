@@ -73,10 +73,10 @@ const LoginPage = () => {
           className="w-24 mx-auto mt-5"
         />
       </Link>
-      <Card className="max-w-lg mx-auto bg-white mt-5 p-8 border-0 shadow-none block">
+      <Card className="max-w-lg mx-4 md:mx-auto bg-white mt-8 md:mt-5 py-8 md:py-8 px-5 md:px-8 border-0 shadow-none block">
         <div className="relative">
           {/* Title */}
-          <h1 className="text-xl md:text-2xl text-center font-black text-gray-900 mb-5">
+          <h1 className="text-2xl md:text-2xl text-center font-black text-gray-900 mb-5">
             Welcome Back
           </h1>
           <Button

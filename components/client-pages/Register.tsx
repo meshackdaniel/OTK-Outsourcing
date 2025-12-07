@@ -352,7 +352,7 @@ export default function RegisterPage() {
                     className="w-24 mx-auto mt-5"
                   />
                 </Link>
-                <Card className="max-w-lg mx-auto bg-white mt-5 p-8 border-0 shadow-none block">
+                <Card className="max-w-lg mx-4 md:mx-auto bg-white mt-5 py-8 md:py-8 px-5 md:px-8 border-0 shadow-none block">
                   <div className="relative">
                     {/* Title */}
                     <h1 className="text-xl md:text-2xl text-center font-black text-gray-900 mb-5">
@@ -488,7 +488,7 @@ export default function RegisterPage() {
                   alt="logo"
                   className="w-24 mx-auto mt-5"
                 />
-                <Card className="max-w-lg mx-auto bg-white mt-5 p-8 border-0 shadow-none block">
+                <Card className="max-w-lg mx-4 md:mx-auto bg-white mt-5 py-8 md:py-8 px-5 md:px-8 border-0 shadow-none block">
                   <div className="relative">
                     <h1 className="text-xl md:text-2xl text-center font-black text-gray-900 mb-5">
                       Check your Inbox
@@ -601,7 +601,7 @@ export default function RegisterPage() {
                 </div>
                 <form onSubmit={step3Form.handleSubmit(onStep3Submit)}>
                   {companyDetailsStep === 1 && (
-                    <Card className="max-w-lg mx-auto bg-white mt-3 p-8 border-0 shadow-none block">
+                    <Card className="max-w-lg mx-4 md:mx-auto bg-white mt-8 md:mt-5 py-8 md:py-8 px-5 md:px-8 border-0 shadow-none block">
                       <div className="relative">
                         <h1 className="text-xl md:text-2xl text-center font-black text-gray-900 mb-5">
                           Tell us about your company
@@ -765,7 +765,7 @@ export default function RegisterPage() {
                     </Card>
                   )}
                   {companyDetailsStep === 2 && (
-                    <Card className="max-w-lg mx-auto bg-white mt-3 p-8 border-0 shadow-none block">
+                    <Card className="max-w-lg mx-4 md:mx-auto bg-white mt-8 md:mt-5 py-8 md:py-8 px-5 md:px-8 border-0 shadow-none block">
                       <div className="relative">
                         <h1 className="text-xl md:text-2xl text-center font-black text-gray-900 mb-5">
                           Service Selection
@@ -846,7 +846,7 @@ export default function RegisterPage() {
                     </Card>
                   )}
                   {companyDetailsStep === 3 && (
-                    <Card className="max-w-lg mx-auto bg-white mt-3 p-8 border-0 shadow-none block">
+                    <Card className="max-w-lg mx-4 md:mx-auto bg-white mt-8 md:mt-5 py-8 md:py-8 px-5 md:px-8 border-0 shadow-none block">
                       <div className="relative">
                         <h1 className="text-xl md:text-2xl text-center font-black text-gray-900 mb-5">
                           Who are you looking to hire?
@@ -970,7 +970,7 @@ export default function RegisterPage() {
                     </Card>
                   )}
                   {companyDetailsStep === 4 && (
-                    <Card className="max-w-3xl mx-auto bg-white mt-3 p-8 border-0 shadow-none block">
+                    <Card className="max-w-3xl mx-4 md:mx-auto bg-white mb-10 mt-8 md:mt-5 py-8 md:py-8 px-5 md:px-8 border-0 shadow-none block">
                       <div className="relative">
                         <h1 className="text-xl md:text-2xl text-center font-black text-gray-900 mb-5">
                           Agreement & SLAs
