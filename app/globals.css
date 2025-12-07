@@ -131,6 +131,16 @@
     margin: 0 !important;
 
   }
+
+  .scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
   /* Remove the eye icon in Edge and IE */
   input[type="password"]::-ms-reveal,
   input[type="password"]::-ms-clear {

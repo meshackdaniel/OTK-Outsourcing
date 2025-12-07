@@ -129,7 +129,7 @@ export function Navbar() {
             </SheetTrigger>
             <SheetContent
               side="left"
-              className="w-80 p-0 h-screen overflow-y-scroll"
+              className="w-80 p-0 overflow-y-scroll scrollbar-hide"
             >
               <SheetHeader className="p-6 border-b">
                 <SheetTitle className="flex items-center gap-3">
@@ -187,14 +187,14 @@ export function Navbar() {
                 ))}
               </nav>
 
-              <div className="border-t p-6 space-y-3">
+              <div className="border-t p-6 space-y-7">
                 <Link href={"/login"}>
                   <Button variant="outline" className="w-full" size="lg">
                     Log In
                   </Button>
                 </Link>
                 <Link href={"/signup"}>
-                  <Button className="w-full bg-dark-yellow" size="lg">
+                  <Button className="w-full bg-dark-yellow mt-3" size="lg">
                     Create account
                   </Button>
                 </Link>
