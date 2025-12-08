@@ -31,9 +31,9 @@ import Footer from "@/components/layout/Footer";
 
 export default function HomePage() {
   return (
-    <div className="max-w-7xl mx-5">
+    <div className="max-w-7xl mx-auto">
       <Navbar />
-      <main>
+      <main className="mx-3">
         {/* Hero */}
         <NextJob imageUrl="/fine-girl.png" />
 
