@@ -43,10 +43,10 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <Image
-              src={"/logo.jpg"}
+              src={"/logo.png"}
               width={400}
               height={300}
-              className="w-15"
+              className="w-18"
               alt="logo"
             />
           </Link>
@@ -134,7 +134,7 @@ export function Navbar() {
               <SheetHeader className="p-6 border-b">
                 <SheetTitle className="flex items-center gap-3">
                   <Image
-                    src={"/logo.jpg"}
+                    src={"/logo.png"}
                     width={200}
                     height={180}
                     alt="logo"
