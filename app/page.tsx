@@ -62,7 +62,7 @@ export default function HomePage() {
         <PartnersMarquee />
 
         {/* Worker Features */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-10 bg-gray-50">
           <div className="container mx-auto px-4 text-center max-w-4xl mx-auto">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               A Game Changer For Finding Real Work

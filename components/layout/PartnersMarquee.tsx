@@ -18,7 +18,7 @@ const partners = [
 
 const PartnersMarquee = () => {
   return (
-    <section className="w-full overflow-hidden bg-gray-50 py-12 mx-auto">
+    <section className="w-full overflow-hidden bg-gray-50 py-8 mx-auto">
       <div className="relative">
         {/* Wrapping container with hover pause */}
         <motion.div
