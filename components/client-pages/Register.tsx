@@ -345,7 +345,7 @@ export default function RegisterPage() {
               <>
                 <Link href={"/"}>
                   <Image
-                    src={"/logo.jpg"}
+                    src={"/logo.png"}
                     height={300}
                     width={350}
                     alt="logo"
@@ -482,7 +482,7 @@ export default function RegisterPage() {
             {step === 2 && (
               <>
                 <Image
-                  src={"/logo.jpg"}
+                  src={"/logo.png"}
                   height={300}
                   width={350}
                   alt="logo"
@@ -574,7 +574,7 @@ export default function RegisterPage() {
               <>
                 <Link href={"/"}>
                   <Image
-                    src={"/logo.jpg"}
+                    src={"/logo.png"}
                     height={300}
                     width={350}
                     alt="logo"
@@ -1104,11 +1104,11 @@ export default function RegisterPage() {
       )}
 
       {!showSignUp && (
-        <div className="min-h-screen bg-gray-50 flex items-center justify-center w-full">
-          <div className="max-w-4xl w-full text-center">
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center w-full py-10">
+          <div className="max-w-4xl mx-8 md:mx-0 w-full text-center">
             <Link href={"/"}>
               <Image
-                src={"/logo.jpg"}
+                src={"/logo.png"}
                 height={300}
                 width={350}
                 alt="logo"
@@ -1116,7 +1116,7 @@ export default function RegisterPage() {
               />
             </Link>
             {/* Title */}
-            <h1 className="text-4xl md:text-3xl font-black text-gray-900 mt-10 mb-12">
+            <h1 className="text-2xl md:text-3xl font-black text-gray-900 mt-10 mb-12">
               What Brings you to OTK?
             </h1>
             {/* <Button
@@ -1143,7 +1143,7 @@ export default function RegisterPage() {
               >
                 <div className="bg-gray-100 w-full rounded-xl h-50"></div>
 
-                <h2 className="text-2xl font-black mt-4">
+                <h2 className="text-xl md:2xl font-black mt-4">
                   I'm Looking for Work
                 </h2>
                 <p className="text-gray-600">
@@ -1160,7 +1160,7 @@ export default function RegisterPage() {
               >
                 <div className="bg-gray-100 w-full rounded-xl h-50"></div>
 
-                <h2 className="text-2xl font-black mt-4">I'm Hiring</h2>
+                <h2 className="text-xl md:2xl font-black mt-4">I'm Hiring</h2>
                 <p className="text-gray-600">
                   Find verified, reliable staff in days - not weeks
                 </p>

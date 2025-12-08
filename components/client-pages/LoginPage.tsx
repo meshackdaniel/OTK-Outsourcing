@@ -66,7 +66,7 @@ const LoginPage = () => {
     <>
       <Link href={"/"}>
         <Image
-          src={"/logo.jpg"}
+          src={"/logo.png"}
           height={300}
           width={350}
           alt="logo"

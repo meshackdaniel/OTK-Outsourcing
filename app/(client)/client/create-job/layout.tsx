@@ -23,7 +23,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
     <div className="flex min-h-screen">
       <div className="w-80 border-r fixed border-gray-100 p-5 h-screen overflow-y-scroll [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         <Image
-          src="/logo.jpg"
+          src="/logo.png"
           width={200}
           height={160}
           className="w-25 mb-8"
