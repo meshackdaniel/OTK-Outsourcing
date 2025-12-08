@@ -31,14 +31,14 @@ import Footer from "@/components/layout/Footer";
 
 export default function HomePage() {
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-5">
       <Navbar />
       <main>
         {/* Hero */}
         <NextJob imageUrl="/fine-girl.png" />
 
         {/* Stats */}
-        <section className="bg-white">
+        <section className="bg-white my-10">
           <div className=" mx-auto">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mx-auto">
               {[
