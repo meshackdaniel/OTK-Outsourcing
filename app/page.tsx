@@ -38,7 +38,7 @@ export default function HomePage() {
         <NextJob imageUrl="/fine-girl.png" />
 
         {/* Stats */}
-        <section className="bg-white my-10">
+        <section className="my-10">
           <div className=" mx-auto">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mx-auto">
               {[
