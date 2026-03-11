@@ -1,0 +1,32 @@
+Register:
+curl -X POST http://localhost:5000/api/hiring/register \
+  -H "Content-Type: application/json" \
+  -d '{"email":"hire@example.com","password":"secret123","fullName":"Hire User"}'
+Login:
+curl -X POST http://localhost:5000/api/hiring/login \
+  -H "Content-Type: application/json" \
+  -d '{"email":"hire@example.com","password":"secret123"}'
+Google auth (use a real ID token):
+curl -X POST http://localhost:5000/api/hiring/auth/google \
+  -H "Content-Type: application/json" \
+  -d '{"idToken":"<your-google-id-token>"}'
+Logout:
+curl -X POST http://localhost:5000/api/hiring/logout
+Work
+
+Register:
+curl -X POST http://localhost:5000/api/work/register \
+  -H "Content-Type: application/json" \
+  -d '{"email":"work@example.com","password":"secret123","fullName":"Work User"}'
+Login:
+curl -X POST http://localhost:5000/api/work/login \
+  -H "Content-Type: application/json" \
+  -d '{"email":"work@example.com","password":"secret123"}'
+Google auth:
+curl -X POST http://localhost:5000/api/work/auth/google \
+  -H "Content-Type: application/json" \
+  -d '{"idToken":"<your-google-id-token>"}'
+Logout:
+curl -X POST http://localhost:5000/api/work/logout
+
+curl -X POST http://localhost:5000/api/hiring/logout
