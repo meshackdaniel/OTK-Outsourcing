@@ -1,39 +1,17 @@
 // app/create-job/page.tsx
 "use client";
 
-import { useState } from "react";
+import React, { useState, useRef } from "react";
+import { DashboardLayout } from "@/components/layout/DashboardLayout";
 import { useForm, useFieldArray } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { useEditor, EditorContent } from "@tiptap/react";
-import StarterKit from "@tiptap/starter-kit";
-import Link from "@tiptap/extension-link";
-import TextAlign from "@tiptap/extension-text-align";
-import Underline from "@tiptap/extension-underline";
-import Placeholder from "@tiptap/extension-placeholder";
 
-import {
-  Bold,
-  Italic,
-  Underline as UnderlineIcon,
-  Strikethrough,
-  Link2,
-  AlignLeft,
-  AlignCenter,
-  AlignRight,
-  List,
-  ListOrdered,
-  Heading1,
-  Heading2,
-  Heading3,
-  Plus,
-  X,
-  ChevronDown,
-  GripVertical,
-  Check,
-  Info,
-} from "lucide-react";
+import { Plus, X, ChevronDown, GripVertical, Check, Info, Pencil } from "lucide-react";
 
+import dynamic from 'next/dynamic';
+import 'react-quill-new/dist/quill.snow.css';
+const ReactQuill = dynamic(() => import('react-quill-new'), { ssr: false });
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -45,6 +23,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Dialog,
@@ -100,9 +79,11 @@ type FormData = z.infer<typeof schema>;
 function SortableStage({
   stage,
   onRemove,
+  onChangeTitle,
 }: {
   stage: any;
   onRemove: () => void;
+  onChangeTitle: (title: string) => void;
 }) {
   const { attributes, listeners, setNodeRef, transform, transition } =
     useSortable({ id: stage.id });
@@ -118,7 +99,8 @@ function SortableStage({
         <GripVertical className="w-5 h-5 text-gray-400" />
       </div>
       <Input
-        defaultValue={stage.title}
+        value={stage.title}
+        onChange={(e) => onChangeTitle(e.target.value)}
         className="flex-1 bg- border-0 focus:ring-0 focus-visible:ring-0 shadow-none"
         placeholder="Stage name"
       />
@@ -138,6 +120,14 @@ function SortableStage({
 // ─────────────────────────────────────────────────────────────────────────────
 export default function CreateJobPage() {
   const [step, setStep] = useState(1);
+  const stepRef = useRef(1);
+  const setStepSafe = (n: number | ((prev: number) => number)) => {
+    setStep((prev) => {
+      const next = typeof n === "function" ? n(prev) : n;
+      stepRef.current = next;
+      return next;
+    });
+  };
 
   const {
     register,
@@ -180,14 +170,17 @@ export default function CreateJobPage() {
           protected: true,
         },
         { id: "lastName", label: "Last Name", required: true, protected: true },
-        { id: "email", label: "Email", required: true },
-        { id: "phone", label: "Phone Number", required: true },
         { id: "resume", label: "Resume/CV", required: true },
       ],
     },
   ]);
 
   const [dialogOpen, setDialogOpen] = useState(false);
+  const [isLinkPopoverOpen, setIsLinkPopoverOpen] = useState(false);
+  const [linkUrl, setLinkUrl] = useState("");
+  const [linkText, setLinkText] = useState("");
+  const [linkSelection, setLinkSelection] = useState<any>(null);
+  const [, forceUpdate] = useState(0);
   const [newSectionTitle, setNewSectionTitle] = useState("");
 
   // Hiring Stages
@@ -195,6 +188,7 @@ export default function CreateJobPage() {
     fields: stages,
     replace,
     remove,
+    update,
   } = useFieldArray({ control, name: "hiringStages" });
   const sensors = useSensors(
     useSensor(PointerSensor),
@@ -210,41 +204,11 @@ export default function CreateJobPage() {
     }
   };
 
-  // Tiptap Editor
-  const editor = useEditor({
-    extensions: [
-      StarterKit.configure({ heading: { levels: [1, 2, 3] } }),
-      Placeholder.configure({
-        placeholder: "Write a detailed job description...",
-      }),
-      Link.configure({ openOnClick: false }),
-      TextAlign.configure({ types: ["heading", "paragraph"] }),
-      Underline,
-    ],
-    content: watch("description") || "",
-    immediatelyRender: false,
-    onUpdate: ({ editor }) => {
-      setValue("description", editor.getHTML(), { shouldValidate: true });
-    },
-    editorProps: {
-      attributes: {
-        class: "prose prose-lg max-w-none min-h-96 p-6 focus:outline-none",
-      },
-    },
-  });
-
-  const setLink = () => {
-    const url = window.prompt("Enter URL");
-    if (!url) return;
-    if (url === "") editor?.chain().focus().unsetLink().run();
-    else editor?.chain().focus().setLink({ href: url }).run();
-  };
-
-  // Fixed navigation — this works 100%
+  
   const next = async () => {
     let valid = true;
 
-    if (step === 1) {
+    if (stepRef.current === 1) {
       valid = await trigger([
         "jobTitle",
         "jobType",
@@ -253,14 +217,12 @@ export default function CreateJobPage() {
         "workplace",
         "skillLevel",
       ]);
-    } else if (step === 2) {
-      const html = editor?.getHTML() || "";
-      setValue("description", html, { shouldValidate: true });
+    } else if (stepRef.current === 2) {
       valid = await trigger("description");
     }
 
     if (valid) {
-      setStep((prev) => prev + 1);
+      setStepSafe((prev) => prev + 1);
     }
   };
 
@@ -268,13 +230,14 @@ export default function CreateJobPage() {
     console.log("Job Published:", { ...data, applicationForm: sections });
     reset();
     setSections([sections[0]]);
-    setStep(1);
+    setStepSafe(1);
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="mx-auto px-6">
-        {/* Progress Bar */}
+    <DashboardLayout type="employer">
+      <div className="py-6">
+        <div className="max-w-[1000px] mx-auto px-6">
+          {/* Progress Bar */}
         <div className="flex items-center justify-between mb-12">
           {[
             {
@@ -295,7 +258,7 @@ export default function CreateJobPage() {
             },
             {
               id: 5,
-              title: "Preview",
+              title: "Review",
             },
           ].map((i) => (
             <div key={i.id} className="flex items-center flex-1">
@@ -325,7 +288,7 @@ export default function CreateJobPage() {
           ))}
         </div>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-12">
+        <div className="space-y-12">
           {/* Step 1: Job Details */}
           {step === 1 && (
             <Card className="bg-white border-0 shadow-none">
@@ -500,116 +463,36 @@ export default function CreateJobPage() {
           )}
 
           {/* Step 2: Job Description */}
-          {step === 2 && editor && (
+          {step === 2 && (
             <Card className="border-0 bg-white shadow-none">
               <CardHeader>
                 <CardTitle>Job Description</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="rounded-xl overflow-hidden">
-                  <div className="bg-gray-100 p-3 flex flex-wrap gap-2 items-center rounded-xl">
-                    <Menu as="div" className="relative">
-                      <MenuButton className="flex items-center gap-1 px-3 py-2 rounded hover:bg-white text-sm font-medium">
-                        {editor.isActive("heading", { level: 1 })
-                          ? "Heading 1"
-                          : editor.isActive("heading", { level: 2 })
-                          ? "Heading 2"
-                          : editor.isActive("heading", { level: 3 })
-                          ? "Heading 3"
-                          : "Paragraph"}
-                        <ChevronDown className="w-4 h-4" />
-                      </MenuButton>
-                      <MenuItems className="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg ring-1 ring-black/5 z-10">
-                        <MenuItem>
-                          <button
-                            onClick={() =>
-                              editor.chain().focus().setParagraph().run()
-                            }
-                            className="w-full text-left px-4 py-2 hover:bg-gray-100"
-                          >
-                            Paragraph
-                          </button>
-                        </MenuItem>
-                        {[1, 2, 3].map((l) => (
-                          <MenuItem key={l}>
-                            <button
-                              onClick={() =>
-                                editor
-                                  .chain()
-                                  .focus()
-                                  .toggleHeading({ level: l as 1 | 2 | 3 })
-                                  .run()
-                              }
-                              className="w-full text-left px-4 py-2 hover:bg-gray-100"
-                            >
-                              Heading {l}
-                            </button>
-                          </MenuItem>
-                        ))}
-                      </MenuItems>
-                    </Menu>
-
-                    <div className="h-6 w-px bg-gray-300 mx-2" />
-
-                    <Button
-                      type="button"
-                      size="icon"
-                      variant={editor.isActive("bold") ? "default" : "ghost"}
-                      onClick={() => editor.chain().focus().toggleBold().run()}
-                    >
-                      <Bold className="w-5 h-5" />
-                    </Button>
-                    <Button
-                      type="button"
-                      size="icon"
-                      variant={editor.isActive("italic") ? "default" : "ghost"}
-                      onClick={() =>
-                        editor.chain().focus().toggleItalic().run()
-                      }
-                    >
-                      <Italic className="w-5 h-5" />
-                    </Button>
-                    <Button
-                      type="button"
-                      size="icon"
-                      variant={
-                        editor.isActive("underline") ? "default" : "ghost"
-                      }
-                      onClick={() =>
-                        editor.chain().focus().toggleUnderline().run()
-                      }
-                    >
-                      <UnderlineIcon className="w-5 h-5" />
-                    </Button>
-                    <Button
-                      type="button"
-                      size="icon"
-                      variant={editor.isActive("strike") ? "default" : "ghost"}
-                      onClick={() =>
-                        editor.chain().focus().toggleStrike().run()
-                      }
-                    >
-                      <Strikethrough className="w-5 h-5" />
-                    </Button>
-                    <Button
-                      type="button"
-                      size="icon"
-                      variant="ghost"
-                      onClick={setLink}
-                    >
-                      <Link2 className="w-5 h-5" />
-                    </Button>
-                  </div>
-                  <EditorContent
+                <div className="rounded-xl">
+                  <ReactQuill 
+                    theme="snow"
+                    value={watch("description") || ""}
+                    onChange={(val) => {
+                      setValue("description", val, { shouldValidate: true });
+                    }}
                     className={cn(
-                      "bg-gray-100 rounded-xl mt-2",
+                      "bg-white rounded-xl mt-2 min-h-96",
                       errors.description && "border border-red-600"
                     )}
-                    editor={editor}
+                    modules={{
+                      toolbar: [
+                        [{ 'header': [1, 2, 3, false] }],
+                        ['bold', 'italic', 'underline', 'strike'],
+                        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+                        ['link'],
+                        ['clean']
+                      ],
+                    }}
                   />
                   <div className="mb-4">
                     <span className="text-right block text-xs text-gray-600 mt-1">
-                      {4000 - editor.getText().length} characters left
+                      {4000 - ((watch("description") || "").replace(/<[^>]*>?/gm, "").length)} characters left
                     </span>
                     {errors.description && (
                       <span className="text-red-600 flex text-xs gap-1 items-center">
@@ -661,7 +544,26 @@ export default function CreateJobPage() {
                           <span className="font-medium">{field.label}</span>
                           <div className="flex items-center gap-6">
                             <div className="flex items-center gap-2">
-                              <Checkbox checked={field.required} disabled />
+                              <Checkbox 
+                                checked={field.required} 
+                                disabled={field.protected}
+                                onCheckedChange={(checked) => {
+                                  setSections((s) =>
+                                    s.map((sec) =>
+                                      sec.id === section.id
+                                        ? {
+                                            ...sec,
+                                            fields: sec.fields.map((f) =>
+                                              f.id === field.id
+                                                ? { ...f, required: !!checked }
+                                                : f
+                                            ),
+                                          }
+                                        : sec
+                                    )
+                                  );
+                                }}
+                              />
                               <span className="text-sm text-gray-600">
                                 Required
                               </span>
@@ -695,6 +597,7 @@ export default function CreateJobPage() {
 
                     <div className="mt-6 flex gap-3">
                       <Input
+                      className="h-12!"
                         placeholder="Add new field (e.g. Portfolio URL)"
                         onKeyDown={(e) => {
                           if (
@@ -724,6 +627,7 @@ export default function CreateJobPage() {
                       />
                       <Button
                         type="button"
+                        className="h-12"
                         variant="outline"
                         onClick={(e) => {
                           const input = e.currentTarget
@@ -757,7 +661,7 @@ export default function CreateJobPage() {
                 ))}
 
                 <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
-                  <DialogTrigger asChild>
+                  <DialogTrigger className="h-12" asChild>
                     <Button variant="outline" className="w-full">
                       <Plus className="w-4 h-4 mr-2" /> Add New Section
                     </Button>
@@ -820,12 +724,14 @@ export default function CreateJobPage() {
                           key={stage.id}
                           stage={stage}
                           onRemove={() => remove(i)}
+                          onChangeTitle={(title) => update(i, { ...stage, title })}
                         />
                       ))}
                     </div>
                   </SortableContext>
                 </DndContext>
                 <Button
+                  type="button"
                   className="mt-6"
                   variant="outline"
                   onClick={() =>
@@ -841,42 +747,97 @@ export default function CreateJobPage() {
             </Card>
           )}
 
-          {/* Step 5: Preview */}
+          {/* Step 5: Review */}
           {step === 5 && (
-            <Card>
-              <CardHeader>
-                <CardTitle>Preview</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-8">
-                <div>
-                  <h1 className="text-3xl font-bold">{watch("jobTitle")}</h1>
-                  <p className="text-gray-600 mt-2">
-                    {watch("location")} • {watch("workplace")} •{" "}
-                    {watch("jobType")}
-                  </p>
+            <div className="space-y-0 bg-white rounded-2xl border border-gray-200 overflow-hidden">
+              {/* Job Details */}
+              <div className="px-8 py-6 border-b border-gray-100">
+                <div className="flex items-center justify-between mb-4">
+                  <h2 className="text-base font-semibold text-gray-900">Job Details</h2>
+                  <button type="button" onClick={() => setStepSafe(1)} className="text-sm text-blue-600 flex items-center gap-1 hover:text-blue-800">
+                    Edit <Pencil className="w-3.5 h-3.5 text-dark-blue" />
+                  </button>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {[watch("jobTitle"), watch("jobType"), watch("location"), watch("workplace"), watch("skillLevel")].filter(Boolean).map((tag, i) => (
+                    <span key={i} className="px-3 py-1.5 border border-gray-200 rounded-lg text-sm text-gray-700 bg-white">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Job Description */}
+              <div className="px-8 py-6 border-b border-gray-100">
+                <div className="flex items-center justify-between mb-4">
+                  <h2 className="text-base font-semibold text-gray-900">Job Description</h2>
+                  <button type="button" onClick={() => setStepSafe(2)} className="text-sm text-blue-600 flex items-center gap-1 hover:text-blue-800">
+                    Edit <Pencil className="w-3.5 h-3.5 text-dark-blue" />
+                  </button>
                 </div>
                 <div
-                  className="prose prose-lg max-w-none"
-                  dangerouslySetInnerHTML={{
-                    __html: watch("description") || "",
-                  }}
+                  className="prose prose-sm max-w-none border border-gray-200 rounded-xl p-5 bg-white text-gray-700 leading-relaxed"
+                  dangerouslySetInnerHTML={{ __html: watch("description") || "" }}
                 />
-                <div>
-                  <h2 className="text-2xl font-bold mt-12 mb-4">
-                    Hiring Process
-                  </h2>
-                  <ol className="list-decimal pl-6 space-y-2 text-lg">
-                    {watch("hiringStages").map((s) => (
-                      <li key={s.id}>{s.title}</li>
-                    ))}
-                  </ol>
+              </div>
+
+              {/* Hiring Stages */}
+              <div className="px-8 py-6 border-b border-gray-100">
+                <div className="flex items-center justify-between mb-4">
+                  <h2 className="text-base font-semibold text-gray-900">Hiring Stages</h2>
+                  <button type="button" onClick={() => setStepSafe(4)} className="text-sm text-blue-600 flex items-center gap-1 hover:text-blue-800">
+                    Edit <Pencil className="w-3.5 h-3.5 text-dark-blue" />
+                  </button>
                 </div>
-              </CardContent>
-            </Card>
+                <div className="flex flex-wrap gap-2">
+                  {watch("hiringStages").map((s, i) => (
+                    <span key={s.id} className="px-3 py-1.5 border border-gray-200 rounded-lg text-sm text-gray-700 bg-white">
+                      {i + 1}. {s.title}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Application Form */}
+              <div className="px-8 py-6">
+                <div className="flex items-center justify-between mb-5">
+                  <h2 className="text-base font-semibold text-gray-900">Application Form</h2>
+                  <button type="button" onClick={() => setStepSafe(3)} className="text-sm text-blue-600 flex items-center gap-1 hover:text-blue-800">
+                    Edit <Pencil className="w-3.5 h-3.5 text-dark-blue" />
+                  </button>
+                </div>
+                <div className="space-y-5">
+                  {sections.map((section) => (
+                    <div key={section.id}>
+                      <p className="text-sm font-medium text-gray-500 mb-2">{section.title}</p>
+                      <div className="flex flex-wrap gap-2">
+                        {section.fields.map((field) => (
+                          <span key={field.id} className="px-3 py-1.5 border border-gray-200 rounded-lg text-sm text-gray-700 bg-white flex items-center gap-1">
+                            {field.label}
+                            {field.required && <span className="text-red-500 font-bold">*</span>}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           )}
 
           {/* Navigation */}
-          <div className="flex gap-8">
+          <div className="flex justify-end items-center gap-4">
+            <Button
+              type="button"
+              variant="outline"
+              className={cn(
+                "h-12 rounded-xl px-10 border-gray-300",
+                step === 1 && "invisible"
+              )}
+              onClick={() => setStepSafe((s) => Math.max(1, s - 1))}
+            >
+              Back
+            </Button>
             {step < 5 ? (
               <Button
                 className="bg-dark-blue h-12 rounded-xl px-10"
@@ -888,27 +849,18 @@ export default function CreateJobPage() {
               </Button>
             ) : (
               <Button
-                type="submit"
+                type="button"
                 size="lg"
-                className="bg-green-600 hover:bg-green-700"
+                className="bg-[#f2c060] hover:bg-[#e0b050] text-[#222364] font-semibold h-12 rounded-xl px-10"
+                onClick={() => handleSubmit(onSubmit)()}
               >
                 Publish Job
               </Button>
             )}
-            <Button
-              type="button"
-              variant="outline"
-              className={cn(
-                "h-12 rounded-xl px-10 border-gray-300",
-                step === 1 && "hidden"
-              )}
-              onClick={() => setStep((s) => Math.max(1, s - 1))}
-            >
-              Back
-            </Button>
           </div>
-        </form>
+        </div>
+        </div>
       </div>
-    </div>
+    </DashboardLayout>
   );
 }

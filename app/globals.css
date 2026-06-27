@@ -121,6 +121,9 @@
   * {
     @apply border-border outline-ring/50;
   }
+  a, button, [role="button"] {
+    cursor: pointer !important;
+  }
   html {
     scrollbar-gutter: stable !important; /* keeps space for scrollbar even when hidden */
   }
@@ -132,14 +135,7 @@
 
   }
 
-  .scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
 
-.scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
-}
 
   /* Remove the eye icon in Edge and IE */
   input[type="password"]::-ms-reveal,
@@ -177,4 +173,185 @@
 /* Fix list spacing */
 .prose ul, .prose ol { @apply my-4 pl-6; }
 .prose li { @apply my-2; }
+
+  /* Custom elegant scrollbar for internal containers (visible on hover) */
+  .overflow-y-auto::-webkit-scrollbar,
+  .overflow-y-scroll::-webkit-scrollbar,
+  .overflow-x-auto::-webkit-scrollbar,
+  .overflow-x-scroll::-webkit-scrollbar,
+  .overflow-auto::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .overflow-y-auto::-webkit-scrollbar-track,
+  .overflow-y-scroll::-webkit-scrollbar-track,
+  .overflow-x-auto::-webkit-scrollbar-track,
+  .overflow-x-scroll::-webkit-scrollbar-track,
+  .overflow-auto::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .overflow-y-auto::-webkit-scrollbar-thumb,
+  .overflow-y-scroll::-webkit-scrollbar-thumb,
+  .overflow-x-auto::-webkit-scrollbar-thumb,
+  .overflow-x-scroll::-webkit-scrollbar-thumb,
+  .overflow-auto::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 10px;
+  }
+  
+  .overflow-y-auto:hover::-webkit-scrollbar-thumb,
+  .overflow-y-scroll:hover::-webkit-scrollbar-thumb,
+  .overflow-x-auto:hover::-webkit-scrollbar-thumb,
+  .overflow-x-scroll:hover::-webkit-scrollbar-thumb,
+  .overflow-auto:hover::-webkit-scrollbar-thumb {
+    background: rgba(156, 163, 175, 0.5); /* Tailwind gray-400 */
+  }
+  
+  .overflow-y-auto::-webkit-scrollbar-thumb:hover,
+  .overflow-y-scroll::-webkit-scrollbar-thumb:hover,
+  .overflow-x-auto::-webkit-scrollbar-thumb:hover,
+  .overflow-x-scroll::-webkit-scrollbar-thumb:hover,
+  .overflow-auto::-webkit-scrollbar-thumb:hover {
+    background: rgba(107, 114, 128, 0.8); /* Tailwind gray-500 */
+  }
+
+  /* Firefox fallback */
+  .overflow-y-auto,
+  .overflow-y-scroll,
+  .overflow-x-auto,
+  .overflow-x-scroll,
+  .overflow-auto {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+  }
+  
+  .overflow-y-auto:hover,
+  .overflow-y-scroll:hover,
+  .overflow-x-auto:hover,
+  .overflow-x-scroll:hover,
+  .overflow-auto:hover {
+    scrollbar-color: rgba(156, 163, 175, 0.5) transparent;
+  }
+}
+
+/* Quill Editor Overrides */
+.ql-container {
+  min-height: 24rem;
+  font-family: inherit !important;
+  font-size: 1.125rem !important;
+}
+.ql-editor {
+  min-height: 24rem;
+}
+.ql-toolbar {
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+  background: var(--color-gray-50);
+}
+.ql-container {
+  border-bottom-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+}
+
+/* Quill Tooltips */
+.ql-toolbar button { position: relative; }
+.ql-toolbar button:hover::after {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 10;
+}
+.ql-toolbar button.ql-bold:hover::after { content: "Bold"; }
+.ql-toolbar button.ql-italic:hover::after { content: "Italic"; }
+.ql-toolbar button.ql-underline:hover::after { content: "Underline"; }
+.ql-toolbar button.ql-strike:hover::after { content: "Strikethrough"; }
+.ql-toolbar button.ql-link:hover::after { content: "Insert Link"; }
+.ql-toolbar button.ql-clean:hover::after { content: "Clear Formatting"; }
+.ql-toolbar button.ql-list[value='ordered']:hover::after { content: "Numbered List"; }
+.ql-toolbar button.ql-list[value='bullet']:hover::after { content: "Bulleted List"; }
+.ql-toolbar span.ql-header:hover::after { content: "Heading Style"; }
+
+/* Modern Quill Tooltip Styling */
+.ql-tooltip {
+  background: white !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 0.75rem !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+  padding: 12px 16px !important;
+  transform: translateY(10px) !important;
+  transition: all 0.2s ease-in-out !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  z-index: 50 !important;
+}
+
+.ql-tooltip.ql-hidden {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: translateY(5px) !important;
+}
+
+.ql-tooltip input[type="text"] {
+  border: 1px solid #d1d5db !important;
+  border-radius: 0.5rem !important;
+  padding: 8px 12px !important;
+  font-size: 14px !important;
+  outline: none !important;
+  transition: border-color 0.15s ease-in-out !important;
+  min-width: 250px !important;
+}
+
+.ql-tooltip input[type="text"]:focus {
+  border-color: var(--color-dark-blue) !important;
+  box-shadow: 0 0 0 2px rgba(34, 35, 100, 0.1) !important;
+}
+
+.ql-tooltip a.ql-action::after {
+  content: "Save" !important;
+  background: var(--color-dark-blue) !important;
+  color: white !important;
+  padding: 8px 16px !important;
+  border-radius: 0.5rem !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: background-color 0.15s ease-in-out !important;
+  margin-left: 0 !important;
+}
+
+.ql-tooltip a.ql-action:hover::after {
+  background: #1a1a4b !important;
+}
+
+.ql-tooltip::before {
+  content: "URL:" !important;
+  font-size: 14px !important;
+  color: #4b5563 !important;
+  font-weight: 500 !important;
+  margin-right: 4px !important;
+  display: none !important; /* Hide the ugly default text */
+}
+
+/* Hide default edit/remove buttons to style them nicely if in view mode */
+.ql-tooltip:not(.ql-editing) a.ql-action::after {
+  content: "Edit" !important;
+}
+.ql-tooltip:not(.ql-editing) a.ql-remove::before {
+  content: "Remove" !important;
+  color: #dc2626 !important;
+  font-weight: 500 !important;
+  margin-left: 8px !important;
+  cursor: pointer !important;
 }

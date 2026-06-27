@@ -1,38 +1,38 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import { Toaster } from "@/components/ui/sonner";
+import type { Metadata } from"next";
+import { Geist, Geist_Mono } from"next/font/google";
+import"./globals.css";
+import { Toaster } from"@/components/ui/sonner";
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+ variable:"--font-geist-sans",
+ subsets: ["latin"],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+ variable:"--font-geist-mono",
+ subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "OTK Outsourcing",
-  description: "Personnel, E-Learning, Logistics",
+ title:"OTK Outsourcing",
+ description:"Personnel, E-Learning, Logistics",
 };
 
 export default function RootLayout({
-  children,
+ children,
 }: Readonly<{
-  children: React.ReactNode;
+ children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} leading-loose antialiased bg-gray-50 text-sm`}
-      >
-        <div>
-          {children}
-          <Toaster position="top-right" richColors />
-        </div>
-      </body>
-    </html>
-  );
+ return (
+ <html lang="en">
+ <body
+ className={`${geistSans.variable} ${geistMono.variable} font-sans leading-loose antialiased bg-gray-50 text-sm`}
+ >
+ <div>
+ {children}
+ <Toaster position="top-right"richColors />
+ </div>
+ </body>
+ </html>
+ );
 }
