@@ -160,6 +160,11 @@ const LoginPage = () => {
  >
  Incorrect email or password
  </p>
+ <div className="flex justify-end mt-2">
+ <Link href="/forgot-password" className="text-sm font-semibold text-dark-blue hover:underline">
+ Forgot password?
+ </Link>
+ </div>
  </div>
 
  <Button

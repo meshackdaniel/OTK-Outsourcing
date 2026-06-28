@@ -126,7 +126,7 @@ export function Navbar() {
                     <div className="col-span-12 mt-6 pt-6 border-t border-gray-100 flex items-center justify-between">
                       <p className="text-sm text-gray-600">We're helping thousands of workers find flexible jobs, fair pay, and career growth.</p>
                       <div className="flex items-center gap-3">
-                        <Link href="/talent/jobs">
+                        <Link href="/signup">
                           <Button variant="outline" className="border-[#222364] text-[#222364] hover:bg-blue-50 px-6 h-10 rounded-xl font-semibold">
                             Find Work
                           </Button>
@@ -154,15 +154,15 @@ export function Navbar() {
                       <div>
                         <h4 className="text-xs font-bold text-gray-400 mb-6 tracking-wider">FIND WORK</h4>
                         <div className="space-y-6">
-                          <Link href="/talent/jobs" className="block group">
+                          <Link href="/signup" className="block group">
                             <h5 className="font-bold text-gray-900 group-hover:text-[#222364] transition text-sm mb-1">Browse Jobs</h5>
                             <p className="text-xs text-gray-500 leading-relaxed">Explore available opportunities tailored to you</p>
                           </Link>
-                          <Link href="/talent/profile" className="block group">
+                          <Link href="/signup" className="block group">
                             <h5 className="font-bold text-gray-900 group-hover:text-[#222364] transition text-sm mb-1">Build Profile</h5>
                             <p className="text-xs text-gray-500 leading-relaxed">Showcase your skills to top employers</p>
                           </Link>
-                          <Link href="/talent/wallet" className="block group">
+                          <Link href="/signup" className="block group">
                             <h5 className="font-bold text-gray-900 group-hover:text-[#222364] transition text-sm mb-1">Wallet & Payments</h5>
                             <p className="text-xs text-gray-500 leading-relaxed">Secure, automated payments directly to you</p>
                           </Link>
@@ -173,15 +173,11 @@ export function Navbar() {
                       <div>
                         <h4 className="text-xs font-bold text-gray-400 mb-6 tracking-wider">CAREER GROWTH</h4>
                         <div className="space-y-6">
-                          <Link href="/talent/skills" className="block group">
-                            <h5 className="font-bold text-gray-900 group-hover:text-[#222364] transition text-sm mb-1">Upskill Programs</h5>
-                            <p className="text-xs text-gray-500 leading-relaxed">Access training and resources to grow</p>
-                          </Link>
-                          <Link href="/talent/certifications" className="block group">
+                          <Link href="/signup" className="block group">
                             <h5 className="font-bold text-gray-900 group-hover:text-[#222364] transition text-sm mb-1">Certifications</h5>
                             <p className="text-xs text-gray-500 leading-relaxed">Verify your expertise and earn more</p>
                           </Link>
-                          <Link href="/talent/community" className="block group">
+                          <Link href="/signup" className="block group">
                             <h5 className="font-bold text-gray-900 group-hover:text-[#222364] transition text-sm mb-1">Talent Community</h5>
                             <p className="text-xs text-gray-500 leading-relaxed">Connect with other professionals</p>
                           </Link>
@@ -241,11 +237,11 @@ export function Navbar() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
-              {/* Resources */}
+              {/* About */}
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link href="/faq" className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-[15px] font-medium transition-colors hover:bg-gray-50/50 hover:text-gray-900 focus:bg-gray-50/50 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-50/50 data-[state=open]:bg-gray-50/50 text-gray-800">
-                    Resources
+                  <Link href="/about" className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-[15px] font-medium transition-colors hover:bg-gray-50/50 hover:text-gray-900 focus:bg-gray-50/50 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-50/50 data-[state=open]:bg-gray-50/50 text-gray-800">
+                    About
                   </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
@@ -253,8 +249,8 @@ export function Navbar() {
               {/* Why OTK */}
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link href="/contact" className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-[15px] font-medium transition-colors hover:bg-gray-50/50 hover:text-gray-900 focus:bg-gray-50/50 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-50/50 data-[state=open]:bg-gray-50/50 text-gray-800">
-                    Why Otk
+                  <Link href="/why-otk" className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-[15px] font-medium transition-colors hover:bg-gray-50/50 hover:text-gray-900 focus:bg-gray-50/50 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-50/50 data-[state=open]:bg-gray-50/50 text-gray-800">
+                    Why OTK
                   </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
@@ -311,15 +307,15 @@ export function Navbar() {
                 <div>
                   <p className="font-bold text-gray-900 mb-3 text-sm tracking-wide">For Talents</p>
                   <ul className="space-y-3 pl-2">
-                    <li><Link href="/talent/jobs" onClick={() => setMobileOpen(false)} className="block text-sm text-gray-600 hover:text-[#222364] transition">Find Jobs</Link></li>
+                    <li><Link href="/signup" onClick={() => setMobileOpen(false)} className="block text-sm text-gray-600 hover:text-[#222364] transition">Find Jobs</Link></li>
                     <li><Link href="/how-it-works" onClick={() => setMobileOpen(false)} className="block text-sm text-gray-600 hover:text-[#222364] transition">How It Works</Link></li>
                   </ul>
                 </div>
 
                 {/* Mobile Simple Links */}
                 <div className="pt-2">
-                  <Link href="/faq" onClick={() => setMobileOpen(false)} className="block py-2 font-bold text-gray-900 text-sm hover:text-[#222364] transition">Resources</Link>
-                  <Link href="/contact" onClick={() => setMobileOpen(false)} className="block py-2 font-bold text-gray-900 text-sm hover:text-[#222364] transition">Why OTK</Link>
+                  <Link href="/about" onClick={() => setMobileOpen(false)} className="block py-2 font-bold text-gray-900 text-sm hover:text-[#222364] transition">About</Link>
+                  <Link href="/why-otk" onClick={() => setMobileOpen(false)} className="block py-2 font-bold text-gray-900 text-sm hover:text-[#222364] transition">Why OTK</Link>
                 </div>
               </nav>
 

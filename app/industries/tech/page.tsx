@@ -3,120 +3,137 @@ import { Navbar } from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { ReadyToTransformCTA } from "@/components/layout/ReadyToTransformCTA";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, Code2, Database, Smartphone } from "lucide-react";
 import PartnersMarquee from "@/components/layout/PartnersMarquee";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export default function TechIndustryPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white font-sans text-gray-900">
       <Navbar />
       <main>
-        {/* Hero Section */}
-        <section className="bg-gray-900 pt-24 pb-32 text-white relative overflow-hidden">
-          <div className="absolute inset-0 bg-[url('/pattern.svg')] opacity-10"></div>
-          <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-gray-300 text-sm font-semibold mb-6">
-                  <span className="w-2 h-2 rounded-full bg-blue-500"></span>
-                  Industry Expertise
-                </div>
-                <h1 className="text-4xl lg:text-6xl font-black mb-6 leading-tight">
-                  Top-Tier <span className="text-blue-500">Tech & Development</span> Talent
-                </h1>
-                <p className="text-lg text-gray-400 mb-8 max-w-xl leading-relaxed">
-                  Hire world-class UI/UX designers, developers, and QA testers. Scale your engineering team rapidly with pre-vetted experts.
-                </p>
-                <div className="flex gap-4">
-                  <Link href="/employer/jobs/create">
-                    <Button className="bg-blue-600 hover:bg-blue-700 text-white h-12 px-8 rounded-xl font-bold border-0">
-                      Hire Developers
-                    </Button>
-                  </Link>
-                  <Link href="/contact">
-                    <Button variant="outline" className="border-white/20 text-white hover:bg-white/10 h-12 px-8 rounded-xl font-bold bg-transparent">
-                      Talk to Sales
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-              <div className="hidden lg:block relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-gray-900 to-transparent z-10"></div>
-                <div className="bg-white/5 rounded-3xl p-8 border border-white/10 backdrop-blur-sm relative">
-                   <div className="flex items-center gap-4 mb-8">
-                     <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center shadow-inner">
-                       <Code2 className="w-8 h-8 text-white" />
-                     </div>
-                     <div>
-                       <h3 className="font-bold text-xl text-white">Full-Stack Experts</h3>
-                       <p className="text-gray-400 text-sm">React, Node.js, Python</p>
-                     </div>
-                   </div>
-                   <div className="space-y-4">
-                     {[
-                       "Frontend & Backend Engineers",
-                       "Mobile App Developers (iOS/Android)",
-                       "UI/UX Product Designers",
-                       "QA Automation Testers"
-                     ].map((item, idx) => (
-                       <div key={idx} className="flex items-center gap-3 bg-white/5 p-4 rounded-xl border border-white/5">
-                         <CheckCircle2 className="w-5 h-5 text-blue-500 shrink-0" />
-                         <span className="text-sm font-medium text-white">{item}</span>
-                       </div>
-                     ))}
-                   </div>
-                </div>
-              </div>
-            </div>
+        {/* 1. Typography-Led Hero Section */}
+        <section className="pt-24 lg:pt-32 pb-16 px-4 lg:px-8 max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl lg:text-[5rem] font-black tracking-tight leading-[1.1] mb-8 text-gray-900">
+            Top-Tier <br />
+            <span className="text-blue-600">Tech Talent.</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-500 max-w-3xl mx-auto font-medium mb-12">
+            Hire world-class UI/UX designers, developers, and QA testers. Scale your engineering team rapidly with pre-vetted experts.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link href="/employer/jobs/create">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white h-14 px-10 rounded-full font-bold text-lg border-0">
+                Hire Developers
+              </Button>
+            </Link>
+          </div>
+        </section>
+
+        {/* Huge Hero Image */}
+        <section className="px-4 lg:px-8 max-w-7xl mx-auto mb-24">
+          <div className="w-full h-[500px] md:h-[700px] bg-gray-100 rounded-[2rem] overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=2850&q=80" alt="Software Engineering" className="w-full h-full object-cover" />
           </div>
         </section>
 
         {/* Partners Marquee */}
-        <section className="py-12 border-b border-gray-100 bg-white">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center mb-6">
-            <p className="text-sm font-bold text-gray-400 tracking-wider">OUR TALENT POWERS INNOVATIVE TEAMS</p>
+        <section className="py-12 border-y border-gray-100 bg-white mb-24">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center mb-8">
+            <p className="text-sm font-bold text-gray-400 tracking-widest uppercase">Our talent powers innovative teams</p>
           </div>
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <PartnersMarquee />
           </div>
         </section>
 
-        {/* Roles Section */}
-        <section className="py-24 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-black text-gray-900 mb-4">Specialized Tech Roles</h2>
-              <p className="text-gray-500 max-w-2xl mx-auto">We provide experienced professionals across the entire software development lifecycle.</p>
+        {/* 2. The "Mission/Statement" Block */}
+        <section className="py-24 px-4 lg:px-8 max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl md:text-5xl font-black text-gray-900 leading-tight mb-8">
+            "We supply the technical horsepower needed to turn your product roadmap into a reality."
+          </h2>
+          <p className="text-xl text-gray-500 font-medium">
+            From React frontend wizards to scalable Node.js and Python backend architects. We supply talent fluent in modern tech stacks.
+          </p>
+        </section>
+
+        {/* 3. Staggered Content Sections (Z-Pattern Layout) */}
+        <section className="py-24 px-4 lg:px-8 max-w-7xl mx-auto space-y-32">
+          {/* Row 1: Image Left, Text Right */}
+          <div className="flex flex-col lg:flex-row items-center gap-16">
+            <div className="w-full lg:w-1/2 h-[400px] md:h-[600px] bg-gray-100 rounded-[2rem] overflow-hidden">
+               <img src="https://images.unsplash.com/photo-1607799279861-4dd97b876948?auto=format&fit=crop&w=1000&q=80" alt="Full-Stack Developers" className="w-full h-full object-cover" />
             </div>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-3xl border border-gray-100">
-                <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
-                  <Code2 className="w-7 h-7 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Software Engineering</h3>
-                <p className="text-gray-500 leading-relaxed text-sm">From React frontend wizards to scalable Node.js and Python backend architects. We supply talent fluent in modern tech stacks.</p>
-              </div>
-              <div className="bg-white p-8 rounded-3xl border border-gray-100">
-                <div className="w-14 h-14 bg-purple-50 rounded-2xl flex items-center justify-center mb-6">
-                  <Smartphone className="w-7 h-7 text-purple-600" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Product Design (UI/UX)</h3>
-                <p className="text-gray-500 leading-relaxed text-sm">Designers who understand user psychology and translate complex requirements into beautiful, intuitive interfaces.</p>
-              </div>
-              <div className="bg-white p-8 rounded-3xl border border-gray-100">
-                <div className="w-14 h-14 bg-green-50 rounded-2xl flex items-center justify-center mb-6">
-                  <Database className="w-7 h-7 text-green-600" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">QA & Infrastructure</h3>
-                <p className="text-gray-500 leading-relaxed text-sm">Ensure your product's reliability with manual testers, automation engineers, and DevOps specialists.</p>
+            <div className="w-full lg:w-1/2">
+              <h3 className="text-3xl md:text-4xl font-black text-gray-900 mb-6">Full-Stack Experts</h3>
+              <p className="text-lg text-gray-500 mb-8 leading-relaxed">
+                Our engineers don't just write code; they build scalable architectures. We vet for algorithmic thinking, system design, and the ability to write clean, maintainable code.
+              </p>
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-center gap-4 text-lg font-bold text-gray-900">
+                  <span className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center shrink-0">1</span>
+                  Frontend (React, Vue, Angular)
+                </li>
+                <li className="flex items-center gap-4 text-lg font-bold text-gray-900">
+                  <span className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center shrink-0">2</span>
+                  Backend (Node.js, Python, Go)
+                </li>
+                <li className="flex items-center gap-4 text-lg font-bold text-gray-900">
+                  <span className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center shrink-0">3</span>
+                  Mobile (React Native, iOS, Android)
+                </li>
+              </ul>
+              <Link href="/employer/jobs/create" className="inline-flex items-center gap-2 text-blue-600 font-bold text-lg hover:underline group">
+                Hire engineers <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Row 2: Text Left, Image Right */}
+          <div className="flex flex-col lg:flex-row-reverse items-center gap-16">
+            <div className="w-full lg:w-1/2 h-[400px] md:h-[600px] bg-gray-100 rounded-[2rem] overflow-hidden">
+               <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=1000&q=80" alt="Product Design & QA" className="w-full h-full object-cover" />
+            </div>
+            <div className="w-full lg:w-1/2">
+              <h3 className="text-3xl md:text-4xl font-black text-gray-900 mb-6">Product Design & QA</h3>
+              <p className="text-lg text-gray-500 mb-8 leading-relaxed">
+                Great software is reliable and beautiful. Complement your engineering team with world-class UI/UX designers and rigorous QA automation testers.
+              </p>
+              <div className="bg-blue-50 p-8 rounded-3xl">
+                <h4 className="text-xl font-bold text-blue-900 mb-4">Complete Lifecycle</h4>
+                <p className="text-blue-800">
+                  We provide experienced professionals across the entire software development lifecycle, ensuring your product is flawlessly designed, built, and tested before it reaches your users.
+                </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Bottom CTA */}
-        <div className="max-w-7xl mx-auto px-4 lg:px-8 mb-8 mt-24">
+        {/* 4. Stats/Impact Section */}
+        <section className="py-24 bg-blue-600 text-white my-24">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="grid md:grid-cols-3 gap-12 text-center divide-y md:divide-y-0 md:divide-x divide-white/20">
+              <div className="pt-8 md:pt-0">
+                <div className="text-6xl md:text-7xl font-black text-white mb-4">5+</div>
+                <div className="text-xl font-bold text-blue-100 mb-2">Years Avg. Experience</div>
+                <p className="text-blue-200">Our talent pool consists of battle-tested seniors.</p>
+              </div>
+              <div className="pt-8 md:pt-0">
+                <div className="text-6xl md:text-7xl font-black text-white mb-4">50+</div>
+                <div className="text-xl font-bold text-blue-100 mb-2">Technologies Supported</div>
+                <p className="text-blue-200">From legacy systems to cutting-edge AI stacks.</p>
+              </div>
+              <div className="pt-8 md:pt-0">
+                <div className="text-6xl md:text-7xl font-black text-white mb-4">100%</div>
+                <div className="text-xl font-bold text-blue-100 mb-2">Code Ownership</div>
+                <p className="text-blue-200">You retain all IP rights to the software built.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 5. Bottom CTA */}
+        <div className="max-w-7xl mx-auto px-4 lg:px-8 mb-16">
           <ReadyToTransformCTA 
             title="Accelerate Your Roadmap"
             subtitle="Hire top tech talent today and ship products faster."

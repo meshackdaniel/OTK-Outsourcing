@@ -4,7 +4,9 @@ import { Search, Bell, ChevronDown, Menu } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { useSidebar } from "@/components/ui/sidebar";
 
-export function DashboardTopNav({ userRole }: { userRole: "Employer" | "Talent" | "Affiliate"}) {
+export function DashboardTopNav({ userRole }: { 
+ userRole: "Employer" | "Talent" | "Affiliate" | "Admin";
+}) {
   const { toggleSidebar } = useSidebar();
 
   return (

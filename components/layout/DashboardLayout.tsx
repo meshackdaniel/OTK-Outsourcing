@@ -7,9 +7,9 @@ export function DashboardLayout({
  type,
 }: {
  children: React.ReactNode;
- type:"employer"|"talent"|"affiliate";
+ type:"employer"|"talent"|"affiliate"|"admin";
 }) {
- const roleName = type ==="employer"?"Employer": type ==="talent"?"Talent":"Affiliate";
+ const roleName = type ==="employer"?"Employer": type ==="talent"?"Talent": type === "admin" ? "Admin" : "Affiliate";
 
  return (
  <SidebarProvider>

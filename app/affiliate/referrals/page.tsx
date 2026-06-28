@@ -1,7 +1,26 @@
 "use client";
 
 import { useState } from "react";
-import { Copy, Users, Briefcase, DollarSign, Activity } from "lucide-react";
+import { Copy, Users, Briefcase, Activity } from "lucide-react";
+
+const NairaSign = (props: any) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M6 21V3l12 18V3" />
+    <path d="M4 10h16" />
+    <path d="M4 14h16" />
+  </svg>
+);
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -12,7 +31,7 @@ const stats = [
   { title: "Total Referrals", value: "142", change: "+12%", icon: Users },
   { title: "Active Referrals", value: "38", change: "+5%", icon: Activity },
   { title: "Pending Commissions", value: "₦45,000", change: "-2%", icon: Briefcase },
-  { title: "Total Earned", value: "₦1,250,000", change: "+18%", icon: DollarSign },
+  { title: "Total Earned", value: "₦1,250,000", change: "+18%", icon: NairaSign },
 ];
 
 const clientReferrals = [

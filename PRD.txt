@@ -1,0 +1,1459 @@
+OaaS (Outsourcing as a Service)
+End-to-End Operational, Revenue & Marketing Workflow
+DOCUMENT PURPOSE
+This document defines the complete operational, financial, and marketing architecture of the OaaS platform.
+OaaS operates as a multi-revenue managed workforce & software platform, not merely a job board.
+PLATFORM POSITIONING
+OaaS is a: Workforce infrastructure platform providing hiring, managed outsourcing, and recruitment software solutions.
+CORE OPERATING PRINCIPLES
+Wallet-First Control
+•	No deployment without funded wallet
+•	No service activation without payment
+•	No payout without approved logs
+Revenue Before Disbursement
+•	Platform earnings are retained before any payout.
+
+Compliance by Design
+•	PAYE, VAT, and WHT embedded at transaction stages.
+
+Modular Revenue Architecture
+•	Each module operates independently but feeds into one financial control system.
+
+OaaS OPERATIONS MODULES
+The OaaS platform operates through seven core modules:
+1.	Client registration & onboarding module
+2.	Talent registration & Personnel Module
+3.	Job Posting, Talent Matching & Deployment Module
+4.	Managed Outsourcing-as-a-Service Solution Module
+5.	Outsourcing Technology-as-a-Solution Module
+6.	Affiliate registration & onboarding module
+7.	Admin & Governance Module
+OaaS EARNINGS & COMMERCIAL MODULES
+The platform consists of three distinct but interconnected commercial modules:
+1.	Job Board & Talent Marketplace earning
+2.	Managed OaaS (Outsourcing & Workforce Management) earnings
+3.	Software & Technology Solutions earnings
+4.	Affiliate earnings and commissions
+5.	Member wallet withdrawals & payouts
+6.	Statutory & compliance modules
+7.	Admin & governance modules
+Each module has its own earning model, billing logic, and compliance structure.
+OaaS MARKETING MODULES
+1.	Client marketing offers
+o	Attraction offers
+o	Upsell offers
+o	Downsell offers
+o	Continuity offers
+2.	Talent marketing offers
+o	Attraction offers
+o	Upsell offers
+o	Downsell offers
+o	Continuity offers
+3.	Affiliate marketing offers
+o	Attraction offers
+o	Upsell offers
+o	Downsell offers
+o	Continuity offers
+OaaS OPERATIONS WORKFLOWS
+1.	Client registration & Job placement onboarding workflows:
+→ Client lands on the hero page
+→ Client review OaaS offerings
+→ Client registers
+o	Company name
+o	Contact person name:
+o	Contact person designation:
+o	Company contact details: address, phone #, email address
+o	Company sector: IT, Engineering, Health, Manufacturing, Logistics etc
+→ Client dashboard account is created automatically with eWallet ID
+→ Client executes platform service level agreement (SLA)
+→ Client selects product / service offerings
+o	Job board & placement
+o	Managed Outsourcing-as-a-Service
+o	Software -as-a-Solution
+→ Client funds eWallet
+→ System confirms receipt of funds in corporate wallet
+o	Negative confirmation - process stalls
+o	Positive confirmation – process continues
+→ Client posts vacancies on job board (for a fee/vacancy/month or freemium) 
+→ Platform auto-matches job placement & talents
+→ Client receives email notification of talent
+→ Client approves preferred candidate(s)
+→ Client receives talent notification for engagement
+
+2.	Talent registration & Personnel Module
+→Talent lands on the hero page
+→ Talent browses platform offerings
+→ Talent registers
+o	Talent name:
+o	Talent personal names:
+o	Talent contact details: address, phone #, email address, referees
+o	Talent interested sector: IT, Engineering, Health, Manufacturing, Logistics etc
+→ Talent dashboard account is created automatically with eWallet ID.
+→ Talent executes SLA
+→ Talent uploads curriculum vitae, supporting documents in pdf & cover letter
+→Talent CV is processed for auto matching
+→ Talent CV is auto matched with advertised job vacancies
+→ Talent receives inbuilt messenger notification of CV selection
+→ Talent approves company nomination
+→ Talent sends inbuilt messenger notification of availability for engagement
+→ Talent is deployed
+3.	Job Posting, Talent Matching & Deployment Module
+→ Client posts job requirements on job board
+→ Client indicates preferred agency model
+o	One-off success fee
+o	Retained executive search
+o	Contract / temporary markup
+o	Temporary-to-permanent model
+→ Client funds eWallet
+→ System confirms receipt of funds in corporate wallet
+o	Negative confirmation - process stalls
+o	Positive confirmation – process continues
+→ Platform performs system compliance checks:
+o	Client registration – complete
+o	System offer selection – complete
+o	Wallet funded correctly – complete
+→ Client executes SLA
+→ Platform browses talent database for matching
+→ Platform matches personnel based on defined logic:
+o	Job designation
+o	Years of experience
+o	Academic qualifications
+o	Professional training & development
+→ Platform notifies company of selected talents via inbuilt messenger
+→ Company approves/disapproves selected talents
+→ Platform receives company approval / disapproval
+o	Approved – process continues
+o	Disapproved – process repeats itself
+→ Platform sends notification to talent on selection
+→Talent approves notifications
+→ Talent details are deployed to client for onward engagement
+→ Transaction ends
+
+
+
+
+
+4.	Managed Outsourcing-as-a-Service Solution Module
+→ Client selects product / service offerings
+o	Job board & placement
+o	Managed Outsourcing-as-a-Service
+o	Software -as-a-Solution
+→ Client indicates preferred outsourcing model
+o	Premium subscriptions
+o	Job posting featuring slots package
+o	Outsourcing-as-a-service hybrid model
+o	On-demand recruiting
+→ Client funds eWallet 
+→ System confirms receipt of funds in corporate wallet
+o	Negative confirmation - process stalls
+o	Positive confirmation – process continues
+→ Client executes SLA
+→ Client specifies talent requirement
+→ Platform performs system compliance checks:
+o	Client registration – complete
+o	System offer selection - complete
+o	Wallet funded - complete
+→ Platform browses talent database for matching
+→ Platform matches personnel based on defined logic:
+o	Job designation
+o	Years of experience
+o	Academic qualifications
+o	Professional training & development
+→ Platform notifies company of selected talents via inbuilt messenger
+→ Company approves/disapproves selected talents
+→ Platform receives company approval / disapproval
+o	If coy approves – system proceeds
+o	If coy disapproves – system repeats process
+→ Platform forwards Employee contract letter to company with:
+o	Company name & address.
+o	Employee designation & grade
+o	Employee work responsibilities
+o	Employee work days and resumption times
+o	Employee emoluments: basic, benefits and statutory deductions
+→ Platform sends notification to talent on selection with appointed letter
+→Talent approves by executing offer letter notifications 
+→Platform deploys talents executed offer letter to client for onward onboarding
+→ Talent status changes to “Outsourced:
+→ Talent outsourced dashboard is activated
+→ Upon resumption, talent logs day, date & time of resumption
+→ Talent uploads line supervisor, departmental manager, KPIs & responsibilities.
+→ Talent continues to log daily/ weekly activities, meetings, achievements and trainings. 
+→ Platform permits line supervisors to view, review and approve daily/weekly logs
+→ Platform generates monthly summary reports, achievements & recommendations
+→ Platform summary report is forwarded to line supervisor for review & approval
+→ Platform generates monthly invoice statement & forwards to supervisor for approval
+o	Supervisor approves – process continues
+o	Supervisor disapproves – process repeats itself
+→ Platform receives approved invoice statement & forwards to Payroll for action
+→ Talent’s wallet on the platform is credited with agreed monthly remuneration
+→Platform deducts platform commission & statutory deductions based on defined logic
+→Talent has access to paid emolument and withdraws accordingly
+→Process continues based on defined time logic
+o	 Daily
+o	 Weekly
+o	Monthly
+5.	Outsourcing Technology-as-a-Solution Module
+→ Client selects product / service offerings
+o	Job board & placement
+o	Managed Outsourcing-as-a-Service
+o	Software-as-a-Solution
+→ Client indicates preferred TaaS model
+o	Resume writing services
+o	Skill assessment certifications
+o	Lead generation & affiliates
+o	Event hosting / partnering monetization
+→ Client funds eWallet 
+→ System confirms receipt of funds in corporate wallet
+o	Negative confirmation - process repeats
+o	Positive confirmation – process continues
+→ Client executes SLA
+→ Platform performs system compliance checks:
+o	Client registration – complete
+o	System offer selection - complete
+o	Wallet funded - complete
+→ Platform initiates requisite workflow
+
+
+
+RESUME WRITING SERVICES
+Workflow
+Talent selects package →
+Uploads CV →
+Pays fee →
+Consultant assigned →
+Draft delivered →
+Revisions completed →
+Final delivery.
+Pricing
+Basic – ₦25,000
+Professional – ₦45,000
+Executive – ₦85,000
+Add-ons priced separately.
+Revenue Logic
+Revenue recognized on payment.
+If consultant external → revenue split (e.g., 60/40).
+Margin retained first.
+Tax
+VAT applies.
+WHT deducted on consultant payout.
+
+CV OPTIMIZATION 
+Lower-tier service focused on formatting & keyword alignment.
+Pricing: ₦10,000 – ₦20,000.
+Revenue fully retained unless outsourced.
+VAT applies.
+
+SKILL ASSESSMENTS
+Workflow
+Talent selects assessment →
+Pays fee →
+Test access unlocked →
+Assessment completed →
+Score generated →
+Certificate issued if passed.
+Revenue
+One-time fee or subscription model.
+Subscription Example:
+Talent Pro Plan – ₦10,000/month (2 assessments included).
+Tax
+VAT applies.
+WHT applies on partner share.
+
+CERTIFICATION PARTNERSHIPS
+External certification body integrated.
+Revenue split example:
+Partner 60%
+OaaS 40%
+Bulk corporate licensing available.
+VAT applies.
+WHT deducted on partner payout.
+
+LEAD GENERATION
+Workflow
+Client subscribes →
+Defines industry & target →
+Pays subscription →
+Qualified leads delivered monthly.
+Pricing
+Silver – ₦150,000/month
+Gold – ₦300,000/month
+Enterprise – custom
+Or pay-per-lead pricing.
+VAT applies.
+WHT applies.
+No PAYE.
+
+SPONSORED JOB PLACEMENTS
+Client pays promotion fee.
+Job boosted in rankings.
+7 days – ₦50,000
+30 days – ₦150,000
+VAT applies.
+
+VIRTUAL JOB FAIRS
+Workflow
+Event created →
+Corporate booths sold →
+Talent registers →
+Live event hosted →
+Analytics delivered →
+Revenue reconciled.
+Revenue
+Booth fees
+Ticket sales
+Sponsorship tiers
+Advertising slots
+VAT applies.
+
+EVENT HOSTING / PARTNERING MONETIZATION
+Includes:
+•	Physical conferences
+•	Career summits
+•	Corporate-sponsored events
+Revenue streams:
+Sponsorship
+Booth sales
+Ticket sales
+Advertising
+Partner revenue share
+Margin retained before partner payout.
+
+
+
+
+
+6.	Affiliate registration & onboarding module
+→Affiliate lands on the hero page
+→ Affiliate browses platform offerings
+→ Affiliate registers
+o	Affiliate surname:
+o	Affiliate personal names:
+o	Affiliate contact details: address, phone #, email address, referees
+o	Affiliate interested sector: IT, Engineering, Health, Manufacturing, Logistics etc
+→ Affiliate dashboard is created automatically with affiliate link & eWallet.
+→ Affiliate dashboard displays
+o	Referee
+o	Referrals
+o	Earnings
+o	Withdrawals
+→ Affiliate executes SLA
+→ Platform performs system compliance checks:
+o	Affiliate registration – complete
+o	System offer selection - complete
+→ Affiliate system is unlocked on the platform
+Trigger events:
+Client funding
+Hire confirmation
+Subscription activation
+Service purchase
+Commission: 5%–15%.
+WHT deducted before wallet credit.
+Minimum withdrawal threshold applies.
+
+
+Admin & Governance Module
+•	Approve onboarding stages
+•	Monitor performance and billing
+•	Approve payouts
+•	View tax liabilities and reports
+•	Handle disputes and replacements
+•	Generate audit-ready reports
+
+
+
+
+
+OaaS EARNINGS & COMMISSION MODULE
+JOB BOARD & TALENT MARKETPLACE
+Revenue Models
+Success Fee (Managed Agency Model)
+Platform earns only when hire is successful.
+Typical range:
+15% – 30% of annual salary
+Example:
+Personnel annual salary: ₦10,000,000
+20% fee = ₦2,000,000
+
+Retained / Executive Search
+Milestone-based fee structure:
+•	Upfront initiation fee
+•	Shortlist milestone
+•	Interview milestone
+•	Final hire payment
+Revenue is milestone-based, not salary-based.
+SYSTEM LOGIC FLOW
+Step 1 – Contract Creation
+Admin defines:
+•	Total contract value
+•	Milestone breakdown %
+•	Deliverable criteria
+•	Timeline
+•	Approval workflow
+Step 2 – Wallet Funding
+Client must:
+•	Fund full contract value OR
+•	Fund first milestone before activation
+System rule:
+Milestone cannot activate without reserved funds.
+Step 3 – Fund Reservation
+For each milestone:
+•	Funds moved from Client Wallet
+•	Into Milestone Reserved Wallet
+Reserved funds cannot be withdrawn.
+Step 4 – Work Execution
+Assigned team/vendor/talent works toward milestone deliverable.
+Step 5 – Milestone Completion Submission
+Responsible party submits:
+•	Deliverable documentation
+•	Evidence
+•	Confirmation report
+Step 6 – Client Review Window
+System grants 3–7 day review window.
+If no dispute → auto-approval triggers.
+Step 7 – Financial Execution
+Upon approval:
+1.	VAT calculated (if applicable)
+2.	Platform margin retained
+3.	WHT calculated (if applicable)
+4.	Net payout credited to vendor/talent wallet
+5.	Ledger updated
+6.	Tax liability recorded
+FINANCIAL LOGIC FORMULA
+For each milestone:
+Milestone Value (MV)
+Example:
+MV = ₦1,500,000
+Platform Margin (PM)
+Example: 20%
+PM = ₦300,000
+Service Value = ₦1,200,000
+VAT (7.5% on service component only)
+VAT = 7.5% × ₦300,000 (if VAT only applies to service fee)
+WHT (5%–10% depending on service classification)
+WHT deducted from vendor payout.
+Final Vendor Payout:
+MV
+– Platform Margin
+– WHT
+= Net Vendor Credit
+
+TAX LOGIC PER MILESTONE
+PAYE
+Applies only if milestone relates to employment salary component.
+VAT
+Applied to service portion of milestone.
+WHT
+Applies when:
+•	Vendor is external service provider
+•	Corporate B2B transaction
+System automatically:
+•	Generates WHT credit note
+•	Updates WHT ledger
+
+ESCROW PROTECTION LOGIC
+Milestone funds behave like escrow:
+Client funds → Reserved Wallet →
+Released only upon milestone approval.
+Dispute scenario:
+•	Funds frozen
+•	Admin mediation triggered
+•	Escalation protocol activated
+If dispute unresolved:
+•	Governing SLA clause executed
+•	Partial release possible
+DISPUTE RESOLUTION WORKFLOW
+1.	Client raises dispute within review window.
+2.	System freezes milestone.
+3.	Evidence upload required.
+4.	Admin review within 5 business days.
+5.	Resolution options:
+o	Full release
+o	Partial release
+o	Refund to client wallet
+o	Rework required
+No funds move without admin authorization.
+
+CANCELLATION LOGIC
+If client cancels after milestone 1 completion:
+Completed milestones = payable.
+Uncompleted milestones = refunded from reserved wallet.
+If cancellation occurs mid-milestone:
+Admin calculates:
+•	% completion
+•	Fair value
+•	Partial payout
+
+
+Job Listing Packages
+FREE JOB POSTING + PAID ACTIVATION + FEATURED SLOT MODEL
+STRATEGIC OBJECTIVE
+This model is designed to:
+•	Remove friction for companies to post jobs.
+•	Increase job volume on the platform.
+•	Monetize visibility and activation instead of posting.
+•	Create flexible revenue control via admin pricing.
+•	Encourage upgrades and recurring subscriptions.
+
+CORE STRUCTURE
+Companies can:
+1.	Post unlimited jobs for FREE (Draft Mode)
+2.	Pay to activate a job listing
+3.	Pay to upgrade to Featured listing
+4.	Subscribe to Active Job Bundles
+5.	Subscribe to Featured Slot Packages
+All pricing adjustable by Admin.
+
+OPERATIONAL LOGIC FLOW
+STEP 1: Job Creation (Free)
+•	Company registers
+•	Creates job
+•	Job saved as “Draft – Inactive”
+•	Not visible to talent
+•	No payment required
+System Rule:
+Draft jobs do not appear in search results.
+
+STEP 2: Job Activation (Paid)
+Company clicks “Activate Job”.
+System calculates:
+Activation Fee (Admin-defined)
+Example:
+₦25,000 per active job for 30 days.
+Company must:
+✔ Have sufficient wallet balance
+✔ Fund wallet if insufficient
+Upon payment:
+•	Wallet debited
+•	VAT calculated
+•	Job status changes to “Active”
+•	Visibility period begins
+•	Invoice generated
+•	Revenue recorded
+
+FEATURED JOB SLOT LOGIC
+Featured jobs receive:
+•	Top placement in search
+•	Highlighted badge
+•	Email promotion inclusion
+•	Homepage rotation
+•	Priority match alerts
+Company selects “Upgrade to Featured”.
+System calculates:
+Featured Fee (Admin-defined)
+Example:
+₦75,000 additional for 30 days.
+Wallet debited →
+VAT calculated →
+Featured flag enabled →
+Analytics activated.
+
+PRICING CONFIGURATION (ADMIN PANEL)
+Admin can adjust:
+•	Activation fee
+•	Featured fee
+•	Duration (7, 14, 30, 60 days)
+•	Featured slot limit
+•	Industry-based pricing
+•	Geographic pricing
+•	Volume discounts
+•	Enterprise pricing overrides
+Changes apply prospectively only.
+
+Recruiter Subscription Plans
+Access to:
+•	Advanced filters
+•	Bulk messaging
+•	Analytics
+Example:
+•	Silver – $49/month
+•	Gold – $99/month
+•	Platinum – $149/month
+Recurring subscription revenue.
+
+Temp-to-Perm Conversion Fees
+If a temporary worker becomes permanent:
+Client pays:
+Monthly salary + 15–30% transfer fee.
+
+Ancillary Services
+Revenue from:
+RESUME WRITING SERVICES
+Workflow
+Talent selects package →
+Uploads CV →
+Pays fee →
+Consultant assigned →
+Draft delivered →
+Revisions completed →
+Final delivery.
+Pricing
+Basic – ₦25,000
+Professional – ₦45,000
+Executive – ₦85,000
+Add-ons priced separately.
+Revenue Logic
+Revenue recognized on payment.
+If consultant external → revenue split (e.g., 60/40).
+Margin retained first.
+Tax
+VAT applies.
+WHT deducted on consultant payout.
+
+CV OPTIMIZATION 
+Lower-tier service focused on formatting & keyword alignment.
+Pricing: ₦10,000 – ₦20,000.
+Revenue fully retained unless outsourced.
+VAT applies.
+
+SKILL ASSESSMENTS
+Workflow
+Talent selects assessment →
+Pays fee →
+Test access unlocked →
+Assessment completed →
+Score generated →
+Certificate issued if passed.
+Revenue
+One-time fee or subscription model.
+Subscription Example:
+Talent Pro Plan – ₦10,000/month (2 assessments included).
+Tax
+VAT applies.
+WHT applies on partner share.
+
+CERTIFICATION PARTNERSHIPS
+External certification body integrated.
+Revenue split example:
+Partner 60%
+OaaS 40%
+Bulk corporate licensing available.
+VAT applies.
+WHT deducted on partner payout.
+
+LEAD GENERATION
+Workflow
+Client subscribes →
+Defines industry & target →
+Pays subscription →
+Qualified leads delivered monthly.
+Pricing
+Silver – ₦150,000/month
+Gold – ₦300,000/month
+Enterprise – custom
+Or pay-per-lead pricing.
+VAT applies.
+WHT applies.
+No PAYE.
+
+SPONSORED JOB PLACEMENTS
+Client pays promotion fee.
+Job boosted in rankings.
+7 days – ₦50,000
+30 days – ₦150,000
+VAT applies.
+
+VIRTUAL JOB FAIRS
+Workflow
+Event created →
+Corporate booths sold →
+Talent registers →
+Live event hosted →
+Analytics delivered →
+Revenue reconciled.
+Revenue
+Booth fees
+Ticket sales
+Sponsorship tiers
+Advertising slots
+VAT applies.
+
+EVENT HOSTING / PARTNERING MONETIZATION
+Includes:
+•	Physical conferences
+•	Career summits
+•	Corporate-sponsored events
+Revenue streams:
+Sponsorship
+Booth sales
+Ticket sales
+Advertising
+Partner revenue share
+Margin retained before partner payout.
+
+AFFILIATE INFRASTRUCTURE
+Affiliate registers →
+KYC verified →
+Referral link generated.
+Trigger events:
+Client funding
+Hire confirmation
+Subscription activation
+Service purchase
+Commission: 5%–15%.
+WHT deducted before wallet credit.
+Minimum withdrawal threshold applies.
+
+Payment & Compliance Logic (Job Board)
+•	VAT (7.5%) applies to service fees
+•	WHT applies on B2B payments (5–10%)
+•	No PAYE (since platform does not employ candidate)
+
+MANAGED OaaS (OUTSOURCING MODEL)
+Revenue Models
+Mark-Up Model
+Client pays:
+Personnel salary + platform margin.
+Example:
+Client daily rate: ₦150,000
+Personnel pay: ₦120,000
+Platform margin: ₦30,000
+VAT & PAYEE also apply where necessary.
+Margin retained automatically.
+
+Fixed Management Fee
+Flat monthly fee per personnel.
+1.	Contract defines:
+o	Scope of service
+o	Fixed monthly (or project-based) fee
+o	Duration
+2.	Client funds wallet:
+o	Salary reserve (if applicable)
+o	Fixed management fee
+3.	Funds are separated:
+o	Salary → Reserved Payroll Wallet
+o	Management Fee → Platform Revenue Wallet
+4.	Revenue is recognized once service period begins (after funding confirmation).
+
+Pricing Models
+•	Per employee (e.g., ₦150,000 per staff monthly)
+•	Per project (flat monthly fee)
+•	Tiered fee based on workforce size
+
+Tax Logic
+•	VAT (7.5%) applies to management fee only
+•	PAYE applies to salary component (if employer-of-record)
+•	WHT may apply on the management fee (corporate deduction)
+
+Key Controls
+•	No service without wallet funding
+•	No negative balances
+•	Salary and fee funds separated
+•	Admin approval required for fee adjustments
+
+
+Hybrid Model
+Base margin + performance incentive.
+Hybrid Job Monetization Model 
+The Hybrid Model combines free access with flexible monetization.
+Free Posting
+•	Companies can create unlimited jobs in Draft mode.
+•	Draft jobs are not visible to candidates.
+•	No payment required at this stage.
+Activation Options (Monetization Layer)
+To make a job visible, companies must either:
+A. Pay-Per-Job
+•	Pay a fixed activation fee per job.
+•	Job becomes active for a defined period.
+OR
+B. Subscription Plan
+•	Purchase a monthly/quarterly plan.
+•	Receive a set number of active job slots.
+•	Jobs can be activated within slot limits.
+Featured Upgrade (Optional Upsell)
+•	Any active job can be upgraded to “Featured.”
+•	Additional fee required.
+•	Boosted visibility, top ranking, highlighted badge.
+
+Revenue Streams
+•	Pay-per-activation fees
+•	Subscription plans
+•	Featured upgrade fees
+•	Enterprise unlimited packages
+Revenue is recognized when:
+•	A job is activated, or
+•	A subscription is purchased.
+
+System Rules
+•	Draft = Free
+•	Active = Paid or subscription slot used
+•	Featured = Paid upgrade
+•	Wallet must be funded before activation
+•	VAT applied on all paid components
+
+
+Subscription OaaS
+Client pays recurring monthly outsourcing support fee.
+Example:
+Silver – $99/month
+Gold – $149/month
+Platinum – $199/month
+These amounts should be structured as:
+Per company, per month (base support subscription)
+NOT per person, and NOT per day.
+
+
+
+Managed OaaS Earning Workflow
+Client registers
+→ SLA executed
+→ Wallet funded
+→ Personnel sourced
+Personnel Sourced by OaaS
+1.	Client Engagement & Funding
+Client submits personnel request → Agreement executed → Client pre-funds 1 month gross salary + OaaS management fee + VAT → Funds moved to Reserved Payroll Wallet.
+(No recruitment without funding.)
+2.	Talent Recruitment & Employment
+OaaS recruits and selects candidate → Talent signs employment contract with OaaS → Onboarded into payroll and tax system.
+3.	Deployment & Service Confirmation
+Talent deployed to client → Monthly service confirmation logged before payroll processing.
+4.	Payroll Processing & Earnings Split
+From reserved funds, system automatically:
+o	Retains OaaS management margin
+o	Deducts PAYE and statutory obligations
+o	Credits net salary to talent wallet
+5.	Tax & Compliance Handling
+o	PAYE deducted and scheduled for remittance
+o	VAT applied on service fee
+o	WHT recorded if applicable
+6.	Recurring Funding Requirement
+Client must pre-fund each payroll cycle in advance.
+Insufficient funding may pause payroll or deployment.
+7.	Exit Process (If Applicable)
+Final salary prorated → Deductions settled → Excess funds returned → Payroll closed.
+
+→ Client approves
+→ Personnel deployed
+→ Work logs submitted
+Personnel Work Log Workflow 
+The Personnel Work Log system ensures that outsourced staff work records are verified before payroll and client billing are processed.
+Log Submission
+Personnel submit daily or weekly work logs including:
+•	Hours worked
+•	Tasks performed
+•	Overtime (if applicable)
+•	Supporting evidence (where required)
+Late or incomplete entries are flagged automatically.
+System Validation
+The platform checks for:
+•	Missing information
+•	Duplicate entries
+•	Excessive hours
+•	Overtime beyond policy limits
+Errors must be corrected before review.
+Client Approval
+The assigned client supervisor:
+•	Approves, rejects, or requests corrections
+•	Must act within a defined review window
+Unreviewed logs escalate to Admin.
+Admin Oversight
+Admin handles:
+•	Disputes
+•	Overtime exceptions
+•	Suspicious entries
+•	Final approval where necessary
+No payroll proceeds without proper approval.
+Payroll & Billing Integration
+Approved logs determine:
+•	Salary calculations (for hourly or hybrid models)
+•	Overtime payments
+•	Absence deductions
+•	Client invoices (for time-based outsourcing)
+Payroll is executed only after approved logs are aggregated.
+Compliance & Controls
+The system maintains:
+•	Time-stamped audit trail
+•	Approval records
+•	Edit history
+•	Escalation process
+This ensures transparency, reduces disputes, and protects payroll accuracy.
+
+→ Logs approved
+→ Platform retains margin
+→ PAYE deducted
+→ Net salary paid
+→ VAT & WHT tracked
+
+Tax Logic (Managed OaaS)
+PAYE
+•	Deducted from personnel gross salary
+•	Remitted to State IRS by 10th
+VAT (7.5%)
+•	Applies only to OTK service fee
+•	Remitted to FIRS by 21st
+WHT
+•	Applied to service fee when client deducts
+•	Credited against company tax
+Including other  NSITF, HMO, Insurance
+
+SOFTWARE & SUBSCRIPTION SOLUTIONS
+Overview
+OaaS provides workforce software tools without managing payroll.
+Includes:
+OaaS SaaS & Enterprise Service Workflows
+All five models operate on:
+•	Wallet-first activation
+•	Subscription or milestone-based revenue
+•	Admin-controlled pricing
+•	VAT-compliant billing
+•	WHT tracking (where applicable)
+•	Full audit & governance oversight
+
+Recruitment SaaS (ATS Platform)
+What it is:
+A subscription-based Applicant Tracking System for companies.
+Workflow Summary:
+1.	Company selects subscription tier.
+2.	Wallet funded.
+3.	Access activated.
+4.	Company manages job postings, applicants, interviews, and hiring pipeline.
+5.	Subscription renews monthly or annually.
+Revenue Model:
+Recurring subscription (tier-based, per user, or per active job).
+Key Value:
+Scalable recurring SaaS revenue with low marginal cost.
+
+Hiring Analytics Tools
+What it is:
+An advanced analytics add-on that provides hiring performance insights.
+Workflow Summary:
+1.	Company subscribes to analytics module.
+2.	System pulls recruitment data.
+3.	Dashboard generates KPIs (time-to-hire, cost-per-hire, recruiter performance, etc.).
+4.	Continuous data-driven insights provided.
+Revenue Model:
+Add-on subscription (monthly/annual).
+Key Value:
+High-margin intelligence layer layered on Recruitment SaaS.
+
+Talent Management Dashboards
+What it is:
+Workforce management system for outsourced and internal teams.
+Workflow Summary:
+1.	Company activates module.
+2.	Employees uploaded or synced.
+3.	Dashboard tracks attendance, KPIs, performance, and optionally payroll.
+4.	Monthly reporting and reconciliation.
+Revenue Model:
+Per employee per month or enterprise subscription.
+Key Value:
+Bridges recruitment to workforce operations, increasing client retention.
+
+OaaS Support Subscriptions
+What it is:
+Premium operational and compliance support tiers.
+Workflow Summary:
+1.	Company selects support tier.
+2.	Wallet funded.
+3.	SLA and response times activated.
+4.	Dedicated account management (if applicable).
+5.	Performance tracked via support metrics.
+Revenue Model:
+Recurring subscription.
+Key Value:
+Enterprise upsell and relationship deepening tool.
+
+On-Demand Recruiter Rental
+What it is:
+Recruiter-as-a-Service model (hourly/daily/project-based).
+Workflow Summary:
+1.	Client selects recruiter level and duration.
+2.	Wallet funded upfront.
+3.	Recruiter assigned.
+4.	Work delivered.
+5.	Admin approval triggers payout (margin retained first).
+Revenue Model:
+Project-based, hourly, or retainer + performance hybrid.
+Key Value:
+Blends SaaS with human service revenue for higher margins.
+
+OVERALL STRATEGIC POSITIONING
+Together, these models create:
+•	Recurring SaaS revenue (Recruitment SaaS, Analytics, Talent Management, Support)
+•	High-margin human service revenue (Recruiter Rental)
+•	Strong cross-selling opportunities
+•	Enterprise client stickiness
+•	Scalable subscription income
+•	Wallet-protected cashflow security
+They transform OaaS from a job marketplace into a full workforce operating system.
+
+Revenue Models
+OaaS Subscription
+Clients subscribing under the OaaS Subscription model are paying for:
+1.	Managed Outsourcing Services – personnel recruitment, deployment, and management
+2.	Job Board / Recruitment Platform Tools – posting, analytics, featured listings
+3.	Software Tools & SaaS Capabilities – recruitment SaaS, analytics, CV & skill modules
+4.	Event & Certification Access – optional participation in virtual job fairs and assessment services
+All of these are delivered as a recurring, tiered subscription with full wallet-first control, tax compliance, and admin-governed flexibility.
+Recurring monthly or annual subscription.
+Example:
+$99/month per recruiter seat.
+
+On-Demand Recruiter Rental
+(Hourly or Project-Based Engagement Model)
+This module allows companies to “rent” a professional recruiter through the OaaS platform without committing to full outsourcing or permanent placement contracts.
+
+SERVICE POSITIONING
+On-Demand Recruiter Rental is a flexible hiring support model where:
+•	Companies hire a recruiter temporarily.
+•	Billing is hourly OR project-based.
+•	OaaS manages scheduling, billing, wallet control, and margin retention.
+•	Recruiter remains contractor under OaaS governance.
+This is NOT full employer-of-record.
+It is a time-bound professional service engagement.
+
+ENGAGEMENT MODELS
+Hourly Model
+Company selects:
+•	Recruiter level (Junior / Mid / Senior / Executive)
+•	Number of hours required
+•	Duration window (e.g., 2 weeks)
+Admin sets base hourly rate.
+Example:
+Junior – ₦10,000/hr
+Mid – ₦20,000/hr
+Senior – ₦35,000/hr
+Executive – ₦60,000/hr
+Minimum billable hours may apply (e.g., 10 hours).
+
+Project-Based Model
+Company defines hiring project:
+•	Example: “Hire 10 Sales Reps within 30 days”
+Admin or system calculates:
+•	Estimated effort hours
+•	Fixed project fee
+Example:
+₦800,000 project fee (inclusive of 40 estimated hours)
+Scope defined in SLA.
+
+OPERATIONAL WORKFLOW
+Step 1 – Request Submission
+Company submits recruiter request with:
+•	Role type
+•	Volume
+•	Timeline
+•	Budget preference (hourly/project)
+Step 2 – Pricing Calculation
+System calculates:
+•	Base fee
+•	VAT
+•	Estimated total
+•	Platform margin
+Step 3 – Wallet Funding
+Company must fund:
+•	Estimated hours (hourly model)
+OR
+•	Full project fee (project model)
+Funds move to Reserved Recruiter Wallet.
+Step 4 – Recruiter Assignment
+Admin assigns recruiter OR
+Company selects from approved recruiter pool.
+Step 5 – Work Execution
+For Hourly Model:
+•	Recruiter logs time via system timesheet.
+•	Client confirms weekly timesheet.
+For Project Model:
+•	Deliverables tracked by milestone (shortlist, interviews, hires).
+Step 6 – Approval Trigger
+Hourly:
+•	Weekly approval window.
+•	Auto-approval after review period.
+Project:
+•	Milestone approval.
+Step 7 – Financial Execution
+Upon approval:
+1.	Platform margin retained.
+2.	VAT calculated.
+3.	WHT calculated (if applicable).
+4.	Net recruiter payout credited.
+5.	Ledger updated.
+
+FINANCIAL LOGIC
+Example (Hourly):
+Hourly Rate: ₦20,000
+Platform Margin: 30%
+Recruiter Share: 70%
+If 20 hours logged:
+Gross = ₦400,000
+Platform Margin = ₦120,000
+Recruiter Earnings = ₦280,000
+VAT applied to service fee portion.
+WHT deducted if corporate B2B applies.
+
+OVERTIME & EXTRA HOURS LOGIC
+If hours exceed funded amount:
+System auto-pauses service OR
+Prompts client to top up wallet.
+No negative wallet allowed.
+
+CANCELLATION LOGIC
+Hourly Model:
+Client can terminate anytime.
+Unused reserved hours refunded to client wallet.
+Project Model:
+If cancelled mid-project:
+Admin calculates % completion.
+Partial payout executed.
+Remaining balance refunded.
+
+TAX LOGIC
+VAT (7.5%)
+Applied to service portion of invoice.
+WHT
+Applies if recruiter is independent contractor.
+PAYE
+Does not apply unless recruiter is employed staff under OaaS payroll.
+
+ADMIN CONTROLS
+Admin can:
+•	Adjust hourly rates by recruiter tier.
+•	Adjust margin percentage.
+•	Set minimum billable hours.
+•	Approve or reject time logs.
+•	Freeze recruiter assignment.
+•	Escalate disputes.
+All actions logged.
+RISK CONTROL
+✔ Time logs require client approval
+✔ No payout without approval
+✔ Wallet funding required upfront
+✔ Recruiter rating system
+✔ SLA-defined scope boundaries
+
+
+Tax Logic (Software Model)
+•	VAT applies to subscription
+•	WHT applies on B2B payments
+•	No PAYE (no employment relationship)
+
+WALLET SYSTEM (UNIFIED ACROSS MODULES)
+Each client has:
+•	Master Wallet
+•	Controlled balance
+•	Reserved funds
+Each personnel has:
+•	Earnings wallet
+•	Net salary only
+Each affiliate has:
+•	Commission wallet
+•	WHT deducted before credit
+
+OaaS AFFILIATE COMMISSION WORKFLOW
+
+OBJECTIVE
+The Affiliate Commission System is designed to:
+•	Incentivize acquisition of Clients and Talents
+•	Reward revenue-generating actions only
+•	Protect platform margins
+•	Prevent abuse and fake registrations
+•	Maintain tax and audit compliance
+Affiliate commissions are triggered only on monetized events.
+
+AFFILIATE TYPES
+OaaS recognizes two primary affiliate referral categories:
+Client Referral Affiliate
+Refers:
+•	Companies
+•	Corporate HR teams
+•	Enterprise partners
+Talent Referral Affiliate
+Refers:
+•	Skilled professionals
+•	Semi-skilled workforce
+•	Specialized experts
+•	Freelancers
+Each referral type has different commission triggers.
+
+AFFILIATE REGISTRATION WORKFLOW
+1.	Affiliate registers.
+2.	KYC verification completed.
+3.	Affiliate Wallet auto-created.
+4.	Unique referral ID & tracking link generated.
+5.	Commission structure assigned (admin-configurable).
+System rule:
+No commission is payable without verified KYC.
+
+CLIENT REFERRAL COMMISSION LOGIC
+Commission Trigger Events (Client-Side)
+Commission is triggered when the referred client:
+✔ Activates a paid job listing
+✔ Purchases featured job slot
+✔ Subscribes to OaaS plan
+✔ Pays milestone-based recruitment fee
+✔ Funds managed outsourcing payroll
+✔ Purchases SaaS tools
+✔ Buys event sponsorship
+✔ Purchases lead generation services
+Commission is NOT triggered when:
+✖ Client registers only
+✖ Client posts draft jobs
+✖ Client does not fund wallet
+✖ Client negotiates but does not pay
+
+Commission Calculation Logic (Client Revenue)
+Example Model:
+Affiliate Commission = 5% – 15% of Platform Margin
+(Not total contract value)
+Example:
+Client pays ₦1,000,000
+Platform margin = ₦250,000
+Affiliate rate = 10% of margin
+Commission = ₦25,000
+This protects platform profitability.
+
+Milestone-Based Contracts
+If client pays via milestones:
+Commission triggers per paid milestone.
+Example:
+Milestone 1 paid → commission credited
+Milestone 2 unpaid → no commission yet
+This ensures revenue-backed payout.
+
+TALENT REFERRAL COMMISSION LOGIC
+Talent referral is more sensitive because revenue depends on deployment.
+There are two models:
+
+MODEL A – Deployment-Based Commission (Primary Model)
+Commission triggers ONLY when:
+✔ Talent is deployed
+✔ Client pays first invoice
+✔ Platform retains margin
+Commission calculated as:
+Percentage of first-month margin only.
+Example:
+Talent deployed
+Client pays ₦500,000 monthly
+Platform margin = ₦100,000
+Affiliate rate = 20% of first month margin
+Commission = ₦20,000
+One-time payout only (unless subscription-based contract).
+
+MODEL B – Activation-Based Commission (Optional)
+Small incentive if:
+Talent completes profile + passes assessment.
+Example:
+₦2,000 fixed activation bonus.
+BUT this requires:
+•	Anti-fraud controls
+•	Device/IP tracking
+•	Unique ID verification
+Recommended to cap monthly activation bonuses.
+
+TALENT NOT DEPLOYED SCENARIO
+If talent:
+✔ Registers
+✔ Completes profile
+✖ Not deployed
+Then:
+No deployment-based commission paid.
+Optional:
+Admin may set:
+“Deployment Window”
+Example:
+If talent not deployed within 180 days → referral expires.
+This prevents indefinite commission liability.
+
+SUBSCRIPTION-BASED CLIENT COMMISSION
+If client subscribes monthly:
+Option A – One-Time Commission
+Commission paid only on first subscription month.
+Option B – Recurring Commission (Limited Duration)
+Commission paid for first 3–6 months only.
+Example:
+Client pays ₦200,000/month
+Margin = ₦80,000
+Affiliate rate = 10%
+Commission per month = ₦8,000
+Valid for 3 months.
+Admin-configurable.
+
+WALLET FLOW FOR COMMISSION
+Revenue Event Occurs →
+Platform Margin Calculated →
+Commission Calculated →
+WHT Deducted (if applicable) →
+Net Commission Credited to Affiliate Wallet →
+Withdrawal allowed after holding period.
+Holding period example:
+7–14 days to allow dispute buffer.
+
+TAX LOGIC
+VAT
+Not applicable to affiliate payout.
+WHT
+Applicable where:
+Affiliate is registered business entity.
+Example:
+10% WHT deducted before wallet credit.
+System generates WHT credit note.
+
+ANTI-ABUSE CONTROLS
+System must prevent:
+✔ Self-referral
+✔ Fake client accounts
+✔ Duplicate talent profiles
+✔ Affiliate referring same entity multiple times
+Controls include:
+•	Email verification
+•	Phone verification
+•	Bank verification
+•	Device fingerprinting
+•	IP tracking
+•	Unique company RC verification
+DISPUTE & CLAWBACK LOGIC
+Commission can be reversed if:
+✔ Client payment is refunded
+✔ Deployment cancelled before 30 days
+✔ Fraud discovered
+✔ Contract terminated before first payroll
+Clawback window:
+30–60 days configurable.
+
+ADMIN CONTROLS
+Admin can:
+•	Adjust commission percentage
+•	Create tiered affiliate levels
+•	Freeze affiliate wallet
+•	Reverse fraudulent commission
+•	Cap monthly payout
+•	Set expiration period
+•	Approve enterprise referral overrides
+All actions logged in audit trail.
+
+TIERED AFFILIATE STRUCTURE 
+Example:
+Starter – 5%
+Pro – 10%
+Elite – 15%
+Upgrade based on:
+•	Revenue volume
+•	Number of successful referrals
+•	Annual performance
+
+SPECIAL CASES
+Corporate Bulk Talent Referral
+If affiliate refers:
+10+ talents deployed in one client contract.
+Commission may:
+•	Be capped
+•	Be structured as bulk bonus
+•	Shift to milestone payout
+Admin approval required.
+
+Event & Job Fair Referral
+Commission triggers when:
+•	Sponsor pays
+•	Booth payment confirmed
+•	Ticket purchase confirmed
+Not triggered on registration.
+
+EXPIRY LOGIC
+Client referral expires if:
+No payment within 90–180 days.
+Talent referral expires if:
+No deployment within 180 days.
+Admin adjustable.
+
+REPORTING DASHBOARD
+Affiliate dashboard shows:
+•	Total referrals
+•	Active clients
+•	Active talents
+•	Deployed talents
+•	Pending commission
+•	Approved commission
+•	Withdrawable balance
+•	Clawback history
+
+GOVERNANCE PRINCIPLES
+✔ Commission paid only on revenue
+✔ Margin protected before payout
+✔ Wallet-first credit
+✔ Tax compliance embedded
+✔ Fraud protection enforced
+✔ Admin override enabled
+SUMMARY LOGIC MATRIX
+Scenario	Commission Triggered?
+Client registers only	❌ No
+Client activates paid job	✅ Yes
+Client subscribes	✅ Yes
+Talent registers only	❌ No
+Talent completes profile	⚠ Optional small bonus
+Talent deployed	✅ Yes
+Client funds milestone 1	✅ Yes (per milestone)
+Client payment refunded	❌ Clawback
+Talent not deployed after expiry	❌ No payout
+
+
+OaaS MARKETING WORKFLOWS
+
+CLIENT MARKETING
+Attraction Offers:
+•	Free workforce audit
+•	Free compliance checklist
+•	Free 14-day SaaS trial
+•	Discounted first job listing
+Upsell:
+•	Featured listing
+•	Managed outsourcing upgrade
+•	Recruiter analytics subscription
+Downsell:
+•	Limited posting package
+•	Pay-per-shortlist option
+Continuity:
+•	Annual subscription discounts
+•	Priority support plan
+
+TALENT MARKETING
+Attraction:
+•	Free CV audit
+•	Free skill test sample
+•	Free interview guide
+Upsell:
+•	Resume rewrite
+•	Certification bundle
+•	Premium visibility plan
+Continuity:
+•	Career membership subscription
+•	Monthly job alert premium
+
+AFFILIATE MARKETING
+Attraction:
+•	Affiliate starter kit
+•	Free commission calculator
+Upsell:
+•	Higher commission tier
+•	Exclusive campaign access
+Continuity:
+•	Quarterly performance bonuses
+•	Leaderboard rewards
+
+ADMIN & GOVERNANCE MODULE
+Admin controls:
+Approve onboarding
+Approve deployments
+Approve payouts
+Freeze wallets
+Adjust margin models
+Generate tax reports
+Resolve disputes
+Audit all financial flows
+
+FINAL POSITIONING
+OaaS is a:
+Multi-layer workforce infrastructure platform integrating:
+Recruitment marketplace
+Managed employer services
+Payroll & tax compliance
+Workforce OaaS tools
+Career services monetization
+Lead generation infrastructure
+Event monetization engine
+Affiliate revenue ecosystem
+All governed by:
+Wallet-first financial control
+Revenue-before-disbursement protection
+Embedded PAYE, VAT & WHT compliance
+Module-separated commercial logic
+Centralized admin governance
+
+

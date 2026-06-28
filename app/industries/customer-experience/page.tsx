@@ -3,119 +3,137 @@ import { Navbar } from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { ReadyToTransformCTA } from "@/components/layout/ReadyToTransformCTA";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, MessageSquareText, Headphones, Users } from "lucide-react";
 import PartnersMarquee from "@/components/layout/PartnersMarquee";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export default function CustomerExperiencePage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white font-sans text-gray-900">
       <Navbar />
       <main>
-        {/* Hero Section */}
-        <section className="bg-amber-50 pt-24 pb-32 text-gray-900 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[url('/pattern.svg')] opacity-5"></div>
-          <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-sm font-semibold mb-6">
-                  <span className="w-2 h-2 rounded-full bg-amber-500"></span>
-                  Industry Expertise
-                </div>
-                <h1 className="text-4xl lg:text-6xl font-black mb-6 leading-tight">
-                  Elevate Your <span className="text-amber-600">Customer Experience</span>
-                </h1>
-                <p className="text-lg text-gray-600 mb-8 max-w-xl leading-relaxed">
-                  Provide world-class support with our vetted customer success agents, virtual assistants, and account managers. 24/7 coverage across all channels.
-                </p>
-                <div className="flex gap-4">
-                  <Link href="/employer/jobs/create">
-                    <Button className="bg-[#222364] hover:bg-[#1a1a4b] text-white h-12 px-8 rounded-xl font-bold">
-                      Find Support Staff
-                    </Button>
-                  </Link>
-                  <Link href="/contact">
-                    <Button variant="outline" className="border-gray-300 text-gray-700 hover:bg-gray-100 h-12 px-8 rounded-xl font-bold bg-transparent">
-                      Talk to Sales
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-              <div className="hidden lg:block relative">
-                <div className="bg-white rounded-3xl p-8 border border-amber-100 shadow-xl relative">
-                   <div className="flex items-center gap-4 mb-8">
-                     <div className="w-16 h-16 bg-amber-100 rounded-2xl flex items-center justify-center shadow-inner">
-                       <Headphones className="w-8 h-8 text-amber-600" />
-                     </div>
-                     <div>
-                       <h3 className="font-bold text-xl text-gray-900">24/7 Coverage</h3>
-                       <p className="text-gray-500 text-sm">Always Online</p>
-                     </div>
-                   </div>
-                   <div className="space-y-4">
-                     {[
-                       "Omnichannel Support (Email, Chat, Voice)",
-                       "Multilingual Capabilities",
-                       "High CSAT & low response times",
-                       "Scalable teams for peak seasons"
-                     ].map((item, idx) => (
-                       <div key={idx} className="flex items-center gap-3 bg-gray-50 p-4 rounded-xl border border-gray-100">
-                         <CheckCircle2 className="w-5 h-5 text-amber-500 shrink-0" />
-                         <span className="text-sm font-medium text-gray-700">{item}</span>
-                       </div>
-                     ))}
-                   </div>
-                </div>
-              </div>
-            </div>
+        {/* 1. Typography-Led Hero Section */}
+        <section className="pt-24 lg:pt-32 pb-16 px-4 lg:px-8 max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl lg:text-[5rem] font-black tracking-tight leading-[1.1] mb-8 text-gray-900">
+            Elevate Your <br />
+            <span className="text-amber-500">Customer Experience.</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-500 max-w-3xl mx-auto font-medium mb-12">
+            Provide world-class support with our vetted customer success agents, virtual assistants, and account managers. 24/7 coverage across all channels.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link href="/employer/jobs/create">
+              <Button className="bg-[#222364] hover:bg-[#1a1a4b] text-white h-14 px-10 rounded-full font-bold text-lg">
+                Find Support Staff
+              </Button>
+            </Link>
+          </div>
+        </section>
+
+        {/* Huge Hero Image */}
+        <section className="px-4 lg:px-8 max-w-7xl mx-auto mb-24">
+          <div className="w-full h-[500px] md:h-[700px] bg-amber-50 rounded-[2rem] overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=2850&q=80" alt="Customer Support" className="w-full h-full object-cover" />
           </div>
         </section>
 
         {/* Partners Marquee */}
-        <section className="py-12 border-b border-gray-100 bg-white">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center mb-6">
-            <p className="text-sm font-bold text-gray-400 tracking-wider">COMPANIES THAT TRUST OUR SUPPORT STAFF</p>
+        <section className="py-12 border-y border-amber-100 bg-amber-50/30 mb-24">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center mb-8">
+            <p className="text-sm font-bold text-amber-600/70 tracking-widest uppercase">Companies that trust our support staff</p>
           </div>
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <PartnersMarquee />
           </div>
         </section>
 
-        {/* Roles Section */}
-        <section className="py-24 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-black text-gray-900 mb-4">Customer-Centric Roles</h2>
-              <p className="text-gray-500 max-w-2xl mx-auto">Build a loyal customer base with empathetic, articulate, and proactive support staff.</p>
+        {/* 2. The "Mission/Statement" Block */}
+        <section className="py-24 px-4 lg:px-8 max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl md:text-5xl font-black text-gray-900 leading-tight mb-8">
+            "Your customers deserve empathy, quick resolutions, and 24/7 reliability. We supply the talent that delivers it."
+          </h2>
+          <p className="text-xl text-gray-500 font-medium">
+            Build a loyal customer base with empathetic, articulate, and proactive support staff dedicated to your brand.
+          </p>
+        </section>
+
+        {/* 3. Staggered Content Sections (Z-Pattern Layout) */}
+        <section className="py-24 px-4 lg:px-8 max-w-7xl mx-auto space-y-32">
+          {/* Row 1: Image Left, Text Right */}
+          <div className="flex flex-col lg:flex-row items-center gap-16">
+            <div className="w-full lg:w-1/2 h-[400px] md:h-[600px] bg-gray-100 rounded-[2rem] overflow-hidden">
+               <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&w=1000&q=80" alt="Support Agents" className="w-full h-full object-cover" />
             </div>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-3xl border border-gray-100">
-                <div className="w-14 h-14 bg-amber-50 rounded-2xl flex items-center justify-center mb-6">
-                  <MessageSquareText className="w-7 h-7 text-amber-600" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Customer Support Agents</h3>
-                <p className="text-gray-500 leading-relaxed text-sm">Empathetic problem-solvers handling live chat, email tickets, and phone calls to resolve issues quickly and efficiently.</p>
-              </div>
-              <div className="bg-white p-8 rounded-3xl border border-gray-100">
-                <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
-                  <Users className="w-7 h-7 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Account Managers</h3>
-                <p className="text-gray-500 leading-relaxed text-sm">Dedicated relationship builders who drive customer success, onboarding, retention, and upsell opportunities.</p>
-              </div>
-              <div className="bg-white p-8 rounded-3xl border border-gray-100">
-                <div className="w-14 h-14 bg-purple-50 rounded-2xl flex items-center justify-center mb-6">
-                  <Headphones className="w-7 h-7 text-purple-600" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Virtual Assistants</h3>
-                <p className="text-gray-500 leading-relaxed text-sm">Highly organized professionals assisting with scheduling, data entry, CRM management, and administrative tasks.</p>
+            <div className="w-full lg:w-1/2">
+              <h3 className="text-3xl md:text-4xl font-black text-gray-900 mb-6">Customer Support Agents</h3>
+              <p className="text-lg text-gray-500 mb-8 leading-relaxed">
+                Empathetic problem-solvers handling live chat, email tickets, and phone calls to resolve issues quickly and efficiently. We vet for emotional intelligence and communication clarity.
+              </p>
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-center gap-4 text-lg font-bold text-gray-900">
+                  <span className="w-8 h-8 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center shrink-0">1</span>
+                  Omnichannel Support (Email, Chat, Voice)
+                </li>
+                <li className="flex items-center gap-4 text-lg font-bold text-gray-900">
+                  <span className="w-8 h-8 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center shrink-0">2</span>
+                  Multilingual Capabilities
+                </li>
+                <li className="flex items-center gap-4 text-lg font-bold text-gray-900">
+                  <span className="w-8 h-8 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center shrink-0">3</span>
+                  24/7 Timezone Coverage
+                </li>
+              </ul>
+              <Link href="/employer/jobs/create" className="inline-flex items-center gap-2 text-amber-600 font-bold text-lg hover:underline group">
+                Hire support agents <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Row 2: Text Left, Image Right */}
+          <div className="flex flex-col lg:flex-row-reverse items-center gap-16">
+            <div className="w-full lg:w-1/2 h-[400px] md:h-[600px] bg-gray-100 rounded-[2rem] overflow-hidden">
+               <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1000&q=80" alt="Account Management" className="w-full h-full object-cover" />
+            </div>
+            <div className="w-full lg:w-1/2">
+              <h3 className="text-3xl md:text-4xl font-black text-gray-900 mb-6">Account Managers & VAs</h3>
+              <p className="text-lg text-gray-500 mb-8 leading-relaxed">
+                Dedicated relationship builders who drive customer success, onboarding, retention, and upsell opportunities. For operations, our Virtual Assistants handle scheduling, data entry, and CRM management.
+              </p>
+              <div className="bg-amber-50 p-8 rounded-3xl">
+                <h4 className="text-xl font-bold text-amber-900 mb-4">Proactive Growth</h4>
+                <p className="text-amber-800">
+                  Transition your customer experience from reactive troubleshooting to proactive relationship building. Our account managers are trained to spot expansion opportunities.
+                </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Bottom CTA */}
-        <div className="max-w-7xl mx-auto px-4 lg:px-8 mb-8 mt-24">
+        {/* 4. Stats/Impact Section */}
+        <section className="py-24 bg-amber-500 text-white my-24">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="grid md:grid-cols-3 gap-12 text-center divide-y md:divide-y-0 md:divide-x divide-white/20">
+              <div className="pt-8 md:pt-0">
+                <div className="text-6xl md:text-7xl font-black text-white mb-4">95%</div>
+                <div className="text-xl font-bold text-amber-100 mb-2">Average CSAT Score</div>
+                <p className="text-amber-50">Our agents consistently deliver highly-rated interactions.</p>
+              </div>
+              <div className="pt-8 md:pt-0">
+                <div className="text-6xl md:text-7xl font-black text-white mb-4">&lt;2m</div>
+                <div className="text-xl font-bold text-amber-100 mb-2">First Response Time</div>
+                <p className="text-amber-50">Dramatically reduce wait times with dedicated teams.</p>
+              </div>
+              <div className="pt-8 md:pt-0">
+                <div className="text-6xl md:text-7xl font-black text-white mb-4">24/7</div>
+                <div className="text-xl font-bold text-amber-100 mb-2">Global Coverage</div>
+                <p className="text-amber-50">Never leave a customer hanging, no matter their timezone.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 5. Bottom CTA */}
+        <div className="max-w-7xl mx-auto px-4 lg:px-8 mb-16">
           <ReadyToTransformCTA 
             title="Improve Your CSAT Score Today"
             subtitle="Hire vetted support professionals ready to deliver exceptional service."

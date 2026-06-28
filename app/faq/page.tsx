@@ -1,8 +1,6 @@
 import { Navbar } from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import { Button } from "@/components/ui/button";
-import { Building2 } from "lucide-react";
-import Link from "next/link";
+import { ReadyToTransformCTA } from "@/components/layout/ReadyToTransformCTA";
 
 export default function FAQPage() {
   const employeeFaqs = [
@@ -52,72 +50,98 @@ export default function FAQPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#FDFDFD]">
+    <div className="min-h-screen bg-[#FDFDFD] font-sans text-gray-900">
       <Navbar />
 
       <main>
-        {/* Header */}
-        <section className="pt-24 pb-16 px-4 max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-black text-[#222364] mb-6 tracking-tight">
-            FREQUENTLY ASKED QUESTIONS
-          </h1>
-          <p className="text-gray-500 text-lg md:text-xl">
-            Find clear answers about our wallet-first infrastructure, rigorous talent screening protocols, and compliance frameworks.
-          </p>
-        </section>
-
-        {/* Content */}
-        <section className="max-w-4xl mx-auto px-4 lg:px-8 pb-24">
-          
-          {/* For Employees & Clients */}
-          <div className="mb-16">
-            <h2 className="text-xl font-bold text-gray-900 mb-6 uppercase tracking-wider">
-              FOR EMPLOYEES & CLIENTS
-            </h2>
-            <div className="space-y-4">
-              {employeeFaqs.map((faq, idx) => (
-                <div key={idx} className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
-                  <h4 className="font-semibold text-gray-900 mb-3">{faq.q}</h4>
-                  <p className="text-sm text-gray-500 leading-relaxed">{faq.a}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* For Talents & Candidates */}
-          <div className="mb-16">
-            <h2 className="text-xl font-bold text-gray-900 mb-6 uppercase tracking-wider">
-              FOR TALENTS & CANDIDATES
-            </h2>
-            <div className="space-y-4">
-              {talentFaqs.map((faq, idx) => (
-                <div key={idx} className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
-                  <h4 className="font-semibold text-gray-900 mb-3">{faq.q}</h4>
-                  <p className="text-sm text-gray-500 leading-relaxed">{faq.a}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Still Have Questions? */}
-          <div className="bg-[#F5F2EC] rounded-3xl p-10 md:p-16 text-center max-w-3xl mx-auto border border-gray-100">
-            <div className="w-16 h-16 bg-[#222364] rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <Building2 className="w-8 h-8 text-white" />
-            </div>
-            <h2 className="text-3xl font-black text-gray-900 mb-4">
-              Still Have Questions?
-            </h2>
-            <p className="text-gray-500 mb-8 max-w-md mx-auto">
-              Can't find the specific compliance or technical answer you are looking for? Our administrative team is here to assist you.
+        {/* 1. Typography-Led Hero Section */}
+        <section className="pt-32 pb-24 px-4 lg:px-8 max-w-7xl mx-auto">
+          <div className="max-w-4xl">
+            <h1 className="text-5xl md:text-7xl font-black text-[#222364] mb-8 leading-tight tracking-tight">
+              Got Questions? <br />
+              <span className="text-[#f2c060]">We Have Answers.</span>
+            </h1>
+            <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
+              Everything you need to know about our wallet-first infrastructure, rigorous talent screening protocols, and compliance frameworks.
             </p>
-            <Link href="/contact" className="text-[#222364] font-bold underline hover:text-[#1a1a4b]">
-              Talk to an Outsourcing Expert →
-            </Link>
           </div>
-
         </section>
 
+        {/* 2. For Employers Section (Z-Pattern Layout style) */}
+        <section className="py-24 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="grid lg:grid-cols-12 gap-12 lg:gap-24">
+              {/* Sticky Title Column */}
+              <div className="lg:col-span-4 relative">
+                <div className="sticky top-32">
+                  <h2 className="text-3xl md:text-5xl font-black text-gray-900 leading-tight">
+                    For Employers <br/> & Clients
+                  </h2>
+                  <div className="w-16 h-2 bg-[#f2c060] mt-6"></div>
+                </div>
+              </div>
+              
+              {/* FAQ List Column */}
+              <div className="lg:col-span-8">
+                <div className="divide-y divide-gray-200">
+                  {employeeFaqs.map((faq, idx) => (
+                    <div key={idx} className="py-10 first:pt-0">
+                      <h3 className="text-2xl md:text-3xl font-bold text-[#222364] mb-4">
+                        {faq.q}
+                      </h3>
+                      <p className="text-lg text-gray-600 leading-relaxed">
+                        {faq.a}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 3. For Talents Section (Z-Pattern Layout style) */}
+        <section className="py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="grid lg:grid-cols-12 gap-12 lg:gap-24">
+              {/* Sticky Title Column */}
+              <div className="lg:col-span-4 relative">
+                <div className="sticky top-32">
+                  <h2 className="text-3xl md:text-5xl font-black text-gray-900 leading-tight">
+                    For Talents <br/> & Candidates
+                  </h2>
+                  <div className="w-16 h-2 bg-[#222364] mt-6"></div>
+                </div>
+              </div>
+              
+              {/* FAQ List Column */}
+              <div className="lg:col-span-8">
+                <div className="divide-y divide-gray-100">
+                  {talentFaqs.map((faq, idx) => (
+                    <div key={idx} className="py-10 first:pt-0">
+                      <h3 className="text-2xl md:text-3xl font-bold text-[#f2c060] mb-4">
+                        {faq.q}
+                      </h3>
+                      <p className="text-lg text-gray-600 leading-relaxed">
+                        {faq.a}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Bottom CTA */}
+        <ReadyToTransformCTA 
+          title="Still have questions?"
+          subtitle="Reach out to our support team and we will get back to you immediately."
+          buttonText="Contact Support"
+          buttonLink="/contact"
+        />
       </main>
+      
       <Footer />
     </div>
   );

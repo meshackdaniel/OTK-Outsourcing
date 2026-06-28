@@ -3,120 +3,138 @@ import { Navbar } from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { ReadyToTransformCTA } from "@/components/layout/ReadyToTransformCTA";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, UserCheck, ShieldCheck, Zap } from "lucide-react";
 import PartnersMarquee from "@/components/layout/PartnersMarquee";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export default function DirectPlacementPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white font-sans text-gray-900">
       <Navbar />
       <main>
-        {/* Hero Section */}
-        <section className="bg-[#222364] pt-24 pb-32 text-white relative overflow-hidden">
-          <div className="absolute inset-0 bg-[url('/pattern.svg')] opacity-10"></div>
-          <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-blue-200 text-sm font-semibold mb-6">
-                  <span className="w-2 h-2 rounded-full bg-blue-400"></span>
-                  Our Services
-                </div>
-                <h1 className="text-4xl lg:text-6xl font-black mb-6 leading-tight">
-                  Permanent Hiring for <span className="text-blue-400">Core Roles</span>
-                </h1>
-                <p className="text-lg text-blue-100 mb-8 max-w-xl leading-relaxed">
-                  We find, vet, and place top-tier talent directly into your organization. Focus on scaling your business while we handle the sourcing.
-                </p>
-                <div className="flex gap-4">
-                  <Link href="/employer/jobs/create">
-                    <Button className="bg-white text-[#222364] hover:bg-gray-100 h-12 px-8 rounded-xl font-bold">
-                      Post a Requirement
-                    </Button>
-                  </Link>
-                  <Link href="/contact">
-                    <Button variant="outline" className="border-white/20 text-white hover:bg-white/10 h-12 px-8 rounded-xl font-bold bg-transparent">
-                      Talk to Sales
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-              <div className="hidden lg:block relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-[#222364] to-transparent z-10"></div>
-                <div className="bg-white/5 rounded-3xl p-8 border border-white/10 backdrop-blur-sm relative">
-                   <div className="flex items-center gap-4 mb-8">
-                     <div className="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center shadow-inner">
-                       <UserCheck className="w-8 h-8 text-white" />
-                     </div>
-                     <div>
-                       <h3 className="font-bold text-xl text-white">Top 1% Talent</h3>
-                       <p className="text-blue-200 text-sm">Vetted & Ready</p>
-                     </div>
-                   </div>
-                   <div className="space-y-4">
-                     {[
-                       "Rigorous skill assessments",
-                       "Cultural fit evaluation",
-                       "Background verification",
-                       "90-day replacement guarantee"
-                     ].map((item, idx) => (
-                       <div key={idx} className="flex items-center gap-3 bg-white/5 p-4 rounded-xl border border-white/5">
-                         <CheckCircle2 className="w-5 h-5 text-blue-400 shrink-0" />
-                         <span className="text-sm font-medium text-white">{item}</span>
-                       </div>
-                     ))}
-                   </div>
-                </div>
-              </div>
-            </div>
+        {/* 1. Typography-Led Hero Section */}
+        <section className="pt-24 lg:pt-32 pb-16 px-4 lg:px-8 max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl lg:text-[5rem] font-black tracking-tight leading-[1.1] mb-8 text-[#222364]">
+            Permanent Hiring for <br />
+            <span className="text-[#3b3c8f]">Core Roles.</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-500 max-w-3xl mx-auto font-medium mb-12">
+            We find, vet, and place top-tier talent directly into your organization. Focus on scaling your business while we handle the sourcing.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link href="/employer/jobs/create">
+              <Button className="bg-[#222364] hover:bg-[#1a1a4b] text-white h-14 px-10 rounded-full font-bold text-lg">
+                Start Hiring Now
+              </Button>
+            </Link>
+          </div>
+        </section>
+
+        {/* Huge Hero Image */}
+        <section className="px-4 lg:px-8 max-w-7xl mx-auto mb-24">
+          <div className="w-full h-[500px] md:h-[700px] bg-gray-100 rounded-[2rem] overflow-hidden relative">
+            {/* Placeholder Image using Unsplash */}
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=2850&q=80" alt="Team Collaboration" className="w-full h-full object-cover" />
           </div>
         </section>
 
         {/* Partners Marquee */}
-        <section className="py-12 border-b border-gray-100 bg-white">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center mb-6">
-            <p className="text-sm font-bold text-gray-400 tracking-wider">TRUSTED BY INNOVATIVE COMPANIES</p>
+        <section className="py-12 border-y border-gray-100 bg-white mb-24">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center mb-8">
+            <p className="text-sm font-bold text-gray-400 tracking-widest uppercase">Trusted by forward-thinking companies</p>
           </div>
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <PartnersMarquee />
           </div>
         </section>
 
-        {/* Benefits Section */}
-        <section className="py-24 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-black text-gray-900 mb-4">Why Choose Direct Placement?</h2>
-              <p className="text-gray-500 max-w-2xl mx-auto">Skip the endless resume reviewing and let our experts find the perfect match for your team's long-term success.</p>
+        {/* 2. The "Mission/Statement" Block */}
+        <section className="py-24 px-4 lg:px-8 max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl md:text-5xl font-black text-[#222364] leading-tight mb-8">
+            "We believe in connecting the best global talent with the best opportunities, seamlessly."
+          </h2>
+          <p className="text-xl text-gray-500 font-medium">
+            Skip the endless resume reviewing and let our experts find the perfect match for your team's long-term success.
+          </p>
+        </section>
+
+        {/* 3. Staggered Content Sections (Z-Pattern Layout) */}
+        <section className="py-24 px-4 lg:px-8 max-w-7xl mx-auto space-y-32">
+          {/* Row 1: Image Left, Text Right */}
+          <div className="flex flex-col lg:flex-row items-center gap-16">
+            <div className="w-full lg:w-1/2 h-[400px] md:h-[600px] bg-gray-100 rounded-[2rem] overflow-hidden">
+               <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1000&q=80" alt="Quality Vetting" className="w-full h-full object-cover" />
             </div>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-3xl border border-gray-100">
-                <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
-                  <ShieldCheck className="w-7 h-7 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Guaranteed Quality</h3>
-                <p className="text-gray-500 leading-relaxed text-sm">Every candidate goes through a rigorous multi-step vetting process covering technical skills, soft skills, and cultural fit.</p>
-              </div>
-              <div className="bg-white p-8 rounded-3xl border border-gray-100">
-                <div className="w-14 h-14 bg-green-50 rounded-2xl flex items-center justify-center mb-6">
-                  <Zap className="w-7 h-7 text-green-600" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Faster Time-to-Hire</h3>
-                <p className="text-gray-500 leading-relaxed text-sm">Tap into our extensive, pre-vetted talent pool to fill critical roles in a fraction of the traditional hiring time.</p>
-              </div>
-              <div className="bg-white p-8 rounded-3xl border border-gray-100">
-                <div className="w-14 h-14 bg-purple-50 rounded-2xl flex items-center justify-center mb-6">
-                  <UserCheck className="w-7 h-7 text-purple-600" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Long-Term Retention</h3>
-                <p className="text-gray-500 leading-relaxed text-sm">We focus on aligning candidate career goals with your company vision to ensure high retention rates.</p>
+            <div className="w-full lg:w-1/2">
+              <h3 className="text-3xl md:text-4xl font-black text-gray-900 mb-6">Guaranteed Quality</h3>
+              <p className="text-lg text-gray-500 mb-8 leading-relaxed">
+                Every candidate goes through a rigorous multi-step vetting process. We don't just look at their resume; we evaluate their technical skills, soft skills, and cultural fit to ensure they align with your company's values.
+              </p>
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-center gap-4 text-lg font-bold text-gray-900">
+                  <span className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center shrink-0">1</span>
+                  Rigorous skill assessments
+                </li>
+                <li className="flex items-center gap-4 text-lg font-bold text-gray-900">
+                  <span className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center shrink-0">2</span>
+                  Cultural fit evaluation
+                </li>
+                <li className="flex items-center gap-4 text-lg font-bold text-gray-900">
+                  <span className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center shrink-0">3</span>
+                  Background verification
+                </li>
+              </ul>
+              <Link href="/employer/jobs/create" className="inline-flex items-center gap-2 text-[#222364] font-bold text-lg hover:underline group">
+                Get started <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Row 2: Text Left, Image Right */}
+          <div className="flex flex-col lg:flex-row-reverse items-center gap-16">
+            <div className="w-full lg:w-1/2 h-[400px] md:h-[600px] bg-gray-100 rounded-[2rem] overflow-hidden">
+               <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1000&q=80" alt="Speed to Hire" className="w-full h-full object-cover" />
+            </div>
+            <div className="w-full lg:w-1/2">
+              <h3 className="text-3xl md:text-4xl font-black text-gray-900 mb-6">Faster Time-to-Hire</h3>
+              <p className="text-lg text-gray-500 mb-8 leading-relaxed">
+                Tap into our extensive, pre-vetted talent pool to fill critical roles in a fraction of the traditional hiring time. We focus on aligning candidate career goals with your company vision to ensure high retention rates from day one.
+              </p>
+              <div className="bg-[#F5F2EC] p-8 rounded-3xl">
+                <h4 className="text-xl font-bold text-[#222364] mb-4">The OTK Advantage</h4>
+                <p className="text-gray-600">
+                  Our dedicated recruiters work exclusively on your roles, utilizing AI-driven matching and deep industry networks to present you with only the top 1% of candidates.
+                </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Bottom CTA */}
-        <div className="max-w-7xl mx-auto px-4 lg:px-8 mb-8 mt-24">
+        {/* 4. Stats/Impact Section */}
+        <section className="py-24 bg-[#222364] text-white my-24">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="grid md:grid-cols-3 gap-12 text-center divide-y md:divide-y-0 md:divide-x divide-white/20">
+              <div className="pt-8 md:pt-0">
+                <div className="text-6xl md:text-7xl font-black text-blue-400 mb-4">1%</div>
+                <div className="text-xl font-bold text-white mb-2">Top Talent</div>
+                <p className="text-blue-200">Only the best candidates pass our rigorous vetting process.</p>
+              </div>
+              <div className="pt-8 md:pt-0">
+                <div className="text-6xl md:text-7xl font-black text-blue-400 mb-4">48h</div>
+                <div className="text-xl font-bold text-white mb-2">Average Match Time</div>
+                <p className="text-blue-200">Get a curated shortlist of candidates in record time.</p>
+              </div>
+              <div className="pt-8 md:pt-0">
+                <div className="text-6xl md:text-7xl font-black text-blue-400 mb-4">90</div>
+                <div className="text-xl font-bold text-white mb-2">Day Guarantee</div>
+                <p className="text-blue-200">We replace any candidate that doesn't work out within 90 days.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 5. Bottom CTA */}
+        <div className="max-w-7xl mx-auto px-4 lg:px-8 mb-16">
           <ReadyToTransformCTA 
             title="Ready to Build Your Core Team?"
             subtitle="Let us find the perfect permanent additions to your organization."
