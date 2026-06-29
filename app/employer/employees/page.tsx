@@ -19,7 +19,7 @@ export default function EmployerEmployees() {
  <DashboardLayout type="employer">
  <div className="space-y-6">
  
- <h1 className="text-2xl font-bold text-[#222364]">Employees</h1>
+ <h1 className="text-2xl font-black text-[#222364]">Employees</h1>
 
  {/* Filter Bar */}
  <div className="bg-white rounded-2xl p-6 border border-gray-100 flex flex-col md:flex-row items-center justify-between gap-4">
@@ -101,13 +101,13 @@ export default function EmployerEmployees() {
  <span className={cn(
 "inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold border",
  emp.statusColor ==="green"?"bg-green-50 text-green-700 border-green-200":
- emp.statusColor ==="orange"?"bg-orange-50 text-orange-700 border-orange-200":
+ emp.statusColor ==="orange"?"bg-gray-50 text-orange-700 border-orange-200":
 "bg-gray-50 text-gray-700 border-gray-200"
  )}>
  <span className={cn(
 "w-1.5 h-1.5 rounded-full",
  emp.statusColor ==="green"?"bg-green-600":
- emp.statusColor ==="orange"?"bg-orange-500":
+ emp.statusColor ==="orange"?"bg-gray-500":
 "bg-gray-500"
  )}></span>
  {emp.status}

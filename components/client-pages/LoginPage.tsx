@@ -180,7 +180,7 @@ const LoginPage = () => {
  </Button>
  </form>
  <p className="text-center text-sm text-gray-600 dark:text-gray-400 mt-3">
- Not a user?{""}
+ Not a user?{" "}
  <Link href="/register"className="text-dark-blue font-semibold">
  Create Account
  </Link>

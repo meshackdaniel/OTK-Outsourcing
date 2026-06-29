@@ -604,7 +604,7 @@ export default function RegisterPage() {
  onSubmit={step2Form.handleSubmit(onStep2Submit)}
  className="space-y-6"
  >
- <div className="flex justify-between gap-3">
+ <div className="flex flex-col md:flex-row justify-between gap-3">
  {values.map((_, i) => (
  <Input
  key={i}
@@ -727,7 +727,7 @@ export default function RegisterPage() {
 
                   <div>
                     <Label className="block mb-2 font-medium text-gray-700">What type of work are you looking for?</Label>
-                    <div className="flex gap-4">
+                    <div className="flex flex-col md:flex-row gap-4">
                       <label className={cn("flex-1 border rounded-xl p-4 cursor-pointer text-center bg-gray-50/50 hover:border-dark-blue", step3TalentForm.watch("workType") === "contract" && "border-dark-blue bg-dark-blue/5")} onClick={() => { step3TalentForm.setValue("workType", "contract"); step3TalentForm.trigger("workType"); }}>
                         <span className="font-semibold text-sm">Contract</span>
                       </label>
@@ -763,7 +763,7 @@ export default function RegisterPage() {
                   {educationFields.map((field, index) => (
                     <div key={field.id} className="space-y-6 p-4 border rounded-2xl bg-gray-50/20 relative">
                       {index > 0 && (
-                        <div className="flex justify-between items-center mb-2">
+                        <div className="flex flex-col md:flex-row justify-between items-center mb-2">
                           <h4 className="text-sm font-semibold text-gray-500">Education {index + 1}</h4>
                           <Button type="button" variant="ghost" onClick={() => removeEducation(index)} className="text-red-500 hover:text-red-700 hover:bg-red-50 px-3 py-1.5 h-auto text-sm rounded-xl">
                             Remove

@@ -29,7 +29,7 @@ export default function CompanyProfile() {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>
-            <h1 className="text-2xl font-bold text-gray-900">Company Profile</h1>
+            <h1 className="text-2xl font-black text-gray-900">Company Profile</h1>
             <p className="text-gray-500 text-sm mt-1">Manage your company information, branding, and contact details.</p>
           </div>
           <Button className="bg-[#222364] hover:bg-[#1a1a4b] text-white rounded-xl h-11 px-8 font-bold shrink-0">
@@ -44,7 +44,7 @@ export default function CompanyProfile() {
             
             {/* General Info Card */}
             <div className="bg-white rounded-2xl border border-gray-100 p-8">
-              <h2 className="text-lg font-bold text-[#222364] mb-6 flex items-center gap-2">
+              <h2 className="text-lg font-black text-[#222364] mb-6 flex items-center gap-2">
                 <Building2 className="w-5 h-5" /> General Information
               </h2>
               
@@ -103,7 +103,7 @@ export default function CompanyProfile() {
 
             {/* Location Card */}
             <div className="bg-white rounded-2xl border border-gray-100 p-8">
-              <h2 className="text-lg font-bold text-[#222364] mb-6 flex items-center gap-2">
+              <h2 className="text-lg font-black text-[#222364] mb-6 flex items-center gap-2">
                 <MapPin className="w-5 h-5" /> Location Details
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -139,7 +139,7 @@ export default function CompanyProfile() {
             
             {/* Contact Details */}
             <div className="bg-white rounded-2xl border border-gray-100 p-8">
-              <h2 className="text-lg font-bold text-[#222364] mb-6 flex items-center gap-2">
+              <h2 className="text-lg font-black text-[#222364] mb-6 flex items-center gap-2">
                 <Phone className="w-5 h-5" /> Contact Details
               </h2>
               <div className="space-y-5">

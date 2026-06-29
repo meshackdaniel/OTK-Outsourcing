@@ -53,7 +53,7 @@ const EarlyAdopters = () => {
  return (
  <section className="pt-20">
  <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">
- <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+ <h2 className="text-3xl lg:text-4xl font-black mb-6">
  Hear From Our Early Adopters
  </h2>
  <p className="text-gray-600 mb-16 mx-auto">

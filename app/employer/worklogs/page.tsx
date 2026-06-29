@@ -70,7 +70,7 @@ export default function EmployerWorkforce() {
  {/* Daily Work Logs Table */}
  <div className="bg-white rounded-2xl p-6 border border-gray-100">
  <div className="flex items-center justify-between mb-6">
- <h2 className="text-xl font-bold text-gray-900">Daily work logs</h2>
+ <h2 className="text-xl font-black text-gray-900">Daily work logs</h2>
  <Button variant="outline"className="border-gray-200 text-gray-700 rounded-xl px-6 h-10">
  View All
  </Button>

@@ -81,7 +81,7 @@ export function LegalPageTemplate({
           {/* Sidebar */}
           <div className="md:w-1/4 hidden md:block">
             <div className="sticky top-32 space-y-2">
-              <h3 className="font-bold text-gray-900 mb-6 uppercase tracking-wider text-sm px-4">
+              <h3 className="font-black text-gray-900 mb-6 uppercase tracking-wider text-sm px-4">
                 Table of Contents
               </h3>
               <nav className="flex flex-col space-y-1 relative before:absolute before:inset-y-0 before:left-4 before:w-px before:bg-gray-200">
@@ -117,7 +117,7 @@ export function LegalPageTemplate({
                         {section.icon}
                       </div>
                     )}
-                    <h2 className="text-xl md:text-2xl font-bold text-gray-900">
+                    <h2 className="text-xl md:text-2xl font-black text-gray-900">
                       {section.title}
                     </h2>
                   </div>

@@ -16,9 +16,9 @@ export default function AffiliateDashboard() {
  <DashboardLayout type="affiliate">
  <div className="space-y-6">
  
- <div className="flex justify-between items-end mb-2">
+ <div className="flex flex-col md:flex-row justify-between items-end mb-2">
  <div>
- <h1 className="text-2xl font-bold text-[#222364]">Affiliate Dashboard</h1>
+ <h1 className="text-2xl font-black text-[#222364]">Affiliate Dashboard</h1>
  <p className="text-gray-500 mt-1">Track your referrals, commissions, and network growth.</p>
  </div>
  </div>
@@ -30,7 +30,7 @@ export default function AffiliateDashboard() {
  {/* Tracking Link Card */}
  <div className="bg-white rounded-2xl p-8 border border-gray-100 relative overflow-hidden">
  <div className="relative z-10">
- <h2 className="text-xl font-bold text-[#222364] mb-2">Your Tracking Link</h2>
+ <h2 className="text-xl font-black text-[#222364] mb-2">Your Tracking Link</h2>
  <p className="text-gray-500 font-medium mb-6 max-w-md">
  Share this link with potential Clients or Talent. Commissions trigger upon monetized events (funding, deployment).
  </p>
@@ -50,11 +50,11 @@ export default function AffiliateDashboard() {
  {/* Referrals Stats */}
  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
  <div className="bg-white rounded-2xl p-6 border border-gray-100 flex flex-col">
- <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4">
+ <div className="w-12 h-12 rounded-xl bg-gray-50 text-blue-600 flex items-center justify-center mb-4">
  <Users className="h-6 w-6"/>
  </div>
  <p className="text-sm font-semibold text-gray-500">Talent Referrals</p>
- <h3 className="text-4xl font-bold text-[#222364] mt-1">12</h3>
+ <h3 className="text-4xl font-black text-[#222364] mt-1">12</h3>
  <p className="text-sm text-green-600 mt-3 font-semibold">4 successfully deployed</p>
  </div>
  
@@ -63,7 +63,7 @@ export default function AffiliateDashboard() {
  <Building className="h-6 w-6"/>
  </div>
  <p className="text-sm font-semibold text-gray-500">Client Referrals</p>
- <h3 className="text-4xl font-bold text-[#222364] mt-1">3</h3>
+ <h3 className="text-4xl font-black text-[#222364] mt-1">3</h3>
  <p className="text-sm text-green-600 mt-3 font-semibold">1 active subscription</p>
  </div>
  </div>
@@ -71,16 +71,16 @@ export default function AffiliateDashboard() {
  {/* Recent Activity */}
  <div className="bg-white rounded-2xl p-6 border border-gray-100">
  <div className="flex items-center justify-between mb-6">
- <h2 className="text-xl font-bold text-[#222364]">Recent Activity</h2>
+ <h2 className="text-xl font-black text-[#222364]">Recent Activity</h2>
  </div>
  <div className="divide-y divide-gray-50">
  {[
  { name:"Acme Corp Ltd.", type:"Client", status:"Subscribed", earned:"+ ₦ 25,000"},
  { name:"Sarah Jenkins", type:"Talent", status:"Deployed", earned:"+ ₦ 20,000"},
  ].map((ref, i) => (
- <div key={i} className="py-4 flex justify-between items-center hover:bg-gray-50/50 transition cursor-pointer">
+ <div key={i} className="py-4 flex flex-col md:flex-row justify-between items-center hover:bg-gray-50/50 transition cursor-pointer">
  <div>
- <h3 className="font-bold text-gray-900 text-lg">{ref.name}</h3>
+ <h3 className="font-black text-gray-900 text-lg">{ref.name}</h3>
  <p className="text-gray-500 font-medium text-sm mt-0.5">{ref.type}</p>
  </div>
  <div className="flex items-center gap-6">
@@ -104,7 +104,7 @@ export default function AffiliateDashboard() {
  <Wallet className="h-6 w-6"/>
  </div>
  <p className="text-gray-500 font-bold mb-1">Withdrawable Commission</p>
- <h3 className="text-4xl font-bold text-[#222364] mb-6">₦45,000</h3>
+ <h3 className="text-4xl font-black text-[#222364] mb-6">₦45,000</h3>
  <Link href="/affiliate/wallet">
  <Button className="w-full bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 font-bold rounded-xl h-12">
  Manage Wallet
@@ -114,16 +114,16 @@ export default function AffiliateDashboard() {
 
  {/* Commission Tiers */}
  <div className="bg-white rounded-2xl p-6 border border-gray-100">
- <h3 className="font-bold text-[#222364] mb-6">Commission Tiers</h3>
+ <h3 className="font-black text-[#222364] mb-6">Commission Tiers</h3>
  <div className="space-y-4">
- <div className="flex justify-between items-center bg-gray-50 p-4 rounded-xl border border-gray-200">
+ <div className="flex flex-col md:flex-row justify-between items-center bg-gray-50 p-4 rounded-xl border border-gray-200">
  <div>
  <p className="font-bold text-gray-900">Starter</p>
  <p className="text-xs text-blue-600 font-bold mt-1">Current Tier</p>
  </div>
  <p className="font-bold text-[#222364] text-xl">5%</p>
  </div>
- <div className="flex justify-between items-center bg-white p-4 rounded-xl border border-gray-100 opacity-60">
+ <div className="flex flex-col md:flex-row justify-between items-center bg-white p-4 rounded-xl border border-gray-100 opacity-60">
  <div>
  <p className="font-bold text-gray-500">Pro</p>
  <p className="text-xs text-gray-400 font-medium mt-1">After 5 Deployments</p>

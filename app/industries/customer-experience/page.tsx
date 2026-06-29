@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import PartnersMarquee from "@/components/layout/PartnersMarquee";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { FadeIn } from "@/components/ui/fade-in";
 
 export default function CustomerExperiencePage() {
   return (
@@ -14,13 +15,17 @@ export default function CustomerExperiencePage() {
       <main>
         {/* 1. Typography-Led Hero Section */}
         <section className="pt-24 lg:pt-32 pb-16 px-4 lg:px-8 max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl lg:text-[5rem] font-black tracking-tight leading-[1.1] mb-8 text-gray-900">
-            Elevate Your <br />
-            <span className="text-amber-500">Customer Experience.</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-500 max-w-3xl mx-auto font-medium mb-12">
-            Provide world-class support with our vetted customer success agents, virtual assistants, and account managers. 24/7 coverage across all channels.
-          </p>
+          <FadeIn>
+            <h1 className="text-5xl md:text-7xl lg:text-[5rem] font-black tracking-tight leading-[1.1] mb-8 text-gray-900">
+              Elevate Your <br />
+              <span className="text-[#222364]">Customer Experience.</span>
+            </h1>
+          </FadeIn>
+          <FadeIn delay={0.1}>
+            <p className="text-xl md:text-2xl text-gray-500 max-w-3xl mx-auto font-medium mb-12">
+              Provide world-class support with our vetted customer success agents, virtual assistants, and account managers. 24/7 coverage across all channels.
+            </p>
+          </FadeIn>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/employer/jobs/create">
               <Button className="bg-[#222364] hover:bg-[#1a1a4b] text-white h-14 px-10 rounded-full font-bold text-lg">
@@ -32,15 +37,15 @@ export default function CustomerExperiencePage() {
 
         {/* Huge Hero Image */}
         <section className="px-4 lg:px-8 max-w-7xl mx-auto mb-24">
-          <div className="w-full h-[500px] md:h-[700px] bg-amber-50 rounded-[2rem] overflow-hidden relative">
+          <div className="w-full h-[500px] md:h-[700px] bg-gray-50 rounded-[2rem] overflow-hidden relative">
             <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=2850&q=80" alt="Customer Support" className="w-full h-full object-cover" />
           </div>
         </section>
 
         {/* Partners Marquee */}
-        <section className="py-12 border-y border-amber-100 bg-amber-50/30 mb-24">
+        <section className="py-12 border-y border-gray-200 bg-gray-50/30 mb-24">
           <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center mb-8">
-            <p className="text-sm font-bold text-amber-600/70 tracking-widest uppercase">Companies that trust our support staff</p>
+            <p className="text-sm font-bold text-[#222364]/70 tracking-widest uppercase">Companies that trust our support staff</p>
           </div>
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <PartnersMarquee />
@@ -49,18 +54,23 @@ export default function CustomerExperiencePage() {
 
         {/* 2. The "Mission/Statement" Block */}
         <section className="py-24 px-4 lg:px-8 max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-black text-gray-900 leading-tight mb-8">
-            "Your customers deserve empathy, quick resolutions, and 24/7 reliability. We supply the talent that delivers it."
-          </h2>
-          <p className="text-xl text-gray-500 font-medium">
-            Build a loyal customer base with empathetic, articulate, and proactive support staff dedicated to your brand.
-          </p>
+          <FadeIn>
+            <h2 className="text-3xl md:text-5xl font-black text-gray-900 leading-tight mb-8">
+              "Your customers deserve empathy, quick resolutions, and 24/7 reliability. We supply the talent that delivers it."
+          
+            </h2>
+          </FadeIn>
+          <FadeIn delay={0.1}>
+            <p className="text-xl text-gray-500 font-medium">
+              Build a loyal customer base with empathetic, articulate, and proactive support staff dedicated to your brand.
+            </p>
+          </FadeIn>
         </section>
 
         {/* 3. Staggered Content Sections (Z-Pattern Layout) */}
         <section className="py-24 px-4 lg:px-8 max-w-7xl mx-auto space-y-32">
           {/* Row 1: Image Left, Text Right */}
-          <div className="flex flex-col lg:flex-row items-center gap-16">
+          <FadeIn className="flex flex-col lg:flex-row items-center gap-16">
             <div className="w-full lg:w-1/2 h-[400px] md:h-[600px] bg-gray-100 rounded-[2rem] overflow-hidden">
                <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&w=1000&q=80" alt="Support Agents" className="w-full h-full object-cover" />
             </div>
@@ -71,26 +81,26 @@ export default function CustomerExperiencePage() {
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-center gap-4 text-lg font-bold text-gray-900">
-                  <span className="w-8 h-8 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center shrink-0">1</span>
+                  <span className="w-8 h-8 rounded-full bg-gray-100 text-[#222364] flex items-center justify-center shrink-0">1</span>
                   Omnichannel Support (Email, Chat, Voice)
                 </li>
                 <li className="flex items-center gap-4 text-lg font-bold text-gray-900">
-                  <span className="w-8 h-8 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center shrink-0">2</span>
+                  <span className="w-8 h-8 rounded-full bg-gray-100 text-[#222364] flex items-center justify-center shrink-0">2</span>
                   Multilingual Capabilities
                 </li>
                 <li className="flex items-center gap-4 text-lg font-bold text-gray-900">
-                  <span className="w-8 h-8 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center shrink-0">3</span>
+                  <span className="w-8 h-8 rounded-full bg-gray-100 text-[#222364] flex items-center justify-center shrink-0">3</span>
                   24/7 Timezone Coverage
                 </li>
               </ul>
-              <Link href="/employer/jobs/create" className="inline-flex items-center gap-2 text-amber-600 font-bold text-lg hover:underline group">
+              <Link href="/employer/jobs/create" className="inline-flex items-center gap-2 text-[#222364] font-bold text-lg hover:underline group">
                 Hire support agents <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
-          </div>
+          </FadeIn>
 
           {/* Row 2: Text Left, Image Right */}
-          <div className="flex flex-col lg:flex-row-reverse items-center gap-16">
+          <FadeIn className="flex flex-col lg:flex-row-reverse items-center gap-16">
             <div className="w-full lg:w-1/2 h-[400px] md:h-[600px] bg-gray-100 rounded-[2rem] overflow-hidden">
                <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1000&q=80" alt="Account Management" className="w-full h-full object-cover" />
             </div>
@@ -99,33 +109,33 @@ export default function CustomerExperiencePage() {
               <p className="text-lg text-gray-500 mb-8 leading-relaxed">
                 Dedicated relationship builders who drive customer success, onboarding, retention, and upsell opportunities. For operations, our Virtual Assistants handle scheduling, data entry, and CRM management.
               </p>
-              <div className="bg-amber-50 p-8 rounded-3xl">
-                <h4 className="text-xl font-bold text-amber-900 mb-4">Proactive Growth</h4>
-                <p className="text-amber-800">
+              <div className="bg-gray-50 p-8 rounded-3xl">
+                <h4 className="text-xl font-black text-[#222364] mb-4">Proactive Growth</h4>
+                <p className="text-[#222364]">
                   Transition your customer experience from reactive troubleshooting to proactive relationship building. Our account managers are trained to spot expansion opportunities.
                 </p>
               </div>
             </div>
-          </div>
+          </FadeIn>
         </section>
 
         {/* 4. Stats/Impact Section */}
-        <section className="py-24 bg-amber-500 text-white my-24">
+        <section className="py-24 bg-[#222364] text-white my-24">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="grid md:grid-cols-3 gap-12 text-center divide-y md:divide-y-0 md:divide-x divide-white/20">
               <div className="pt-8 md:pt-0">
                 <div className="text-6xl md:text-7xl font-black text-white mb-4">95%</div>
-                <div className="text-xl font-bold text-amber-100 mb-2">Average CSAT Score</div>
+                <div className="text-xl font-bold text-gray-500 mb-2">Average CSAT Score</div>
                 <p className="text-amber-50">Our agents consistently deliver highly-rated interactions.</p>
               </div>
               <div className="pt-8 md:pt-0">
                 <div className="text-6xl md:text-7xl font-black text-white mb-4">&lt;2m</div>
-                <div className="text-xl font-bold text-amber-100 mb-2">First Response Time</div>
+                <div className="text-xl font-bold text-gray-500 mb-2">First Response Time</div>
                 <p className="text-amber-50">Dramatically reduce wait times with dedicated teams.</p>
               </div>
               <div className="pt-8 md:pt-0">
                 <div className="text-6xl md:text-7xl font-black text-white mb-4">24/7</div>
-                <div className="text-xl font-bold text-amber-100 mb-2">Global Coverage</div>
+                <div className="text-xl font-bold text-gray-500 mb-2">Global Coverage</div>
                 <p className="text-amber-50">Never leave a customer hanging, no matter their timezone.</p>
               </div>
             </div>
@@ -133,7 +143,7 @@ export default function CustomerExperiencePage() {
         </section>
 
         {/* 5. Bottom CTA */}
-        <div className="max-w-7xl mx-auto px-4 lg:px-8 mb-16">
+        <FadeIn className="max-w-7xl mx-auto px-4 lg:px-8 mb-16">
           <ReadyToTransformCTA 
             title="Improve Your CSAT Score Today"
             subtitle="Hire vetted support professionals ready to deliver exceptional service."
@@ -141,7 +151,7 @@ export default function CustomerExperiencePage() {
             buttonLink="/employer/jobs/create"
             className="px-0 py-0"
           />
-        </div>
+        </FadeIn>
       </main>
       <Footer />
     </div>

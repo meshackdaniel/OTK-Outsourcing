@@ -22,7 +22,7 @@ const PartnersMarquee = () => {
  <div className="relative">
  {/* Wrapping container with hover pause */}
  <motion.div
- className="flex gap-16"
+ className="flex flex-col md:flex-row gap-16"
  animate={{ x: [0, -100 +"%"] }} // Moves from 0 to -100% of its own width
  transition={{
  x: {

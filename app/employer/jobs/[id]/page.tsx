@@ -18,7 +18,7 @@ const candidatesData = [
     avatar: "/avatars/1.png",
     verified: true,
     stage: "Applied",
-    stageColor: "bg-blue-500",
+    stageColor: "bg-gray-500",
     match: 85,
     matchColor: "text-green-500",
     experience: "3 years",
@@ -30,9 +30,9 @@ const candidatesData = [
     avatar: "/avatars/2.png",
     verified: true,
     stage: "Applied",
-    stageColor: "bg-blue-500",
+    stageColor: "bg-gray-500",
     match: 68,
-    matchColor: "text-orange-500",
+    matchColor: "text-gray-500",
     experience: "3 years",
     email: "blissmaurice@gmail.com"
   },
@@ -42,7 +42,7 @@ const candidatesData = [
     avatar: "/avatars/3.png",
     verified: true,
     stage: "Shortlisted",
-    stageColor: "bg-orange-500",
+    stageColor: "bg-gray-500",
     match: 99,
     matchColor: "text-green-500",
     experience: "3 years",
@@ -56,7 +56,7 @@ const candidatesData = [
     stage: "First Interview",
     stageColor: "bg-gray-400",
     match: 68,
-    matchColor: "text-orange-500",
+    matchColor: "text-gray-500",
     experience: "3 years",
     email: "blissmaurice@gmail.com"
   },
@@ -98,7 +98,7 @@ export default function EmployerJobDetailsPage() {
         </div>
 
         {/* Title & Badges */}
-        <h1 className="text-2xl font-bold text-gray-900 mb-4">Backend Engineer</h1>
+        <h1 className="text-2xl font-black text-gray-900 mb-4">Backend Engineer</h1>
         <div className="flex flex-wrap items-center gap-6 mb-8">
           <div className="flex items-center gap-2 text-gray-700 font-semibold text-sm">
             <Briefcase className="w-5 h-5" />
@@ -133,7 +133,7 @@ export default function EmployerJobDetailsPage() {
           
           {/* Candidates Header */}
           <div className="p-6 border-b border-gray-100">
-            <h2 className="text-gray-500 text-sm font-medium">67 Candidates</h2>
+            <h2 className="text-gray-500 text-sm font-black">67 Candidates</h2>
           </div>
 
           {/* Toolbar */}
@@ -246,17 +246,17 @@ export default function EmployerJobDetailsPage() {
 
       {activeTab === "job-post" && (
         <div className="bg-white rounded-2xl border border-gray-100 p-8 md:p-10">
-          <h2 className="text-xl font-bold text-gray-900 mb-6 border-b border-gray-100 pb-4">Job Description</h2>
+          <h2 className="text-xl font-black text-gray-900 mb-6 border-b border-gray-100 pb-4">Job Description</h2>
           <div className="space-y-6 text-gray-700 leading-relaxed text-sm">
             <p>We are seeking an experienced Backend Engineer to join our growing engineering team. You will be responsible for designing and building highly scalable backend systems and APIs.</p>
-            <h3 className="font-bold text-gray-900 text-base mt-8 mb-4">Key Responsibilities</h3>
+            <h3 className="font-black text-gray-900 text-base mt-8 mb-4">Key Responsibilities</h3>
             <ul className="list-disc pl-5 space-y-2">
               <li>Design, build, and maintain scalable APIs and microservices.</li>
               <li>Collaborate with frontend teams to integrate user-facing elements.</li>
               <li>Optimize applications for maximum speed and scalability.</li>
               <li>Implement security and data protection best practices.</li>
             </ul>
-            <h3 className="font-bold text-gray-900 text-base mt-8 mb-4">Required Skills & Qualifications</h3>
+            <h3 className="font-black text-gray-900 text-base mt-8 mb-4">Required Skills & Qualifications</h3>
             <div className="flex flex-wrap gap-2 mb-6">
               <span className="bg-gray-50 border border-gray-200 text-gray-700 text-xs font-bold px-3 py-1.5 rounded-lg">Node.js</span>
               <span className="bg-gray-50 border border-gray-200 text-gray-700 text-xs font-bold px-3 py-1.5 rounded-lg">TypeScript</span>

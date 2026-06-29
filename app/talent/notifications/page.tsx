@@ -15,7 +15,7 @@ const notifications = [
     read: false,
     icon: Briefcase,
     color: "text-blue-600",
-    bg: "bg-blue-50"
+    bg: "bg-gray-50"
   },
   {
     id: 2,
@@ -59,7 +59,7 @@ export default function TalentNotificationsPage() {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>
-            <h1 className="text-3xl font-bold text-gray-900">Notifications</h1>
+            <h1 className="text-3xl font-black text-gray-900">Notifications</h1>
             <p className="text-gray-500 mt-1">Stay updated on job matches, interviews, and platform alerts.</p>
           </div>
           <Button variant="outline" className="border-gray-200 text-gray-600 rounded-xl bg-white hover:bg-gray-50">

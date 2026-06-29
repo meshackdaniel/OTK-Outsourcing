@@ -65,14 +65,13 @@ export default function ReferralsPage() {
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h1 className="text-3xl font-bold text-gray-900">Referrals</h1>
+          <h1 className="text-3xl font-black text-gray-900">Referrals</h1>
           <p className="text-gray-500 mt-1">Track your client and talent referrals and monitor your commissions.</p>
         </div>
         <div className="flex items-center gap-2 bg-white p-2 rounded-xl border border-gray-200">
           <Input 
             value={referralLink} 
-            readOnly 
-            className="border-0 focus-visible:ring-0 bg-transparent w-64 text-gray-600"
+            className="border-0 focus-visible:ring-0 bg-transparent w-full sm:w-64 text-gray-600"
           />
           <Button onClick={copyToClipboard} className="bg-[#222364] hover:bg-[#1a1b4b] text-white rounded-lg">
             <Copy className="w-4 h-4 mr-2" />
@@ -96,7 +95,7 @@ export default function ReferralsPage() {
               </div>
               <div className="mt-4">
                 <p className="text-sm text-gray-500 font-medium">{stat.title}</p>
-                <h3 className="text-2xl font-bold text-gray-900 mt-1">{stat.value}</h3>
+                <h3 className="text-2xl font-black text-gray-900 mt-1">{stat.value}</h3>
               </div>
             </CardContent>
           </Card>

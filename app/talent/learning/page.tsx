@@ -15,7 +15,7 @@ export default function TalentLearning() {
  <DashboardLayout type="talent">
  <div className="flex flex-col gap-8">
  
- <div className="flex justify-between items-end">
+ <div className="flex flex-col md:flex-row justify-between items-end">
  <div>
  <h1 className="text-3xl font-black text-[#222364]">Learning & Services</h1>
  <p className="text-gray-500 mt-1 font-medium">Boost your employability with our professional services and assessments.</p>
@@ -37,8 +37,8 @@ export default function TalentLearning() {
  { tier:"Executive Package", price:"₦85,000", desc:"C-Level rewrite + Cover Letter + LinkedIn Profile."}
  ].map((pkg, idx) => (
  <div key={idx} className="bg-white border border-gray-200 rounded-xl p-5 hover:border-[#f2c060] transition-colors cursor-pointer group">
- <div className="flex justify-between items-center mb-2">
- <h3 className="font-bold text-[#222364]">{pkg.tier}</h3>
+ <div className="flex flex-col md:flex-row justify-between items-center mb-2">
+ <h3 className="font-black text-[#222364]">{pkg.tier}</h3>
  <span className="font-black text-[#222364]">{pkg.price}</span>
  </div>
  <p className="text-sm text-gray-500 mb-4 font-medium">{pkg.desc}</p>
@@ -78,7 +78,7 @@ export default function TalentLearning() {
  { name:"Data Structures", price:"₦5,000"},
  { name:"PMP Prep Course", price:"₦12,000"}
  ].map((test, idx) => (
- <div key={idx} className="flex justify-between items-center p-4 bg-white border border-gray-200 rounded-xl hover:border-[#f2c060] transition-colors">
+ <div key={idx} className="flex flex-col md:flex-row justify-between items-center p-4 bg-white border border-gray-200 rounded-xl hover:border-[#f2c060] transition-colors">
  <span className="font-bold text-[#222364] text-sm">{test.name}</span>
  <div className="flex items-center gap-4">
  <span className="font-black text-[#222364]">{test.price}</span>

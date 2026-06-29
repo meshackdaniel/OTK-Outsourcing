@@ -23,7 +23,7 @@ export default function TalentMessagesPage() {
           {/* Sidebar */}
           <div className="w-1/3 border-r border-gray-100 flex flex-col h-full">
             <div className="p-6 border-b border-gray-100">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Messages</h2>
+              <h2 className="text-2xl font-black text-gray-900 mb-4">Messages</h2>
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
                 <Input placeholder="Search conversations..." className="pl-10 bg-gray-50 border-0 rounded-xl" />
@@ -51,7 +51,7 @@ export default function TalentMessagesPage() {
                   </div>
                   <div className="flex-1 overflow-hidden">
                     <div className="flex items-center justify-between">
-                      <h3 className="font-semibold text-gray-900 truncate">{chat.name}</h3>
+                      <h3 className="font-black text-gray-900 truncate">{chat.name}</h3>
                       <span className="text-xs text-gray-400 flex-shrink-0">{chat.time}</span>
                     </div>
                     <p className="text-sm text-gray-500 truncate mt-1">{chat.lastMessage}</p>
@@ -77,7 +77,7 @@ export default function TalentMessagesPage() {
                   </AvatarFallback>
                 </Avatar>
                 <div>
-                  <h3 className="font-bold text-gray-900">{activeChat.name}</h3>
+                  <h3 className="font-black text-gray-900">{activeChat.name}</h3>
                   <p className="text-xs text-green-600 font-medium">Online</p>
                 </div>
               </div>
@@ -96,7 +96,7 @@ export default function TalentMessagesPage() {
                 </span>
               </div>
               
-              <div className="flex gap-4 max-w-[80%]">
+              <div className="flex flex-col md:flex-row gap-4 max-w-[80%]">
                 <Avatar className="w-8 h-8 flex-shrink-0 mt-auto">
                   <AvatarFallback className="bg-[#222364] text-white">
                     {activeChat.name.substring(0, 2).toUpperCase()}
@@ -108,7 +108,7 @@ export default function TalentMessagesPage() {
                 </div>
               </div>
 
-              <div className="flex gap-4 max-w-[80%] ml-auto justify-end">
+              <div className="flex flex-col md:flex-row gap-4 max-w-[80%] ml-auto justify-end">
                 <div className="bg-[#222364] p-4 rounded-2xl rounded-br-none text-white">
                   <p className="text-sm text-white/90">That sounds great! I am available tomorrow after 2 PM.</p>
                   <p className="text-xs text-white/60 mt-2 text-right">10:30 AM</p>

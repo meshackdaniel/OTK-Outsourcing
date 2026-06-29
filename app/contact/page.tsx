@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Facebook, Instagram, Twitter, MessageCircle, Phone, Mail, MapPin } from "lucide-react";
+import { FadeIn, StaggerContainer, FadeInStaggerItem } from "@/components/ui/fade-in";
 
 export default function ContactPage() {
   return (
@@ -15,13 +16,17 @@ export default function ContactPage() {
         {/* 1. Typography-Led Hero Section */}
         <section className="pt-32 pb-16 px-4 lg:px-8 max-w-7xl mx-auto">
           <div className="max-w-4xl">
-            <h1 className="text-5xl md:text-7xl font-black text-[#222364] mb-8 leading-tight tracking-tight">
-              Let's build <br />
-              <span className="text-[#f2c060]">something great.</span>
-            </h1>
-            <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
-              Do you have a question, complaint, or need help choosing the right service? Our team of experts is ready to assist you.
-            </p>
+            <FadeIn>
+              <h1 className="text-5xl md:text-7xl font-black text-[#222364] mb-8 leading-tight tracking-tight">
+                Let's build <br />
+                <span className="text-[#f2c060]">something great.</span>
+              </h1>
+            </FadeIn>
+            <FadeIn delay={0.1}>
+              <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
+                Do you have a question, complaint, or need help choosing the right service? Our team of experts is ready to assist you.
+              </p>
+            </FadeIn>
           </div>
         </section>
 
@@ -30,7 +35,7 @@ export default function ContactPage() {
           <div className="grid lg:grid-cols-12 gap-16 lg:gap-24">
             
             {/* Contact Info (Left Column) */}
-            <div className="lg:col-span-5 flex flex-col justify-between">
+            <FadeIn className="lg:col-span-5 flex flex-col justify-between">
               <div>
                 <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-12">
                   We are always here to help you.
@@ -38,8 +43,8 @@ export default function ContactPage() {
                 
                 <div className="space-y-10">
                   {/* Phone */}
-                  <div className="flex gap-6">
-                    <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center shrink-0">
+                  <div className="flex flex-col md:flex-row gap-6">
+                    <div className="w-14 h-14 bg-gray-50 rounded-2xl flex items-center justify-center shrink-0">
                       <Phone className="w-6 h-6 text-[#222364]" />
                     </div>
                     <div>
@@ -49,8 +54,8 @@ export default function ContactPage() {
                   </div>
                   
                   {/* Email */}
-                  <div className="flex gap-6">
-                    <div className="w-14 h-14 bg-amber-50 rounded-2xl flex items-center justify-center shrink-0">
+                  <div className="flex flex-col md:flex-row gap-6">
+                    <div className="w-14 h-14 bg-gray-50 rounded-2xl flex items-center justify-center shrink-0">
                       <Mail className="w-6 h-6 text-[#f2c060]" />
                     </div>
                     <div>
@@ -60,7 +65,7 @@ export default function ContactPage() {
                   </div>
 
                   {/* Office */}
-                  <div className="flex gap-6">
+                  <div className="flex flex-col md:flex-row gap-6">
                     <div className="w-14 h-14 bg-gray-100 rounded-2xl flex items-center justify-center shrink-0">
                       <MapPin className="w-6 h-6 text-gray-700" />
                     </div>
@@ -90,12 +95,12 @@ export default function ContactPage() {
                   <a href="#" className="hover:text-[#222364] transition-colors duration-300"><MessageCircle className="w-6 h-6" /></a>
                 </div>
               </div>
-            </div>
+            </FadeIn>
 
             {/* Form (Right Column) */}
-            <div className="lg:col-span-7">
+            <FadeIn delay={0.2} className="lg:col-span-7">
               <div className="bg-gray-50/50 rounded-[2rem] p-8 md:p-12 lg:p-16 border border-gray-100">
-                <h3 className="text-2xl font-bold text-gray-900 mb-8">Send a Message</h3>
+                <h3 className="text-2xl font-black text-gray-900 mb-8">Send a Message</h3>
                 <form className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
@@ -128,16 +133,18 @@ export default function ContactPage() {
                   </div>
                 </form>
               </div>
-            </div>
+            </FadeIn>
 
           </div>
         </section>
 
         {/* Bottom CTA */}
-        <ReadyToTransformCTA 
-          title="Ready to Transform Your Workforce?"
-          subtitle="Skip the message and sign up directly to explore our talent pool or apply for jobs."
-        />
+        <FadeIn>
+          <ReadyToTransformCTA 
+            title="Ready to Transform Your Workforce?"
+            subtitle="Skip the message and sign up directly to explore our talent pool or apply for jobs."
+          />
+        </FadeIn>
 
       </main>
       <Footer />

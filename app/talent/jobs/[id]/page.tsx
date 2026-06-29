@@ -26,7 +26,7 @@ export default function JobDetailsPage() {
               <span>›</span>
               <span>Design & Creative</span>
             </div>
-            <h1 className="text-3xl font-bold text-[#222364]">Senior UI/UX Designer</h1>
+            <h1 className="text-3xl font-black text-[#222364]">Senior UI/UX Designer</h1>
             <div className="flex items-center gap-4 mt-3">
               <Badge className="bg-[#f2c060]/20 text-[#b38520] hover:bg-[#f2c060]/30 border-0 rounded-lg px-3 py-1 font-bold ">
                 PRIORITY: HIGH
@@ -57,7 +57,7 @@ export default function JobDetailsPage() {
                   <div className="p-2 bg-[#222364]/10 rounded-lg">
                     <Edit2 className="w-5 h-5 text-[#222364]" />
                   </div>
-                  <h3 className="text-lg font-bold text-[#222364]">Project Brief</h3>
+                  <h3 className="text-lg font-black text-[#222364]">Project Brief</h3>
                 </div>
                 <Button variant="ghost" size="icon" className="text-gray-400 hover:text-gray-600 rounded-lg">
                   <Edit2 className="w-4 h-4" />
@@ -89,7 +89,7 @@ export default function JobDetailsPage() {
                   <div className="p-2 bg-[#222364]/10 rounded-lg">
                     <CheckCircle2 className="w-5 h-5 text-[#222364]" />
                   </div>
-                  <h3 className="text-lg font-bold text-[#222364]">Assigned Tasks</h3>
+                  <h3 className="text-lg font-black text-[#222364]">Assigned Tasks</h3>
                 </div>
                 <div className="flex items-center gap-3 w-48">
                   <span className="text-xs font-semibold text-gray-500 whitespace-nowrap">4 of 12 completed</span>
@@ -145,12 +145,12 @@ export default function JobDetailsPage() {
                 <div className="p-2 bg-[#222364]/10 rounded-lg">
                   <Clock className="w-5 h-5 text-[#222364]" />
                 </div>
-                <h3 className="text-lg font-bold text-[#222364]">Recent Activity</h3>
+                <h3 className="text-lg font-black text-[#222364]">Recent Activity</h3>
               </div>
               
               <div className="space-y-6">
                 
-                <div className="flex gap-4 relative group">
+                <div className="flex flex-col md:flex-row gap-4 relative group">
                   <div className="absolute left-1.5 top-5 bottom-[-24px] w-px bg-gray-200 group-last:hidden"></div>
                   <div className="relative z-10 w-3 h-3 mt-1.5 flex-shrink-0 rounded-full bg-[#222364] ring-4 ring-white"></div>
                   <div className="flex-1">
@@ -161,7 +161,7 @@ export default function JobDetailsPage() {
                   </div>
                 </div>
 
-                <div className="flex gap-4 relative group">
+                <div className="flex flex-col md:flex-row gap-4 relative group">
                   <div className="absolute left-1.5 top-5 bottom-[-24px] w-px bg-gray-200 group-last:hidden"></div>
                   <div className="relative z-10 w-3 h-3 mt-1.5 flex-shrink-0 rounded-full bg-orange-400 ring-4 ring-white"></div>
                   <div className="flex-1">
@@ -172,7 +172,7 @@ export default function JobDetailsPage() {
                   </div>
                 </div>
 
-                <div className="flex gap-4 relative group">
+                <div className="flex flex-col md:flex-row gap-4 relative group">
                   <div className="absolute left-1.5 top-5 bottom-[-24px] w-px bg-gray-200 group-last:hidden"></div>
                   <div className="relative z-10 w-3 h-3 mt-1.5 flex-shrink-0 rounded-full bg-green-500 ring-4 ring-white"></div>
                   <div className="flex-1">
@@ -199,20 +199,20 @@ export default function JobDetailsPage() {
                   <AvatarFallback className="bg-[#222364] text-white rounded-xl text-xl font-bold">N</AvatarFallback>
                 </Avatar>
                 <div>
-                  <h4 className="font-bold text-lg text-gray-900">Nexus Global</h4>
+                  <h4 className="font-black text-lg text-gray-900">Nexus Global</h4>
                   <p className="text-sm text-gray-500">Logistics & Supply Chain</p>
                 </div>
               </div>
               <div className="space-y-4 mb-6">
-                <div className="flex justify-between items-center text-sm">
+                <div className="flex flex-col md:flex-row justify-between items-center text-sm">
                   <span className="text-gray-500">Status</span>
                   <span className="font-bold text-green-600 flex items-center gap-1"><CheckCircle2 className="w-3.5 h-3.5"/> Verified</span>
                 </div>
-                <div className="flex justify-between items-center text-sm">
+                <div className="flex flex-col md:flex-row justify-between items-center text-sm">
                   <span className="text-gray-500">Rating</span>
                   <span className="font-bold text-gray-900 flex items-center gap-1"><span className="text-[#f2c060]">★</span> 4.9 (124 reviews)</span>
                 </div>
-                <div className="flex justify-between items-center text-sm">
+                <div className="flex flex-col md:flex-row justify-between items-center text-sm">
                   <span className="text-gray-500">Member Since</span>
                   <span className="font-bold text-gray-900">Jan 2018</span>
                 </div>
@@ -233,7 +233,7 @@ export default function JobDetailsPage() {
                 
                 <div className="flex items-center justify-between p-3 rounded-xl border border-gray-100 hover:bg-gray-50 transition cursor-pointer">
                   <div className="flex items-center gap-3">
-                    <div className="p-2 bg-blue-50 text-blue-600 rounded-lg">
+                    <div className="p-2 bg-gray-50 text-blue-600 rounded-lg">
                       <FileText className="w-4 h-4" />
                     </div>
                     <div>
@@ -246,7 +246,7 @@ export default function JobDetailsPage() {
 
                 <div className="flex items-center justify-between p-3 rounded-xl border border-gray-100 hover:bg-gray-50 transition cursor-pointer">
                   <div className="flex items-center gap-3">
-                    <div className="p-2 bg-orange-50 text-orange-600 rounded-lg">
+                    <div className="p-2 bg-gray-50 text-orange-600 rounded-lg">
                       <ImageFileIcon className="w-4 h-4" />
                     </div>
                     <div>

@@ -44,7 +44,7 @@ export default function TalentDashboard() {
  <DashboardLayout type="talent">
  <div className="space-y-6">
  
- <h1 className="text-2xl font-bold text-gray-900">My Jobs</h1>
+ <h1 className="text-2xl font-black text-gray-900">My Jobs</h1>
 
  <div className="bg-white rounded-2xl p-6 border border-gray-100">
  <div className="flex items-center gap-4">
@@ -65,7 +65,7 @@ export default function TalentDashboard() {
  <span className="text-[#222364] font-bold text-sm">OaaS</span>
  </div>
  <div>
- <h3 className="font-bold text-gray-900 text-lg mb-1">{job.title}</h3>
+ <h3 className="font-black text-gray-900 text-lg mb-1">{job.title}</h3>
  <div className="flex items-center gap-3">
  <p className="text-gray-500 text-sm">{job.location}</p>
  <span className={cn(

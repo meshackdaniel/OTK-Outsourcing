@@ -47,12 +47,12 @@ export default function TalentArticlePage() {
         <article className="bg-white rounded-3xl p-8 md:p-12 border border-gray-100">
           <header className="mb-10 pb-10 border-b border-gray-100">
             <div className="flex items-center gap-3 mb-4">
-              <span className="bg-blue-50 text-blue-600 font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider">
+              <span className="bg-gray-50 text-blue-600 font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider">
                 {categoryTitle}
               </span>
               <span className="text-gray-400 text-sm">Updated 2 days ago</span>
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
+            <h1 className="text-3xl md:text-4xl font-black text-gray-900 leading-tight">
               {articleTitle}
             </h1>
           </header>
@@ -62,19 +62,19 @@ export default function TalentArticlePage() {
               This guide provides a comprehensive overview of how to manage {articleTitle.toLowerCase()} effectively on the OTK Outsourcing platform. Whether you are a new talent or a seasoned freelancer, these steps will help streamline your workflow.
             </p>
 
-            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">Step 1: Getting Started</h3>
+            <h3 className="text-xl font-black text-gray-900 mt-8 mb-4">Step 1: Getting Started</h3>
             <p className="mb-6">
               Begin by navigating to your primary dashboard. Ensure that your account has the necessary permissions. Verify that your profile completeness is above 80% to ensure you have full access to features related to {categoryTitle.toLowerCase()}.
             </p>
 
-            <div className="bg-blue-50/50 rounded-2xl p-6 border border-blue-100 my-8">
-              <h4 className="font-bold text-blue-900 mb-2">Pro Tip</h4>
+            <div className="bg-gray-50/50 rounded-2xl p-6 border border-blue-100 my-8">
+              <h4 className="font-black text-blue-900 mb-2">Pro Tip</h4>
               <p className="text-sm text-blue-800 m-0">
                 Always double-check your inputs before finalizing submissions. Changes to critical settings or payouts may require a 24-hour verification window for security purposes.
               </p>
             </div>
 
-            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">Step 2: Configuration & Management</h3>
+            <h3 className="text-xl font-black text-gray-900 mt-8 mb-4">Step 2: Configuration & Management</h3>
             <p className="mb-4">
               Once you have accessed the correct module, follow these standard procedures:
             </p>
@@ -85,7 +85,7 @@ export default function TalentArticlePage() {
               <li>Click "Save & Continue" to securely commit your changes.</li>
             </ul>
 
-            <h3 className="text-xl font-bold text-gray-900 mt-8 mb-4">Troubleshooting</h3>
+            <h3 className="text-xl font-black text-gray-900 mt-8 mb-4">Troubleshooting</h3>
             <p className="mb-6">
               If you encounter errors like "Access Denied" or "Data Sync Failure", try refreshing your session by logging out and logging back in. If the issue persists, please take a screenshot of the error code and contact our support desk immediately.
             </p>
@@ -95,7 +95,7 @@ export default function TalentArticlePage() {
           <footer className="mt-16 pt-8 border-t border-gray-100">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4 bg-gray-50 rounded-2xl p-6">
               <div>
-                <h4 className="font-bold text-gray-900 mb-1">Was this article helpful?</h4>
+                <h4 className="font-black text-gray-900 mb-1">Was this article helpful?</h4>
                 <p className="text-sm text-gray-500">Your feedback helps us improve our Help Center.</p>
               </div>
               <div className="flex items-center gap-3">

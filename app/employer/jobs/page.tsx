@@ -44,7 +44,7 @@ export default function EmployerJobs() {
  
  {/* Header & Filters */}
  <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-2">
- <h1 className="text-2xl font-bold text-[#222364]">Job Posts</h1>
+ <h1 className="text-2xl font-black text-[#222364]">Job Posts</h1>
  </div>
 
  <div className="bg-white rounded-2xl p-6 border border-gray-100 flex flex-col md:flex-row items-center justify-between gap-4">
@@ -75,7 +75,7 @@ export default function EmployerJobs() {
  <span className="text-[#222364] font-bold text-sm">OaaS</span>
  </div>
  <div>
- <h3 className="font-bold text-gray-900 text-lg">{job.title}</h3>
+ <h3 className="font-black text-gray-900 text-lg">{job.title}</h3>
  <div className="flex items-center gap-3 mt-1">
  <p className="text-gray-500 text-sm">{job.location}</p>
  <span className={cn(
@@ -99,7 +99,7 @@ export default function EmployerJobs() {
  </div>
 
  <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
- <div className="grid grid-cols-3 md:grid-cols-6 gap-8 flex-1">
+ <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 md:gap-8 flex-1 w-full">
  <div>
  <p className="text-gray-500 text-sm mb-1">Views :</p>
  <p className={cn("font-bold text-xl", job.stats.views > 0 ?"text-[#222364]":"text-gray-400")}>{job.stats.views}</p>

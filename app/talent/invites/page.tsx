@@ -57,7 +57,7 @@ export default function TalentInvites() {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>
-            <h1 className="text-3xl font-bold text-[#222364]">Invites & Offers</h1>
+            <h1 className="text-3xl font-black text-[#222364]">Invites & Offers</h1>
             <p className="text-gray-600 mt-1">Manage your active invitations and formal job offers from high-tier enterprise clients.</p>
           </div>
           <Button className="bg-[#f2c060] text-[#222364] hover:bg-[#e0b050] font-bold px-6 py-2.5 h-11 rounded-xl">
@@ -96,10 +96,10 @@ export default function TalentInvites() {
             <div className="space-y-6">
               {filteredInvites.length > 0 ? filteredInvites.map((invite) => (
                 <div key={invite.id} className="bg-white rounded-2xl p-6 border border-gray-100 flex flex-col relative overflow-hidden group hover:border-[#222364]/20 transition">
-                  <div className="flex justify-between items-start mb-4">
+                  <div className="flex flex-col md:flex-row justify-between items-start mb-4">
                     <div>
                       <div className="flex items-center gap-3 mb-1">
-                        <h3 className="font-bold text-gray-900 text-lg">{invite.title}</h3>
+                        <h3 className="font-black text-gray-900 text-lg">{invite.title}</h3>
                         {invite.priority && (
                           <span className="bg-[#f2c060] text-[#222364] text-[10px] font-black px-2 py-0.5 rounded uppercase">Priority</span>
                         )}
@@ -157,11 +157,11 @@ export default function TalentInvites() {
             
             <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden">
               <div className="bg-[#222364] p-4 text-white">
-                <h3 className="font-bold text-sm tracking-wide">Success Metrics</h3>
+                <h3 className="font-black text-sm tracking-wide">Success Metrics</h3>
               </div>
               <div className="p-6 space-y-6">
                 <div>
-                  <div className="flex justify-between items-end mb-2">
+                  <div className="flex flex-col md:flex-row justify-between items-end mb-2">
                     <p className="text-sm font-semibold text-gray-600">Response Rate</p>
                     <p className="font-bold text-[#222364]">98%</p>
                   </div>
@@ -170,7 +170,7 @@ export default function TalentInvites() {
                   </div>
                 </div>
                 <div>
-                  <div className="flex justify-between items-end mb-2">
+                  <div className="flex flex-col md:flex-row justify-between items-end mb-2">
                     <p className="text-sm font-semibold text-gray-600">Response Time</p>
                     <p className="font-bold text-[#222364]">&lt; 2 hours</p>
                   </div>
@@ -192,7 +192,7 @@ export default function TalentInvites() {
                 <div className="w-8 h-8 rounded-full bg-amber-50 flex items-center justify-center">
                   <TrendingUp className="w-4 h-4 text-amber-600" />
                 </div>
-                <h3 className="font-bold text-[#222364]">Offer Tips</h3>
+                <h3 className="font-black text-[#222364]">Offer Tips</h3>
               </div>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
@@ -212,7 +212,7 @@ export default function TalentInvites() {
 
             <div className="bg-[#222364] rounded-2xl p-6 text-white relative overflow-hidden group cursor-pointer">
               <div className="relative z-10">
-                <h3 className="font-bold text-lg mb-2">Upgrade to Pro+</h3>
+                <h3 className="font-black text-lg mb-2">Upgrade to Pro+</h3>
                 <p className="text-sm text-blue-100 leading-relaxed mb-6">Get 20% more invites from Fortune 500 clients.</p>
                 <Button className="bg-[#f2c060] text-[#222364] hover:bg-[#e0b050] font-bold h-10 px-6 rounded-lg w-fit">
                   Learn More

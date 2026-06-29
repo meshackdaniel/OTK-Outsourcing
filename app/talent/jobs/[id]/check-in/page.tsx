@@ -42,7 +42,7 @@ export default function DailyCheckInPage() {
                   <div className="p-2 bg-[#222364]/10 rounded-lg">
                     <Edit2 className="w-5 h-5 text-[#222364]" />
                   </div>
-                  <h3 className="text-lg font-bold text-[#222364]">Project Brief</h3>
+                  <h3 className="text-lg font-black text-[#222364]">Project Brief</h3>
                 </div>
                 <Button variant="ghost" size="icon" className="text-gray-400 hover:text-gray-600 rounded-lg">
                   <Edit2 className="w-4 h-4" />

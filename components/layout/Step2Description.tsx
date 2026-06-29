@@ -43,7 +43,7 @@ export default function Step2Description() {
  }),
  Link.configure({
  openOnClick: false,
- HTMLAttributes: { class:"text-blue-600 underline", target:"_blank"},
+ HTMLAttributes: { class:"text-[#222364] underline", target:"_blank"},
  }),
  TextAlign.configure({ types: ["heading","paragraph"] }),
  Underline,
@@ -77,11 +77,11 @@ export default function Step2Description() {
 
  return (
  <div className="space-y-6">
- <div className="flex justify-between items-center">
- <h1 className="text-3xl font-bold">Job Description</h1>
+ <div className="flex flex-col md:flex-row justify-between items-center">
+ <h1 className="text-3xl font-black">Job Description</h1>
  <div
  className={`text-sm font-medium ${
- hasError ?"text-red-600":"text-green-600"
+ hasError ?"text-[#222364]":"text-[#222364]"
  }`}
  >
  {charCount} / 100+ characters
@@ -89,7 +89,7 @@ export default function Step2Description() {
  </div>
 
  {hasError && (
- <div className="bg-red-50 border border-red-300 text-red-700 px-5 py-4 rounded-xl font-medium">
+ <div className="bg-gray-50 border border-gray-200 text-[#222364] px-5 py-4 rounded-xl font-medium">
  Description must be at least 100 characters (currently {charCount})
  </div>
  )}

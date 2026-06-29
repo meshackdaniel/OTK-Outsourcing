@@ -113,7 +113,7 @@ export default function EmployerWorkforce() {
       <div className="space-y-6">
         
         <div className="flex items-center justify-between">
-          <h1 className="text-2xl font-bold text-gray-900">Employees</h1>
+          <h1 className="text-2xl font-black text-gray-900">Employees</h1>
         </div>
 
         {/* Filters */}
@@ -158,7 +158,7 @@ export default function EmployerWorkforce() {
         <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden">
           
           <div className="flex items-center justify-between border-b border-gray-100 px-8 pt-6">
-            <div className="flex gap-8">
+            <div className="flex flex-col md:flex-row gap-8">
               <button 
                 onClick={() => setViewType('list')}
                 className={cn(
@@ -247,7 +247,7 @@ export default function EmployerWorkforce() {
                       <DialogTitle className="text-[#222364]">Manage Workforce</DialogTitle>
                     </DialogHeader>
                     
-                    <div className="flex gap-4 border-b border-gray-100 mb-4">
+                    <div className="flex flex-col md:flex-row gap-4 border-b border-gray-100 mb-4">
                       <button 
                         onClick={() => setManageTab('groups')}
                         className={cn("text-sm font-bold pb-2 border-b-2", manageTab === 'groups' ? "border-[#222364] text-[#222364]" : "border-transparent text-gray-500")}

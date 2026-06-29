@@ -14,7 +14,7 @@ export default function EmployerNotifications() {
  desc:"Amanda Temi has applied for the Mechanical Engineer role.",
  time:"2 mins ago",
  icon: Briefcase,
- color:"bg-blue-50 text-[#222364]",
+ color:"bg-gray-50 text-[#222364]",
  unread: true,
  actionText: "View Application",
  actionLink: "/employer/jobs/1/application/1"
@@ -55,7 +55,7 @@ export default function EmployerNotifications() {
  <div className="space-y-6">
  
  <div className="flex items-center justify-between">
- <h1 className="text-2xl font-bold text-[#222364]">Notifications</h1>
+ <h1 className="text-2xl font-black text-[#222364]">Notifications</h1>
  <Button variant="outline"className="text-gray-600 border-gray-200 rounded-xl hover:bg-gray-50 h-10 px-4">
  Mark all as read
  </Button>
@@ -77,7 +77,7 @@ export default function EmployerNotifications() {
  </div>
  
  <div className="flex-1 min-w-0 pt-1">
- <div className="flex justify-between items-start mb-1">
+ <div className="flex flex-col md:flex-row justify-between items-start mb-1">
  <h3 className={cn("text-base font-bold truncate pr-4", notif.unread ?"text-gray-900":"text-gray-700")}>
  {notif.title}
  </h3>

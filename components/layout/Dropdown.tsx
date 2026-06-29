@@ -53,7 +53,7 @@ export default function Dropdown({
  className={`
  flex items-center text-gray-700 gap-3 rounded-lg px-4 py-2.5 text-sm font-medium
  transition-all focus:outline-none focus-visible:ring-2
- focus-visible:ring-blue-500 focus-visible:ring-offset-2 justify-between w-full
+ focus-visible:ring-gray-200 focus-visible:ring-offset-2 justify-between w-full
  ${
  disabled
  ?"cursor-not-allowed opacity-60"

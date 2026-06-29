@@ -45,7 +45,7 @@ export default function MyJobsPage() {
     <DashboardLayout type="talent">
       <div>
         <div>
-          <h1 className="text-3xl font-bold text-gray-900">My Jobs</h1>
+          <h1 className="text-3xl font-black text-gray-900">My Jobs</h1>
         </div>
 
         {/* Filter Bar */}
@@ -74,7 +74,7 @@ export default function MyJobsPage() {
                     <AvatarFallback className="bg-transparent">{job.company.substring(0, 2).toUpperCase()}</AvatarFallback>
                   </Avatar>
                   <div>
-                    <h2 className="text-lg font-bold text-gray-900">{job.title}</h2>
+                    <h2 className="text-lg font-black text-gray-900">{job.title}</h2>
                     <div className="flex items-center gap-3 mt-1">
                       <span className="text-sm text-gray-500">{job.location}</span>
                       <Badge 

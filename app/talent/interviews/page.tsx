@@ -10,7 +10,7 @@ export default function TalentInterviews() {
  <DashboardLayout type="talent">
  <div className="flex flex-col gap-8">
  
- <div className="flex justify-between items-end">
+ <div className="flex flex-col md:flex-row justify-between items-end">
  <div>
  <h1 className="text-3xl font-black text-[#222364]">Interviews</h1>
  <p className="text-gray-500 mt-1 font-medium">Manage your upcoming technical screenings and client calls.</p>
@@ -19,10 +19,10 @@ export default function TalentInterviews() {
 
  <div className="grid gap-6 max-w-4xl">
  <Card className="p-0 rounded-2xl border border-gray-100 bg-white overflow-hidden">
- <div className="p-6 border-b border-gray-100 flex items-center justify-between bg-blue-50/50">
+ <div className="p-6 border-b border-gray-100 flex items-center justify-between bg-gray-50/50">
  <div className="flex items-center gap-3">
  <Calendar className="h-5 w-5 text-blue-600"/>
- <h2 className="text-xl font-bold text-[#222364]">Upcoming Interview</h2>
+ <h2 className="text-xl font-black text-[#222364]">Upcoming Interview</h2>
  </div>
  <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-xs font-bold">TODAY</span>
  </div>

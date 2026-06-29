@@ -114,12 +114,12 @@ export default function EmployerMessages() {
 
   return (
     <DashboardLayout type="employer">
-      <div className="bg-white rounded-2xl border border-gray-100 flex h-[82vh] overflow-hidden">
+      <div className="bg-white rounded-2xl border border-gray-100 flex flex-col md:flex-row h-[82vh] overflow-hidden">
 
         {/* ── Left Pane ─────────────────────────────────────────────────────── */}
-        <div className="w-80 border-r border-gray-100 flex flex-col shrink-0">
+        <div className="w-full md:w-80 border-b md:border-b-0 md:border-r border-gray-100 flex flex-col shrink-0 h-1/2 md:h-auto">
           <div className="p-4 border-b border-gray-100">
-            <h2 className="text-xl font-bold text-[#222364] mb-4">Messages</h2>
+            <h2 className="text-xl font-black text-[#222364] mb-4">Messages</h2>
             <div className="relative">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
               <input
@@ -159,7 +159,7 @@ export default function EmployerMessages() {
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center justify-between">
-                        <h3 className="text-sm font-semibold truncate text-gray-800">{contact.name}</h3>
+                        <h3 className="text-sm font-black truncate text-gray-800">{contact.name}</h3>
                         <span className="text-xs text-gray-400 whitespace-nowrap ml-2">{contact.time}</span>
                       </div>
                       <p className="text-xs text-gray-500 truncate">{contact.role}</p>
@@ -198,7 +198,7 @@ export default function EmployerMessages() {
                 )}
               </div>
               <div>
-                <h3 className="font-bold text-gray-900">{activeContact?.name}</h3>
+                <h3 className="font-black text-gray-900">{activeContact?.name}</h3>
                 <p className={cn("text-xs font-medium", activeContact?.online ? "text-green-600" : "text-gray-400")}>
                   {activeContact?.online ? "Online" : "Offline"}
                 </p>

@@ -38,9 +38,9 @@ export default function ServiceCardSelector() {
  const [selectedId, setSelectedId] = useState<string>("software");
 
  const colorClasses = {
- blue:"border-blue-500 bg-blue-50 ring-blue-500",
- green:"border-green-500 bg-green-50 ring-green-500",
- purple:"border-purple-500 bg-purple-50 ring-purple-500",
+ blue:"border-gray-200 bg-gray-50 ring-gray-200",
+ green:"border-gray-200 bg-gray-50 ring-gray-200",
+ purple:"border-gray-200 bg-gray-50 ring-gray-200",
  };
 
  return (

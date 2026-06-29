@@ -48,7 +48,7 @@ const Footer = () => {
         <div className="container mx-auto px-10 py-16">
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-15 mb-12">
             <div className="col-span-2 pr-8">
-              <h3 className="font-bold mb-4 text-xl">Stay in the Loop</h3>
+              <h3 className="font-black mb-4 text-xl">Stay in the Loop</h3>
               <p className="text-gray-400 mb-6 text-sm leading-6">
                 Get tips, updates, and stories from teams and talents using OTK.
               </p>
@@ -56,9 +56,9 @@ const Footer = () => {
                 <input
                   placeholder="Type email here"
                   required
-                  className="border-0 border-b-2 bg-transparent w-full border-gray-600 py-2 focus:border-b-2 focus:border-blue-500 focus:ring-0 focus:outline-none rounded-none text-white placeholder:text-gray-500"
+                  className="border-0 border-b-2 bg-transparent w-full border-gray-600 py-2 focus:border-b-2 focus:border-gray-200 focus:ring-0 focus:outline-none rounded-none text-white placeholder:text-gray-500"
                 />
-                <button className="hover:cursor-pointer absolute right-0 p-0 top-1/2 -translate-y-1/2 text-blue-500 text-sm font-semibold">
+                <button className="hover:cursor-pointer absolute right-0 p-0 top-1/2 -translate-y-1/2 text-gray-500 text-sm font-semibold">
                   Submit
                 </button>
               </form>
@@ -66,7 +66,7 @@ const Footer = () => {
 
             {footerSections.map((section) => (
               <div key={section.title} className="mt-8 lg:mt-0">
-                <h4 className="font-bold mb-6 text-lg">{section.title}</h4>
+                <h4 className="font-black mb-6 text-lg">{section.title}</h4>
                 <ul className="flex flex-col gap-4 text-gray-400 text-sm">
                   {section.links.map((link, idx) => (
                     <Link href={link.url} key={idx}>
@@ -93,11 +93,11 @@ const Footer = () => {
                 <Link href="/code-of-conduct" className="hover:text-white transition">Code of conduct</Link>
               </div>
             </div>
-            <div className="flex gap-6 mt-6 md:mt-0">
-              <Twitter className="w-5 h-5 text-gray-400 cursor-pointer hover:text-blue-400 transition" />
-              <Facebook className="w-5 h-5 text-gray-400 cursor-pointer hover:text-blue-600 transition" />
-              <Instagram className="w-5 h-5 text-gray-400 cursor-pointer hover:text-pink-500 transition" />
-              <Youtube className="w-5 h-5 text-gray-400 cursor-pointer hover:text-red-500 transition" />
+            <div className="flex flex-col md:flex-row gap-6 mt-6 md:mt-0">
+              <Twitter className="w-5 h-5 text-gray-400 cursor-pointer hover:text-[#222364] transition" />
+              <Facebook className="w-5 h-5 text-gray-400 cursor-pointer hover:text-[#222364] transition" />
+              <Instagram className="w-5 h-5 text-gray-400 cursor-pointer hover:text-[#222364] transition" />
+              <Youtube className="w-5 h-5 text-gray-400 cursor-pointer hover:text-[#222364] transition" />
             </div>
           </div>
         </div>

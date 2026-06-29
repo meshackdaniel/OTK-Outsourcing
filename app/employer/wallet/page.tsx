@@ -85,7 +85,7 @@ Thank you for using OTK Outsourcing!
         <div className="bg-white rounded-2xl p-6 md:p-8 border border-gray-100 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
             <p className="text-gray-500 font-medium mb-2">Wallet Balance</p>
-            <h1 className="text-4xl md:text-5xl font-bold text-[#222364]">₦1,450,000</h1>
+            <h1 className="text-4xl md:text-5xl font-black text-[#222364]">₦1,450,000</h1>
           </div>
           <div className="flex flex-col sm:flex-row items-center gap-4 w-full md:w-auto">
             <Button className="bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 h-12 px-6 rounded-xl w-full sm:w-auto">
@@ -102,7 +102,7 @@ Thank you for using OTK Outsourcing!
         {/* Transactions Section */}
         <div className="bg-white rounded-2xl p-6 border border-gray-100">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-6">
-            <h2 className="text-xl font-bold text-[#222364]">Transactions</h2>
+            <h2 className="text-xl font-black text-[#222364]">Transactions</h2>
             <div className="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
               <div className="relative w-full sm:w-64">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
@@ -199,7 +199,7 @@ Thank you for using OTK Outsourcing!
                     {tx.type === "credit" ? <ArrowDownLeft className="w-5 h-5" /> : <ArrowUpRight className="w-5 h-5" />}
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 text-sm line-clamp-1">{tx.desc}</h3>
+                    <h3 className="font-black text-gray-900 text-sm line-clamp-1">{tx.desc}</h3>
                     <p className="text-xs text-gray-500 mt-0.5">{tx.date}</p>
                   </div>
                 </div>
@@ -249,19 +249,19 @@ Thank you for using OTK Outsourcing!
                 </div>
 
                 <div className="space-y-4 bg-gray-50 p-4 rounded-xl border border-gray-100 mb-6 text-sm">
-                  <div className="flex justify-between items-center border-b border-gray-200 pb-3">
+                  <div className="flex flex-col md:flex-row justify-between items-center border-b border-gray-200 pb-3">
                     <span className="text-gray-500">Date</span>
                     <span className="font-semibold text-gray-900">{selectedTx.date}</span>
                   </div>
-                  <div className="flex justify-between items-center border-b border-gray-200 pb-3">
+                  <div className="flex flex-col md:flex-row justify-between items-center border-b border-gray-200 pb-3">
                     <span className="text-gray-500">Transaction ID</span>
                     <span className="font-semibold text-gray-900">TXN-{Math.random().toString(36).substr(2, 9).toUpperCase()}</span>
                   </div>
-                  <div className="flex justify-between items-center border-b border-gray-200 pb-3">
+                  <div className="flex flex-col md:flex-row justify-between items-center border-b border-gray-200 pb-3">
                     <span className="text-gray-500">Description</span>
                     <span className="font-semibold text-gray-900 text-right max-w-[200px] truncate">{selectedTx.desc}</span>
                   </div>
-                  <div className="flex justify-between items-center">
+                  <div className="flex flex-col md:flex-row justify-between items-center">
                     <span className="text-gray-500">Status</span>
                     <div className="flex items-center gap-1.5">
                       {selectedTx.status === "Completed" ? (
